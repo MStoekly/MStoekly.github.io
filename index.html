@@ -28,7 +28,7 @@ const CONFIG = {
     nav:       ["Projects", "Experience", "Skills"],
     hero_tag:  "Business Data Analyst",
     hero_h1:   "I turn complex data into clear decisions.",
-    hero_lead: `A <em>business</em>-trained analyst, not an IT one — I read the problem before the tool.
+    hero_lead: `A <em>business</em>-trained analyst, not an IT one — I read the challenge before the tool.
                 Strong in SQL, Power BI and dashboards, with the analytical and economic lens
                 of an administrator. Public and private sector work turning messy data into
                 decisions leaders actually use.`,
@@ -36,7 +36,7 @@ const CONFIG = {
     cta_li:    "Connect on LinkedIn",
 
     kpi_tag:   "Career at a glance",
-    kpi_h2:    "The Analyst KPI's",
+    kpi_h2:    "The Analyst, in KPIs.",
 
     proj_tag:  "Case studies",
     proj_h2:   "Selected projects",
@@ -178,7 +178,7 @@ const CONFIG = {
                 <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1 (Fiscaliza)</a>.`,
         insight: "O mérito não estava na ferramenta, e sim na precisão sob pressão: zero margem para erro, dado sensível e prazo apertado.",
       },
-    },    
+    },
     {
       idx:  "02",
       live: true,
@@ -236,7 +236,7 @@ const CONFIG = {
         sub:   "Product + behavioral strategy",
         body:  `Working as a Planning consultant embedded inside Infrastructure, I had no internal
                 authority and teams were reluctant to help. Instead of escalating, I turned the scraps
-                of existing data into useful BI products,creating an incentive loop where usefulness
+                of existing data into useful BI products, creating an incentive loop where usefulness
                 pulled more and better data from previously uncooperative teams.`,
         insight: "I solved a political and behavioral problem with a product strategy. Few analysts have an answer to 'how do you get data from people who don't want to give it'.",
       },
@@ -459,6 +459,8 @@ section{padding-top:84px;padding-bottom:84px}
 .card-body-inner{padding:2px 26px 26px 72px}
 @media(max-width:560px){.card-body-inner{padding:2px 22px 24px 22px}.card-head{padding:18px 20px}}
 .card-body p{font-size:15.5px;color:var(--body);line-height:1.6;max-width:70ch}
+.card-body p a,.insight a{color:var(--primary-active);text-decoration:underline;text-underline-offset:2px;font-weight:500;transition:color .15s}
+.card-body p a:hover,.insight a:hover{color:var(--primary)}
 .insight{margin-top:14px;padding:14px 16px;background:var(--surface-soft);border-left:3px solid var(--primary);border-radius:0 8px 8px 0;font-size:14.5px;color:var(--body-strong)}
 .card.is-live .insight{background:var(--surface-card)}
 .card-meta{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:18px}
