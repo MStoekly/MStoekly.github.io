@@ -9,24 +9,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- ============================================================
-  EDIT ZONE — tudo que você precisa editar está aqui
-  Não mexa em nada abaixo de "END EDIT ZONE"
-=============================================================== -->
+<!-- EDIT ZONE -->
 <script>
 const CONFIG = {
 
-  /* ── INFORMAÇÕES PESSOAIS ─────────────────────────────────── */
+  /* INFORMAÇÕES PESSOAIS */
   name:      "Mateus Stoekly",
   role_en:   "Business Data Analyst",
   role_pt:   "Analista de Dados de Negócios",
   email:     "mateus.stoekly@gmail.com",
-  linkedin:  "linkedin.com/in/mateus.stoekly",
+  linkedin:  "linkedin.com/in/mateusstoekly/",
   location_en: "Curitiba, Brazil · Open to remote roles",
   location_pt: "Curitiba, Brasil · Aberto a oportunidades remotas",
   portfolio: "mstoekly.github.io",
 
-  /* ── TEXTOS INGLÊS ────────────────────────────────────────── */
+  /* TEXTOS INGLÊS */
   en: {
     nav:       ["Projects", "Experience", "Skills"],
     hero_tag:  "Business Data Analyst",
@@ -39,7 +36,7 @@ const CONFIG = {
     cta_li:    "Connect on LinkedIn",
 
     kpi_tag:   "Career at a glance",
-    kpi_h2:    "One analyst, read as a dashboard.",
+    kpi_h2:    "The Analyst KPI's",
 
     proj_tag:  "Case studies",
     proj_h2:   "Selected projects",
@@ -66,20 +63,20 @@ const CONFIG = {
     present:    "present",
   },
 
-  /* ── TEXTOS PORTUGUÊS ─────────────────────────────────────── */
+  /* TEXTOS PORTUGUÊS */
   pt: {
     nav:       ["Projetos", "Experiência", "Competências"],
     hero_tag:  "Analista de Dados de Negócios",
     hero_h1:   "Transformo dados complexos em decisões claras.",
-    hero_lead: `Tenho formação em <em>negócios</em>, não em TI — então enxergo o problema antes da ferramenta.
-                Domino SQL, Power BI e dashboards, mas penso com a cabeça de administrador, não de engenheiro.
-                Já atuei no setor público e no privado pegando dado bagunçado e transformando em decisão
+    hero_lead: `Formado em <em>negócios</em>, não em TI — eu leio o desafio antes da ferramenta.
+                Domino SQL, Power BI e dashboards, com a visão analítica de um administrador e não de um TI.
+                Já atuei no setor público e no privado transformando dados bagunçados em histórias
                 que a liderança de fato usa.`,
     cta_proj:  "Ver projetos",
     cta_li:    "Conectar no LinkedIn",
 
     kpi_tag:   "A carreira em números",
-    kpi_h2:    "Um analista lido como um dashboard.",
+    kpi_h2:    "Este Analista, em indicadores.",
 
     proj_tag:  "Estudos de caso",
     proj_h2:   "Projetos selecionados",
@@ -106,7 +103,7 @@ const CONFIG = {
     present:    "atual",
   },
 
-  /* ── KPIs ─────────────────────────────────────────────────── */
+  /* KPIs */
   kpis: [
     {
       tag:  "Faurecia",
@@ -153,7 +150,7 @@ const CONFIG = {
     },
   ],
 
-  /* ── PROJETOS ─────────────────────────────────────────────── */
+  /* PROJETOS */
   projects: [
     {
       idx:  "01",
@@ -167,7 +164,9 @@ const CONFIG = {
                 the plan was under audit-court scrutiny and public-transparency pressure. I built the
                 dashboard in hours — every cent reconciled across the Treasury, Security and Education
                 departments. One wrong formula meant answering to the state audit court. The plan it
-                tracked was the subject of G1's investigative coverage.`,
+                tracked was the subject of of <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1's investigative coverage</a>.`,
+  insight: "The value wasn't the tool — it was precision under stakes: zero margin for error, sensitive data, hard deadline.",
+},
         insight: "The value wasn't the tool — it was precision under stakes: zero margin for error, sensitive data, hard deadline.",
       },
       pt: {
@@ -175,9 +174,10 @@ const CONFIG = {
         sub:   "Transparência pública · precisão de auditoria",
         body:  `O estado precisava mostrar à população como aplicaria o dinheiro da venda da Copel,
                 e o plano estava sob o olhar do Tribunal de Contas. Montei o dashboard em poucas horas,
-                com cada centavo batendo entre as Secretarias da Fazenda, Segurança e Educação —
-                uma fórmula errada ali significava ter que responder ao Tribunal.
-                O plano que ele acompanhava virou pauta de reportagem investigativa do G1 (Fiscaliza).`,
+                com cada centavo batendo entre as Secretarias da Fazenda, Segurança e Educação.
+                Uma fórmula errada ali significava ter que responder ao Tribunal.
+                O plano que ele acompanhava virou pauta de reportagem investigativa do
+         <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1 (Fiscaliza)</a>.`,
         insight: "O mérito não estava na ferramenta, e sim na precisão sob pressão: zero margem para erro, dado sensível e prazo apertado.",
       },
     },
@@ -189,15 +189,15 @@ const CONFIG = {
       en: {
         title: "CLP State Competitiveness Ranking Analysis",
         sub:   "Benchmarking · 10 pillars · ~100 indicators",
-        body:  `I decoded the ranking's methodology — ten pillars and roughly a hundred weighted
-                indicators — to benchmark departments and surface performance gaps. The work pushed
+        body:  `I decoded the ranking's methodology, ten pillars and roughly a hundred weighted
+                indicators, to benchmark departments and surface performance gaps. The work pushed
                 several departments to improve data transparency and propose corrective projects.`,
         insight: "Reading a weak metric critically matters as much as building a good one: I flagged where the methodology distorted and where it genuinely pointed.",
       },
       pt: {
         title: "Análise do Ranking de Competitividade dos Estados (CLP)",
         sub:   "Benchmark · 10 pilares · ~100 indicadores",
-        body:  `Destrinchei a metodologia do ranking — dez pilares e quase cem indicadores ponderados —
+        body:  `Destrinchei a metodologia do ranking, dez pilares e quase cem indicadores ponderados,
                 para comparar as secretarias e expor onde o desempenho destoava.
                 O trabalho fez várias secretarias abrirem mais os próprios dados e proporem projetos de melhoria.`,
         insight: "Ler com olho crítico um indicador fraco vale tanto quanto construir um bom: apontei onde a metodologia distorcia e onde ela realmente fazia sentido.",
@@ -238,14 +238,14 @@ const CONFIG = {
         sub:   "Product + behavioral strategy",
         body:  `Working as a Planning consultant embedded inside Infrastructure, I had no internal
                 authority and teams were reluctant to help. Instead of escalating, I turned the scraps
-                of existing data into useful BI products — creating an incentive loop where usefulness
+                of existing data into useful BI products,creating an incentive loop where usefulness
                 pulled more and better data from previously uncooperative teams.`,
         insight: "I solved a political and behavioral problem with a product strategy. Few analysts have an answer to 'how do you get data from people who don't want to give it'.",
       },
       pt: {
         title: "Adoção de dados em ambiente resistente",
         sub:   "Estratégia de produto + comportamento",
-        body:  `Eu era uma espécie de consultor do Planejamento dentro da Infraestrutura — sem
+        body:  `Eu era uma espécie de consultor do Planejamento dentro da Infraestrutura, sem
                 autoridade interna e com equipes pouco dispostas a ajudar. Em vez de levar o problema
                 para cima, peguei os poucos dados que já existiam e transformei em BI que era de fato
                 útil. A utilidade virou isca: quanto mais útil, mais (e melhores) dados as equipes
@@ -263,8 +263,8 @@ const CONFIG = {
         sub:   "Faurecia · efficiency & initiative",
         body:  `I automated (Excel VBA + SAP) a manual freight-payment and PO-correction process that
                 consumed an analyst's whole day, cutting it to ~3 hours and reducing the backlog by
-                ~97% in five months. With the freed time I took on a second role — container allocation
-                — and built an optimization tool that improved utilization by 86%.`,
+                ~97% in five months. With the freed time I took on a second role in container allocation
+                and built an optimization tool that improved utilization by 86% minimum.`,
         insight: "I automate myself out of repetitive work and use the free time to create more value — concrete results in two areas at once.",
       },
       pt: {
@@ -273,14 +273,14 @@ const CONFIG = {
         body:  `Automatizei (Excel VBA + SAP) um processo manual de pagamento de fretes e correção de
                 ordens de compra que tomava o dia inteiro de um analista. Ele caiu para ~3 horas e o
                 passivo encolheu ~97% em cinco meses. Com o tempo que sobrou, abracei uma segunda
-                função — alocação de contêineres — e criei uma ferramenta de otimização que subiu
-                a ocupação em 86%.`,
+                função — alocação de contêineres, criei uma ferramenta de otimização que subiu
+                a ocupação em no mínimo 86%.`,
         insight: "Eu me automatizo para fora do trabalho repetitivo e uso o tempo que sobra para gerar mais valor. Resultado concreto em duas frentes ao mesmo tempo.",
       },
     },
   ],
 
-  /* ── EXPERIÊNCIA ──────────────────────────────────────────── */
+  /* EXPERIÊNCIA */
   experience: [
     {
       date_en: "Feb 2023 — present",
@@ -326,7 +326,7 @@ const CONFIG = {
     },
   ],
 
-  /* ── COMPETÊNCIAS (chips por grupo) ──────────────────────── */
+  /* COMPETÊNCIAS (chips por grupo) */
   skills: [
     { en: "Data & BI",    pt: "Dados e BI",
       chips: ["SQL","Power BI","DAX","Power Query (M)",{"en":"Data Modeling","pt":"Modelagem de Dados"},"ETL",{"en":"Data Governance","pt":"Governança de Dados"}] },
@@ -338,7 +338,7 @@ const CONFIG = {
       chips: [{"en":"Data Adoption","pt":"Adoção de Dados"},{"en":"Cross-functional","pt":"Atuação Interdepartamental"},{"en":"Problem-Solving","pt":"Resolução de Problemas"}] },
   ],
 
-  /* ── IDIOMAS ──────────────────────────────────────────────── */
+  /* IDIOMAS */
   languages: [
     { en:"Portuguese", pt:"Português",  level_en:"Native",       level_pt:"Nativo",             pct:100 },
     { en:"English",    pt:"Inglês",     level_en:"C1 · Fluent",  level_pt:"C1 · Fluente",        pct:92  },
@@ -346,7 +346,7 @@ const CONFIG = {
     { en:"French",     pt:"Francês",    level_en:"B1 · Basic",   level_pt:"B1 · Básico",         pct:42  },
   ],
 
-  /* ── FORMAÇÃO ─────────────────────────────────────────────── */
+  /* FORMAÇÃO */
   education: {
     en: { degree: "Bachelor's in International Business", period: "Jan 2020 — Dec 2023" },
     pt: { degree: "Bacharelado em Negócios Internacionais", period: "jan 2020 — dez 2023" },
@@ -358,7 +358,7 @@ const CONFIG = {
     place: "Limerick, Ireland",
   },
 
-  /* ── CERTIFICAÇÕES ────────────────────────────────────────── */
+  /* CERTIFICAÇÕES */
   certs: [
     { bold: "CS50 SQL",                    rest: "— Harvard / edX (2024)" },
     { bold: "Power BI Experience",         rest: "— 130h, Maven Analytics (2024)" },
@@ -648,7 +648,7 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
 </footer>
 
 <script>
-/* ── RENDERER (não edite abaixo desta linha) ──────────────── */
+/* RENDERER */
 let L = 'en';
 const C = CONFIG;
 const t = k => C[L][k];
