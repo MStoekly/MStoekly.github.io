@@ -121,47 +121,45 @@ const CONFIG = {
   /* KPIs  (num e unit podem ser texto ou {en, pt}) */
   kpis: [
     {
-      tag:  "SEPL · SEIL",
+      tag:  {"en":"Paraná State","pt":"Estado do Paraná"},
       num:  {"en":"R$690M","pt":"R$ 690 mi"}, unit: "",
       sparkline: "0,16 10,15 20,11 30,6 46,2",
-      en: "in public works monitored across ~250 municipal agreements, on a data flow I redesigned",
-      pt: "em obras monitoradas em ~250 convênios municipais, com um fluxo de dados que redesenhei",
+      en: "in public works monitored, across ~250 municipal agreements",
+      pt: "em obras monitoradas, em ~250 convênios municipais",
     },
     {
-      tag:  "SEPL · SEIL",
-      num:  {"en":"Weekly","pt":"Semanal"}, unit: "",
-      sparkline: "0,4 14,5 22,8 32,13 46,17",
-      teal: true,
-      en: "update cycle for the municipal-agreement dashboards, up from monthly",
-      pt: "ciclo de atualização dos dashboards de convênios, antes mensal",
+      tag:  {"en":"Paraná State","pt":"Estado do Paraná"},
+      num:  "~100", unit: "",
+      en: "indicators analyzed in the State Competitiveness Ranking (CLP)",
+      pt: "indicadores analisados no Ranking de Competitividade dos Estados (CLP)",
     },
     {
-      tag:  "COPEL",
+      tag:  "Copel",
       num:  {"en":"~R$250M","pt":"~R$ 250 mi"}, unit: "",
       dark: true,
-      en: "in Copel-funded public works, tracked by an executive dashboard I built in 2 hours",
-      pt: "em obras financiadas pela Copel, acompanhadas por um dashboard executivo que montei em 2 horas",
+      en: "in works tracked on the Copel dashboard, built in 2 hours",
+      pt: "em obras no dashboard da Copel, montado em 2 horas",
     },
     {
-      tag:  "SEPL · SEIL",
-      num:  "10", unit: "+",
-      en: "dashboards for managers and administrative areas, including HR, Procurement and outsourced services",
-      pt: "dashboards para gestores e áreas administrativas, como RH, Compras e terceirizados",
+      tag:  {"en":"Paraná State","pt":"Estado do Paraná"},
+      num:  "20", unit: "+",
+      en: "dashboards for managers, HR and Procurement",
+      pt: "dashboards para gestores, RH e Compras",
     },
     {
       tag:  "Faurecia",
       num:  {"en":"R$1.5M","pt":"R$ 1,5 mi"}, unit: {"en":"→ 9 CT-e","pt":"→ 9 CT-es"},
       sparkline: "0,2 12,4 24,9 34,15 46,18",
       teal: true,
-      en: "freight backlog down to 9 pending documents in five months",
-      pt: "de passivo de fretes reduzido a 9 pendências em cinco meses",
+      en: "freight backlog, in five months",
+      pt: "passivo de fretes, em cinco meses",
     },
     {
       tag:  "Faurecia",
       num:  "86", unit: "%+",
       sparkline: "0,15 12,13 24,8 34,7 46,3",
-      en: "container utilization, beating the 80% operational target",
-      pt: "de ocupação dos contêineres, acima da meta operacional de 80%",
+      en: "container utilization, against an 80% target",
+      pt: "ocupação de contêineres, contra meta de 80%",
     },
   ],
 
@@ -312,7 +310,7 @@ const CONFIG = {
         bullets: [
           "Redesigned the data flow for monitoring ~250 municipal agreements covering R$ 690 million in public works. Standardized data entry and built SQL and Power Query transformations feeding Power BI dashboards. The solution removed manual preparation steps, raised the update frequency from monthly to weekly and gave managers clear visibility into project status.",
           "Built in 2 hours, with Power BI and Power Query, an executive version of the dashboard tracking ~R$ 250 million in public works funded by the privatization of Copel (state utility), starting from an existing prototype. Working directly with the director, I redesigned the visuals and added the information required for accountability to the State Audit Court, such as beneficiary municipalities and planned vs. transferred amounts. The director used it in his first public interview about the dashboard, which stayed in use after my transfer to another department.",
-          "Developed 10+ dashboards for managers and administrative areas, including HR, Procurement and outsourced-services management, tailoring each solution to the area and turning operational data into information for monitoring and decision-making.",
+          "Developed 20+ dashboards for managers and administrative areas, including HR, Procurement and outsourced-services management, tailoring each solution to the area and turning operational data into information for monitoring and decision-making.",
           "Standardized spreadsheet templates and automated Excel controls for areas with low analytical maturity, improving data organization and making the data usable for analysis and monitoring.",
           "As part of a team, analyzed ~100 indicators of the Brazilian State Competitiveness Ranking (CLP) and presented diagnostics to the responsible departments, helping identify improvement opportunities in the state's indicators.",
         ],
@@ -324,7 +322,7 @@ const CONFIG = {
         bullets: [
           "Redesenhei o fluxo de dados do monitoramento de aproximadamente 250 convênios municipais, abrangendo R$ 690 milhões em obras. Padronizei a entrada de dados e estruturei o tratamento em SQL e Power Query para alimentar dashboards em Power BI. A solução eliminou etapas de preparação manual para o monitoramento, elevou a frequência de atualização de mensal para semanal e ampliou a visibilidade dos gestores sobre o andamento dos processos.",
           "Desenvolvi em 2 horas, com Power BI e Power Query, uma versão executiva do dashboard de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas com recursos da privatização da Copel, partindo de um protótipo existente. Em alinhamento direto com o diretor, reformulei visualizações e incluí informações essenciais à prestação de contas ao Tribunal de Contas, como municípios beneficiados e valores previstos e repassados. A entrega foi utilizada pelo diretor em sua primeira entrevista pública sobre o dashboard, que permaneceu em atualização após minha realocação para outra secretaria.",
-          "Desenvolvi mais de 10 dashboards para gestores e áreas administrativas, incluindo RH, Compras e gestão de terceirizados, adaptando as soluções às necessidades de cada área e transformando dados operacionais em informações para acompanhamento e tomada de decisão.",
+          "Desenvolvi mais de 20 dashboards para gestores e áreas administrativas, incluindo RH, Compras e gestão de terceirizados, adaptando as soluções às necessidades de cada área e transformando dados operacionais em informações para acompanhamento e tomada de decisão.",
           "Padronizei modelos de planilhas e automatizei controles em Excel para áreas com baixa maturidade analítica, melhorando a organização dos dados e facilitando sua utilização em análises e monitoramentos.",
           "Em equipe, analisei aproximadamente 100 indicadores do Ranking de Competitividade dos Estados (CLP) e apresentei diagnósticos às secretarias responsáveis, apoiando a identificação de oportunidades de melhoria nos indicadores estaduais.",
         ],
@@ -510,7 +508,7 @@ section{padding-top:84px;padding-bottom:84px}
 .kpi.dark::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,80%) var(--my,20%),rgba(232,165,90,.16),transparent 55%);pointer-events:none;transition:opacity .3s}
 .spark-line{position:absolute;right:18px;top:22px;width:46px;height:20px;opacity:.6;overflow:visible;transform-origin:right top;transition:opacity .25s,transform .35s var(--ease)}
 .kpi:hover .spark-line{opacity:1;transform:scale(1.25)}
-.js .spark-line polyline{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.3s var(--ease) .35s}
+.js .spark-line polyline{stroke-dasharray:var(--len,60);stroke-dashoffset:var(--len,60);transition:stroke-dashoffset 1.3s var(--ease) .35s}
 .js .kpi.in .spark-line polyline{stroke-dashoffset:0}
 .spark-line circle{opacity:0;transition:opacity .3s 1.5s}
 .kpi.in .spark-line circle,html:not(.js) .spark-line circle{opacity:1}
@@ -900,11 +898,11 @@ function render(){
     const pn = parseNum(num);
     const last = k.sparkline ? k.sparkline.trim().split(' ').pop().split(',') : null;
     const col = k.teal ? 'var(--teal)' : 'var(--primary)';
-    const sp = k.sparkline ? `<svg class="spark-line" viewBox="0 0 46 20"><polyline points="${k.sparkline}" pathLength="1" fill="none" stroke="${col}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="${last[0]}" cy="${last[1]}" r="2" fill="${col}"/></svg>` : '';
+    const sp = k.sparkline ? `<svg class="spark-line" viewBox="0 0 46 20"><polyline points="${k.sparkline}" fill="none" stroke="${col}" stroke-width="1.6" stroke-linejoin="round"/><circle cx="${last[0]}" cy="${last[1]}" r="2" fill="${col}"/></svg>` : '';
     const countAttr = pn ? ` data-count="${pn.n}" data-pre="${pn.pre}" data-post="${pn.post}"` : '';
     return `<div class="kpi reveal${k.dark?' dark':''}" style="--d:${i}">
       ${sp}
-      <span class="ktag">${k.tag}</span>
+      <span class="ktag">${tr(k.tag)}</span>
       <span class="num"><span class="nv"${countAttr}>${num}</span><span class="unit">${tr(k.unit)}</span></span>
       <span class="lbl">${k[L]}</span>
     </div>`;
@@ -995,6 +993,7 @@ function render(){
   const la = document.getElementById('foot-li');
   la.href = 'https://'+C.linkedin; la.querySelector('span').textContent = C.linkedin;
 
+  document.querySelectorAll('.spark-line polyline').forEach(pl=>pl.style.setProperty('--len', Math.ceil(pl.getTotalLength()) + 2));
   bindKpis();
 }
 
@@ -1047,7 +1046,7 @@ function bindKpis(){
     if(!line || REDUCE) return;
     k.addEventListener('pointerenter', ()=>{
       if(!k.classList.contains('in')) return;
-      line.style.transition = 'none'; line.style.strokeDashoffset = '1';
+      line.style.transition = 'none'; line.style.strokeDashoffset = line.style.getPropertyValue('--len');
       line.getBoundingClientRect();
       line.style.transition = 'stroke-dashoffset .9s cubic-bezier(.2,.7,.2,1)'; line.style.strokeDashoffset = '0';
     });
