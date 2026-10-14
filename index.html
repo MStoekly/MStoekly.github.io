@@ -33,6 +33,10 @@ const CONFIG = {
   location_en: "Curitiba, Brazil · Remote, hybrid or on-site · Open to relocation",
   location_pt: "Curitiba, PR · Remoto, híbrido ou presencial · Aberto a realocação",
   portfolio: "mstoekly.github.io",
+  cv: {
+    en: "cv/Mateus_Stoekly_Business_Data_Analyst_CV.pdf",
+    pt: "cv/Mateus_Stoekly_Analista_de_Dados_CV.pdf",
+  },
 
   /* TEXTOS INGLÊS */
   en: {
@@ -46,6 +50,7 @@ const CONFIG = {
                 I connect data, processes and departments to spot opportunities and solve business problems.`,
     cta_proj:  "View projects",
     cta_li:    "Connect on LinkedIn",
+    cta_cv:    "Download CV",
 
     kpi_tag:   "Career at a glance",
     kpi_h2:    "My career, as a dashboard.",
@@ -88,6 +93,7 @@ const CONFIG = {
                 dados, processos e áreas distintas, identificar oportunidades e resolver problemas de negócio.`,
     cta_proj:  "Ver projetos",
     cta_li:    "Conectar no LinkedIn",
+    cta_cv:    "Baixar currículo",
 
     kpi_tag:   "A carreira em números",
     kpi_h2:    "Minha carreira, em formato de dashboard.",
@@ -321,10 +327,10 @@ const CONFIG = {
         note: "Atuação como analista de dados em núcleos de planejamento setorial, inicialmente na SEPL e posteriormente na SEIL.",
         bullets: [
           "Redesenhei o fluxo de dados do monitoramento de aproximadamente 250 convênios municipais, abrangendo R$ 690 milhões em obras. Padronizei a entrada de dados e estruturei o tratamento em SQL e Power Query para alimentar dashboards em Power BI. A solução eliminou etapas de preparação manual para o monitoramento, elevou a frequência de atualização de mensal para semanal e ampliou a visibilidade dos gestores sobre o andamento dos processos.",
-          "Desenvolvi em 2 horas, com Power BI e Power Query, uma versão executiva do dashboard de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas com recursos da privatização da Copel, partindo de um protótipo existente. Em alinhamento direto com o diretor, reformulei visualizações e incluí informações essenciais à prestação de contas ao Tribunal de Contas, como municípios beneficiados e valores previstos e repassados. A entrega foi utilizada pelo diretor em sua primeira entrevista pública sobre o dashboard, que permaneceu em atualização após minha realocação para outra secretaria.",
+          "Desenvolvi em 2 horas, com Power BI e Power Query, uma versão executiva do dashboard de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas com recursos da privatização da Copel, partindo de um protótipo existente. Em alinhamento direto com o diretor, reformulei visualizações e incluí informações essenciais à prestação de contas ao Tribunal de Contas, como municípios beneficiados e valores previstos e repassados. A entrega foi utilizada pelo diretor em sua primeira entrevista pública sobre o dashboard, que permaneceu em atualização até o presente momento, após minha realocação para outra secretaria.",
           "Desenvolvi mais de 20 dashboards para gestores e áreas administrativas, incluindo RH, Compras e gestão de terceirizados, adaptando as soluções às necessidades de cada área e transformando dados operacionais em informações para acompanhamento e tomada de decisão.",
           "Padronizei modelos de planilhas e automatizei controles em Excel para áreas com baixa maturidade analítica, melhorando a organização dos dados e facilitando sua utilização em análises e monitoramentos.",
-          "Em equipe, analisei aproximadamente 100 indicadores do Ranking de Competitividade dos Estados (CLP) e apresentei diagnósticos às secretarias responsáveis, apoiando a identificação de oportunidades de melhoria nos indicadores estaduais.",
+          "Em equipe, analisei de maneira aprofundada aproximadamente 100 indicadores do Ranking de Competitividade dos Estados (CLP) e apresentei diagnósticos às secretarias responsáveis, apoiando a identificação de oportunidades de melhoria nos indicadores estaduais.",
         ],
       },
     },
@@ -742,6 +748,7 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
     <p class="lead" id="h-lead"></p>
     <div class="hero-cta">
       <a href="#projetos" class="btn btn-primary"><span id="h-cta1"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#" class="btn btn-ghost" id="h-cta3" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span></span></a>
       <a href="#" target="_blank" rel="noopener" class="btn btn-ghost" id="h-cta2"></a>
     </div>
   </header>
@@ -829,6 +836,7 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
       <h3 id="foot-h" class="reveal"></h3>
       <div class="f-contact reveal" style="--d:1">
         <a id="foot-email" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span></span></a>
+        <a id="foot-cv" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span></span></a>
         <a id="foot-li" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg><span></span></a>
         <a href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="foot-loc"></span></a>
       </div>
@@ -889,6 +897,10 @@ function render(){
   const cta2 = document.getElementById('h-cta2');
   cta2.textContent = t('cta_li');
   cta2.href = 'https://' + C.linkedin;
+  const cvFile = C.cv[L];
+  const cta3 = document.getElementById('h-cta3');
+  cta3.href = cvFile; cta3.setAttribute('download', cvFile.split('/').pop());
+  cta3.querySelector('span').textContent = t('cta_cv');
 
   // KPI
   document.getElementById('kpi-tag').textContent = t('kpi_tag');
@@ -990,6 +1002,8 @@ function render(){
   document.getElementById('foot-brand').textContent = `${C.name} · ${L==='pt' ? C.role_pt : C.role_en}`;
   const ea = document.getElementById('foot-email');
   ea.href = 'mailto:'+C.email; ea.querySelector('span').textContent = C.email;
+  const fc = document.getElementById('foot-cv');
+  fc.href = cvFile; fc.setAttribute('download', cvFile.split('/').pop()); fc.querySelector('span').textContent = t('cta_cv');
   const la = document.getElementById('foot-li');
   la.href = 'https://'+C.linkedin; la.querySelector('span').textContent = C.linkedin;
 
@@ -1269,6 +1283,14 @@ render();
 observeReveals();
 
 addEventListener('beforeprint', settleAll);
+
+// Ctrl/Cmd+P opens the real CV (PDF) in the current language, so printing from there gives the exact document
+addEventListener('keydown', e=>{
+  if(!(e.ctrlKey || e.metaKey) || e.shiftKey || e.altKey || e.key.toLowerCase() !== 'p') return;
+  e.preventDefault();
+  const w = window.open(C.cv[L], '_blank');
+  if(w){ w.opener = null; } else { window.print(); }
+});
 
 /* ---------- EASTER EGGS ---------- */
 
