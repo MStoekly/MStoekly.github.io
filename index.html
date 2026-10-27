@@ -15,9 +15,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://mstoekly.github.io/og-image.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23faf9f5'/><path d='M16 2c1 6.8 3.2 9 9 10-6.8 1-9 3.2-10 10-1-6.8-3.2-9-9-10 6.8-1 9-3.2 10-10z' fill='%23cc785c'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 
 <!-- EDIT ZONE -->
@@ -28,6 +25,9 @@ const CONFIG = {
   name:      "Mateus Stoekly",
   role_en:   "Business Data Analyst",
   role_pt:   "Analista de Dados de Negócios",
+  /* ANALYTICS (sem cookies). Para ativar: crie uma conta grátis em goatcounter.com e coloque aqui só o código do site (ex.: "mateus"). Vazio = nada é carregado nem enviado. */
+  analytics: { goatcounter: "" },
+
   email:     "mateus.stoekly@gmail.com",
   linkedin:  "linkedin.com/in/mateusstoekly/",
   location_en: "Curitiba, Brazil · Remote, hybrid or on-site · Open to relocation",
@@ -76,6 +76,7 @@ const CONFIG = {
 
     badge_live: "Live",
     badge_case: "Case",
+    badge_open: "Open data",
     view_dash:  "View live dashboard",
     present:    "present",
     egg_toast:  "Data, organized. Now, what's the decision?",
@@ -119,6 +120,7 @@ const CONFIG = {
 
     badge_live: "Ao vivo",
     badge_case: "Case",
+    badge_open: "Dados abertos",
     view_dash:  "Ver dashboard ao vivo",
     present:    "atual",
     egg_toast:  "Dados organizados. Agora, qual é a decisão?",
@@ -143,22 +145,22 @@ const CONFIG = {
       tag:  "Copel",
       num:  {"en":"~R$250M","pt":"~R$ 250 mi"}, unit: "",
       dark: true,
-      en: "in works tracked on the Copel dashboard, built in 2 hours",
-      pt: "em obras no dashboard da Copel, montado em 2 horas",
+      en: "in works on the Copel dashboard, executive version built in 2 hours",
+      pt: "em obras no dashboard da Copel, versão executiva montada em 2 horas",
     },
     {
       tag:  {"en":"Paraná State","pt":"Estado do Paraná"},
       num:  "20", unit: "+",
-      en: "dashboards for managers, HR and Procurement",
-      pt: "dashboards para gestores, RH e Compras",
+      en: "dashboards for managers and admin areas, incl. HR and Procurement",
+      pt: "dashboards para gestores e áreas administrativas, como RH e Compras",
     },
     {
       tag:  "Faurecia",
       num:  {"en":"R$1.5M","pt":"R$ 1,5 mi"}, unit: {"en":"→ 9 CT-e","pt":"→ 9 CT-es"},
       sparkline: "0,2 12,4 24,9 34,15 46,18",
       teal: true,
-      en: "freight backlog, in five months",
-      pt: "passivo de fretes, em cinco meses",
+      en: "freight backlog helped down to 9 pending documents, in five months",
+      pt: "ajudei a reduzir o passivo de fretes a 9 pendências, em cinco meses",
     },
     {
       tag:  "Faurecia",
@@ -169,6 +171,140 @@ const CONFIG = {
     },
   ],
 
+  /* ANÁLISE ABERTA (resultado de analysis/run.py) */
+  analysis: {
+    "rows": [
+        {
+            "r": 1,
+            "m": "Petroleum engineering",
+            "pay": 110000,
+            "n": 36
+        },
+        {
+            "r": 2,
+            "m": "Mining and mineral engineering",
+            "pay": 75000,
+            "n": 7
+        },
+        {
+            "r": 3,
+            "m": "Metallurgical engineering",
+            "pay": 73000,
+            "n": 3
+        },
+        {
+            "r": 4,
+            "m": "Naval architecture and marine engineering",
+            "pay": 70000,
+            "n": 16
+        },
+        {
+            "r": 5,
+            "m": "Chemical engineering",
+            "pay": 65000,
+            "n": 289
+        },
+        {
+            "r": 6,
+            "m": "Nuclear engineering",
+            "pay": 65000,
+            "n": 17
+        },
+        {
+            "r": 7,
+            "m": "Actuarial science",
+            "pay": 62000,
+            "n": 51
+        },
+        {
+            "r": 8,
+            "m": "Astronomy and astrophysics",
+            "pay": 62000,
+            "n": 10
+        },
+        {
+            "r": 9,
+            "m": "Mechanical engineering",
+            "pay": 60000,
+            "n": 1029
+        },
+        {
+            "r": 10,
+            "m": "Electrical engineering",
+            "pay": 60000,
+            "n": 631
+        }
+    ],
+    "dropped": [
+        "Mining and mineral engineering",
+        "Metallurgical engineering",
+        "Naval architecture and marine engineering",
+        "Nuclear engineering",
+        "Astronomy and astrophysics"
+    ],
+    "entered": [
+        "Engineering mechanics physics and science",
+        "Aerospace engineering",
+        "Computer engineering",
+        "Industrial and manufacturing engineering",
+        "Biomedical engineering"
+    ],
+    "repo": "https://github.com/MStoekly/MStoekly.github.io/blob/main/analysis/",
+    "source": "https://github.com/fivethirtyeight/data/tree/master/college-majors",
+    "thin_in_top10": 5,
+    "survive": 5,
+    "pct_under_30": 18,
+    sql: `SELECT
+    Rank                                AS rank_headline,
+    Major,
+    Median                              AS median_pay,
+    Sample_size                         AS respondents,
+    Sample_size < 30                    AS too_thin
+FROM grads
+ORDER BY Rank
+LIMIT 10;
+
+WITH scored AS (
+    SELECT
+        Rank,
+        Major,
+        Median,
+        Sample_size,
+        Median * (1 - Unemployment_rate) AS expected_pay
+    FROM grads
+    WHERE Sample_size >= 30
+)
+SELECT
+    RANK() OVER (ORDER BY expected_pay DESC) AS rank_reliable,
+    Major,
+    round(expected_pay)                       AS expected_pay,
+    Sample_size                               AS respondents,
+    Rank                                      AS rank_headline
+FROM scored
+ORDER BY rank_reliable
+LIMIT 10;`,
+    en: {
+      legend_ok: "30+ respondents", legend_thin: "Under 30 (too thin to rank on)",
+      axis: "Respondents behind each number (log scale)", cutoff: "cutoff",
+      view_table: "View as table", view_chart: "View as chart", show_sql: "Show the SQL",
+      th: ["#", "Major", "Median pay", "Respondents", "Status"], ok: "OK", thin: "Too thin",
+      thin_short: "thin", pay: "median pay", n: "respondents", fixed_title: "After the fix",
+      out: "Out of the top 10", in_: "In the top 10",
+      note: "The 30-respondent cutoff is a rule of thumb. Data: FiveThirtyEight, built from US Census Bureau survey data (ACS 2010-2012), CC BY 4.0. Petroleum engineering (n=36) sits just above the cutoff. It is an older US cut, so read it for the method, not for today's salaries.",
+      chart_label: "Bar chart: respondents behind each of the 10 best-paid majors",
+    },
+    pt: {
+      legend_ok: "30+ respondentes", legend_thin: "Menos de 30 (pouco para ranquear)",
+      axis: "Respondentes por trás de cada número (escala log)", cutoff: "corte",
+      view_table: "Ver como tabela", view_chart: "Ver como gráfico", show_sql: "Mostrar o SQL",
+      th: ["#", "Curso", "Salário mediano", "Respondentes", "Status"], ok: "OK", thin: "Pouco dado",
+      thin_short: "pouco", pay: "salário mediano", n: "respondentes", fixed_title: "Depois da correção",
+      out: "Saem do top 10", in_: "Entram no top 10",
+      note: "O corte de 30 respondentes é uma regra prática. Dados: FiveThirtyEight, a partir de pesquisa do Censo dos EUA (ACS 2010-2012), CC BY 4.0. Engenharia de petróleo (n=36) fica logo acima do corte. É um recorte antigo dos EUA, então vale pelo método, não pelos salários de hoje. Os nomes dos cursos ficam em inglês, como na fonte.",
+      chart_label: "Gráfico de barras: respondentes por trás de cada um dos 10 cursos mais bem pagos",
+    },
+  },
+
   /* PROJETOS */
   projects: [
     {
@@ -178,27 +314,24 @@ const CONFIG = {
       stack: ["Power BI", "Power Query"],
       en: {
         title: "Copel Resource-Allocation Dashboard",
-        sub: "Public accountability · built in 2 hours",
+        sub: "Public accountability · executive version in 2 hours",
         body: `The state was tracking about R$250 million in public works funded by the privatization of Copel,
                 and a prototype dashboard already existed. Working directly with the director, I turned it into an
                 executive version in 2 hours. I redesigned the visuals and added what the State Audit Court needs for
                 accountability, such as beneficiary municipalities and planned vs. transferred amounts. The director
                 used it in his first public interview about the dashboard, and it stayed in use after I moved to
-                another department. The plan it tracked was also the subject of
-                <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1's investigative coverage</a>.`,
+                another department. The spending plan was also covered by <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1</a>.`,
         insight: "Building it fast was the easy part. The value was knowing what an audit court needs to see.",
       },
       pt: {
         title: "Dashboard do Plano de Aplicação dos Recursos da Copel",
-        sub: "Prestação de contas · montado em 2 horas",
+        sub: "Prestação de contas · versão executiva em 2 horas",
         body: `O estado acompanhava cerca de R$ 250 milhões em obras financiadas com a privatização da Copel,
                 e já existia um protótipo de dashboard. Em alinhamento direto com o diretor, transformei o protótipo
                 numa versão executiva em 2 horas. Reformulei as visualizações e incluí o que o Tribunal de Contas
                 precisa para a prestação de contas, como os municípios beneficiados e os valores previstos e
                 repassados. O diretor usou o painel em sua primeira entrevista pública sobre o assunto, e ele
-                continuou sendo atualizado depois que fui realocado para outra secretaria. O plano acompanhado
-                também foi tema de reportagem investigativa do
-                <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1 (Fiscaliza)</a>.`,
+                continuou em uso depois que fui realocado para outra secretaria. O plano de aplicação também foi noticiado pelo <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1</a>.`,
         insight: "Montar rápido era a parte fácil. O valor estava em saber o que um tribunal de contas precisa enxergar.",
       },
     },
@@ -206,26 +339,50 @@ const CONFIG = {
       idx:  "02",
       live: true,
       url:  "https://app.powerbi.com/view?r=eyJrIjoiMjdmZjNlNjItODI0Ny00MWRiLTgzMDgtZTVhN2M5ZmI0NTViIiwidCI6IjZlY2NiMTczLTA1OTUtNGE3MS05OGI3LTE4ZDFmNDkyMzA4NCJ9",
-      stack: ["Power BI", "Power Query", "VBA"],
+      stack: ["Power BI", "Power Query"],
       en: {
         title: "CLP State Competitiveness Ranking Analysis",
-        sub:   "Benchmarking · 10 pillars · ~100 indicators",
+        sub:   "Team analysis · ~100 indicators",
         body:  `As part of a team, I analyzed about 100 indicators of the Brazilian State Competitiveness Ranking
-                (CLP) and presented diagnostics to the departments responsible for them. That helped each one see
-                where its indicators had room to improve.`,
-        insight: "Reading a weak metric critically matters as much as building a good one. I pointed out where the methodology distorted things and where it genuinely meant something.",
+                (CLP) and presented diagnostics to the departments responsible for them. That helped identify
+                where the state's indicators had room to improve.`,
+        insight: "A ranking is only useful once each department can see which of its own numbers to act on.",
       },
       pt: {
         title: "Análise do Ranking de Competitividade dos Estados (CLP)",
-        sub:   "Benchmark · 10 pilares · ~100 indicadores",
+        sub:   "Análise em equipe · ~100 indicadores",
         body:  `Em equipe, analisei cerca de 100 indicadores do Ranking de Competitividade dos Estados (CLP) e
-                apresentei diagnósticos às secretarias responsáveis. Isso ajudou cada uma a enxergar onde seus
-                indicadores tinham espaço para melhorar.`,
-        insight: "Ler com olho crítico um indicador fraco vale tanto quanto construir um bom. Apontei onde a metodologia distorcia e onde ela de fato fazia sentido.",
+                apresentei diagnósticos às secretarias responsáveis. Isso ajudou a identificar onde os
+                indicadores do estado tinham espaço para melhorar.`,
+        insight: "Um ranking só serve quando cada secretaria enxerga quais dos seus números pedem ação.",
       },
     },
     {
       idx:  "03",
+      live: false,
+      open: true,
+      analysis: true,
+      url:  null,
+      links: [
+        { url: "https://github.com/MStoekly/MStoekly.github.io/blob/main/analysis/majors.sql", en: "View the query", pt: "Ver a query" },
+        { url: "https://github.com/MStoekly/MStoekly.github.io/blob/main/analysis/run.py", en: "Run it yourself", pt: "Rodar por conta própria" },
+      ],
+      stack: ["SQL", "DuckDB"],
+      en: {
+        title: "Best-paid majors: who is behind each number?",
+        sub:   "Personal project · open data · SQL",
+        body:  `The usual "best-paid majors" list ranks by median pay. I took the survey data behind it (173 majors) and checked how many graduates each number rests on. Five of the top 10 rest on fewer than 30 respondents, and the #2, mining engineering, rests on 7. Drop those five and 5 of the original 10 remain. Re-ranking the rest by expected pay (median pay x employment rate, with 30+ respondents) brings in five different majors. The SQL is below.`,
+        insight: "Before ranking anything, check how many people each number rests on.",
+      },
+      pt: {
+        title: "Cursos mais bem pagos: quem está por trás de cada número?",
+        sub:   "Projeto pessoal · dados abertos · SQL",
+        body:  `A lista de "cursos mais bem pagos" costuma ranquear pelo salário mediano. Peguei os dados da pesquisa por trás dela (173 cursos) e conferi em quantos formados cada número se apoia. Cinco dos 10 primeiros têm menos de 30 respondentes, e o segundo, engenharia de minas, tem 7. Tirando esses cinco, restam 5 dos 10 originais. Reranqueando o resto por salário esperado (mediana x taxa de emprego, com 30+ respondentes), entram cinco cursos diferentes. O SQL está abaixo.`,
+        insight: "Antes de ranquear qualquer coisa, confira em quantas pessoas cada número se apoia.",
+      },
+    },
+    {
+      idx:  "04",
       live: false,
       url:  null,
       stack: ["SQL", "Power Query", "Power BI"],
@@ -250,32 +407,32 @@ const CONFIG = {
       },
     },
     {
-      idx:  "04",
+      idx:  "05",
       live: false,
       url:  null,
       stack: ["Power BI", {"en":"Stakeholder mgmt","pt":"Gestão de stakeholders"}],
       en: {
         title: "Data adoption in a resistant environment",
         sub:   "Product + behavioral strategy",
-        body:  `I worked as a sort of Planning consultant embedded in Infrastructure, with no internal
-                authority and teams that weren't keen to help. Instead of escalating, I took the little
+        body:  `I worked from Planning with the Infrastructure teams, without formal authority over
+                the people who held the data. Instead of escalating, I took the little
                 data that already existed and turned it into BI people actually found useful. Usefulness
                 became the hook: the more useful it got, the more (and better) data the teams handed over.`,
-        insight: "It was a political and behavioral problem, and I solved it with product thinking. Getting data out of people who don't want to share it is something few analysts learn to do.",
+        insight: "It was a political and behavioral problem, and I solved it with product thinking.",
       },
       pt: {
         title: "Adoção de dados em ambiente resistente",
         sub:   "Estratégia de produto + comportamento",
-        body:  `Eu era uma espécie de consultor do Planejamento dentro da Infraestrutura, sem
-                autoridade interna e com equipes pouco dispostas a ajudar. Em vez de levar o problema
+        body:  `Eu atuava a partir do Planejamento junto às equipes da Infraestrutura, sem
+                autoridade formal sobre quem detinha os dados. Em vez de levar o problema
                 para cima, peguei os poucos dados que já existiam e transformei em BI que era de fato
                 útil. A utilidade virou isca: quanto mais útil, mais (e melhores) dados as equipes
                 passavam a entregar.`,
-        insight: "Era um problema político e comportamental, e resolvi com pensamento de produto. Tirar dado de quem não quer dar é algo que pouco analista aprende a fazer.",
+        insight: "Era um problema político e comportamental, e resolvi com pensamento de produto.",
       },
     },
     {
-      idx:  "05",
+      idx:  "06",
       live: false,
       url:  null,
       stack: ["Excel / VBA", "SAP"],
@@ -284,22 +441,22 @@ const CONFIG = {
         sub:   "Faurecia · efficiency & initiative",
         body:  `I built three Excel/VBA automations, tied into SAP, for freight validation, for correcting entries
                 returned by Controllership and for updating source records. Processing dropped from a full day to
-                about 3 hours, and within five months a R$1.5 million backlog was down to just 9 pending freight
-                documents (CT-e). With the time that freed up, I took over container allocation and built a
+                about 3 hours, and within five months I helped bring a R$1.5 million backlog down to just 9 pending freight
+                documents (CT-e, freight transport records). With the time that freed up, I took over container allocation and built a
                 load-optimization tool that kept utilization above 86%, against an 80% target. I also managed
                 international freight with China and France for several plants.`,
-        insight: "I automate myself out of repetitive work and put that time back into something worth more.",
+        insight: "The time freed by automating the repetitive work went into a bigger role.",
       },
       pt: {
         title: "Automação de fretes → segunda função",
         sub:   "Faurecia · eficiência e iniciativa",
         body:  `Desenvolvi três automações em Excel/VBA, integradas ao SAP, para validar fretes, corrigir lançamentos
                 devolvidos pela Controladoria e atualizar registros de origem. O processamento caiu de um dia para
-                cerca de 3 horas e, em cinco meses, o passivo de R$ 1,5 milhão chegou a apenas 9 CT-es pendentes.
+                cerca de 3 horas e, em cinco meses, ajudei a reduzir um passivo de R$ 1,5 milhão a apenas 9 CT-es (conhecimentos de transporte) pendentes.
                 Com o tempo que sobrou, assumi a alocação de contêineres e criei uma ferramenta de otimização de
                 carga que manteve a ocupação acima de 86%, contra uma meta de 80%. Também cuidei de fretes
                 internacionais com China e França para várias plantas.`,
-        insight: "Eu me automatizo para fora do trabalho repetitivo e devolvo esse tempo em algo que gera mais valor.",
+        insight: "O tempo liberado pela automação do trabalho repetitivo foi para uma função maior.",
       },
     },
   ],
@@ -361,7 +518,7 @@ const CONFIG = {
   /* COMPETÊNCIAS (chips por grupo) */
   skills: [
     { en: "Data & BI",    pt: "Dados e BI",
-      chips: ["SQL","Power BI","DAX","Power Query (M)",{"en":"Data Modeling","pt":"Modelagem de Dados"},"ETL",{"en":"Data Visualization","pt":"Visualização de Dados"},{"en":"Data Governance","pt":"Governança de Dados"}] },
+      chips: ["SQL","Power BI","DAX","Power Query (M)",{"en":"Data Modeling","pt":"Modelagem de Dados"},"ETL",{"en":"Data Visualization","pt":"Visualização de Dados"}] },
     { en: "Analysis",     pt: "Análise",
       chips: ["Business Intelligence",{"en":"KPI Monitoring","pt":"Monitoramento de Indicadores"},"Dashboards",{"en":"Automation","pt":"Automação"}] },
     { en: "Tooling",      pt: "Ferramentas",
@@ -407,6 +564,17 @@ const CONFIG = {
 =============================================================== -->
 
 <style>
+@font-face{font-family:'Lora';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lora-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/lora-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/lora-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/lora-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Lora';font-style:italic;font-weight:500;font-display:swap;src:url(fonts/lora-latin-500-italic.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format('woff2')}
+
 :root{
   --canvas:#faf9f5;--surface-soft:#f5f0e8;--surface-card:#efe9de;--cream-strong:#e8e0d2;
   --dark:#181715;--dark-elevated:#252320;
@@ -424,7 +592,7 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:500;letter-spa
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-left:28px;padding-right:28px}
 @media(max-width:560px){.wrap{padding-left:20px;padding-right:20px}}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--primary);display:inline-flex;align-items:center;gap:8px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--primary-active);display:inline-flex;align-items:center;gap:8px}
 .spark{display:inline-block;width:13px;height:13px;flex:none}
 #content{transition:opacity .18s ease}
 #content.swapping{opacity:0}
@@ -468,8 +636,8 @@ nav.scrolled{box-shadow:0 10px 30px -22px rgba(20,20,19,.45)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .btn{font-family:var(--sans);font-size:14px;font-weight:600;padding:0 22px;height:46px;display:inline-flex;align-items:center;gap:8px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:background .18s,border-color .18s,transform .18s,box-shadow .18s}
 .btn svg{transition:transform .25s var(--ease)}
-.btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 20px -12px rgba(204,120,92,.9)}
-.btn-primary:hover{background:var(--primary-active);transform:translateY(-1px)}
+.btn-primary{background:var(--primary-active);color:#fff;box-shadow:0 8px 20px -12px rgba(204,120,92,.9)}
+.btn-primary:hover{background:#8f4731;transform:translateY(-1px)}
 .btn-primary:hover svg{transform:translateX(3px)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--hairline)}
 .btn-ghost:hover{background:var(--surface-card);border-color:var(--cream-strong);transform:translateY(-1px)}
@@ -555,6 +723,48 @@ section{padding-top:84px;padding-bottom:84px}
 .view-link svg{width:14px;height:14px;transition:transform .25s var(--ease)}
 .view-link:hover svg{transform:translate(2px,-2px)}
 
+
+/* ANÁLISE ABERTA */
+.an{margin-top:20px}
+.an-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;justify-content:space-between}
+.an-leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--body)}
+.an-leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.an-ok{background:#4a4a46}.an-thin{background:#a9583e}
+.an-btn{font:inherit;font-size:12.5px;font-weight:600;color:var(--primary-active);background:none;border:1px solid var(--hairline);border-radius:9999px;padding:5px 12px;cursor:pointer}
+.an-btn:hover{border-color:var(--primary)}
+.an-bars{margin-top:10px}
+.an-bar{position:relative}
+.an-bar::after{content:"";position:absolute;left:var(--cut);top:-4px;bottom:-4px;border-left:1.5px dashed var(--body)}
+.an-leg .cut{display:inline-block;width:0;height:11px;border-left:1.5px dashed var(--body);margin-right:8px;vertical-align:-2px}
+.an-row{padding:7px 0}
+.an-line{display:flex;align-items:baseline;gap:8px;font-size:13.5px;color:var(--body-strong)}
+.an-line .r{font-family:var(--mono);font-size:11.5px;color:var(--muted);width:22px;flex:none}
+.an-line .m{flex:1;min-width:0}
+.an-line .pay{font-family:var(--mono);font-size:12px;color:var(--muted);flex:none}
+.an-tag{font-size:10.5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--primary-active);border:1px solid var(--primary-active);border-radius:4px;padding:0 5px;flex:none}
+.an-track{display:flex;align-items:center;gap:8px;margin-top:4px}
+.an-bar{flex:1;height:10px}
+.an-bar b{display:block;height:100%;border-radius:0 4px 4px 0}
+.js .an-bar b{transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
+.js .card.open .an-bar b{transform:none}
+.an-n{font-family:var(--mono);font-size:12px;color:var(--body-strong);width:58px;text-align:right;flex:none}
+.an-fix{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.an-fix div{background:var(--canvas);border:1px solid var(--hairline);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--body)}
+.an-fix h4{font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.an-fix ul{list-style:none;padding:0}
+.an-fix li{padding:2px 0}
+@media(max-width:560px){.an-fix{grid-template-columns:1fr}}
+.an-tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:14px}
+.an-tbl th,.an-tbl td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--hairline)}
+.an-tbl th{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.an-tbl td:nth-child(3),.an-tbl td:nth-child(4){font-family:var(--mono);white-space:nowrap}
+.an-wrap{overflow-x:auto}
+.an details{margin-top:16px;border:1px solid var(--hairline);border-radius:8px;background:var(--canvas)}
+.an summary{cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;color:var(--primary-active)}
+.an pre{margin:0;padding:4px 14px 14px;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.55;color:var(--body-strong)}
+.an-note{margin-top:14px;font-size:12.5px;color:var(--muted);max-width:70ch}
+.an-links{display:flex;flex-wrap:wrap;gap:6px 18px}
+
 /* TIMELINE */
 .tl{position:relative;padding-left:26px}
 .tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1.5px;background:var(--hairline)}
@@ -577,7 +787,7 @@ section{padding-top:84px;padding-bottom:84px}
 .cols{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
 @media(max-width:780px){.cols{grid-template-columns:1fr;gap:40px}}
 .skill-group{margin-bottom:22px}
-.skill-group h4{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
+.skill-group h3{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
 .skill-group .stack .chip{font-family:var(--sans);font-size:13px;padding:6px 13px;border-radius:9999px;background:var(--surface-card);border-color:var(--hairline);transition:background .2s,border-color .2s,color .2s,transform .2s}
 .skill-group .stack .chip:hover{background:var(--canvas);border-color:var(--primary);color:var(--ink);transform:translateY(-1px)}
 .lang-row{margin-bottom:16px}
@@ -592,7 +802,7 @@ section{padding-top:84px;padding-bottom:84px}
 /* EDU / CERTS */
 .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 @media(max-width:680px){.mini-grid{grid-template-columns:1fr;gap:32px}}
-.mini h4{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.mini h3{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 .ei-deg{font-family:var(--serif);font-size:18px;color:var(--ink)}
 .ei-sch{font-size:14px;color:var(--body)}
 .ei-when{font-family:var(--mono);font-size:12px;color:var(--muted-soft);margin-top:2px}
@@ -689,7 +899,7 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
   .tl-item::before{left:-14pt}
   .cols{grid-template-columns:1.3fr 1fr;gap:20pt}
   .skill-group{margin-bottom:5pt}
-  .skill-group h4,.mini h4{margin-bottom:4pt}
+  .skill-group h3,.mini h3{margin-bottom:4pt}
   .lang-row{margin-bottom:6pt}
   .sec-head .eyebrow{display:none}
   .skill-group .stack .chip{font-size:8pt;padding:2pt 7pt;background:#fff!important}
@@ -719,7 +929,7 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="n-brand"></span></a>
+    <a href="#top" class="brand"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="n-brand">Mateus Stoekly</span></a>
     <div class="nav-links">
       <a href="#projetos" id="n-0"></a>
       <a href="#experiencia" id="n-1"></a>
@@ -739,13 +949,14 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
   <div class="ph-contact"><span id="ph-email"></span><br><span id="ph-li"></span><br><span id="ph-loc"></span></div>
 </div>
 
+<main id="main">
 <!-- HERO -->
 <div class="hero-shell" id="hero-shell">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
   <header class="hero wrap" id="top">
-    <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="h-tag"></span></span>
-    <h1 id="h-h1"></h1>
-    <p class="lead" id="h-lead"></p>
+    <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="h-tag" data-l="en">Business Data Analyst · SQL · Power BI · Excel</span></span>
+    <h1 id="h-h1" data-l="en"><span class="w" style="--i:0">Business</span> <span class="w" style="--i:1"><em>before</em></span> <span class="w" style="--i:2">data.</span></h1>
+    <p class="lead" id="h-lead" data-l="en">Data analyst with a background in <em>International Business</em> and hands-on experience in Business Intelligence, automation and KPI monitoring. Proficient in SQL, Power BI and Excel/VBA, I combine analytical skills with business sense to turn operational problems into solutions that support decisions and deliver measurable results. A generalist with a systems view, I connect data, processes and departments to spot opportunities and solve business problems.</p>
     <div class="hero-cta">
       <a href="#projetos" class="btn btn-primary"><span id="h-cta1"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a href="#" class="btn btn-ghost" id="h-cta3" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span></span></a>
@@ -810,26 +1021,27 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
 <section class="wrap">
   <div class="mini-grid">
     <div class="mini reveal">
-      <h4 id="edu-tag"></h4>
+      <h3 id="edu-tag"></h3>
       <div class="ei-deg" id="edu-deg"></div>
       <div class="ei-sch" id="edu-sch"></div>
       <div class="ei-when" id="edu-when"></div>
       <div class="ei-award" id="edu-award" style="margin-top:8px;font-size:13px;color:var(--primary-active);font-weight:500;line-height:1.5"></div>
       <div style="margin-top:22px">
-        <h4 id="intl-tag" style="margin-top:8px"></h4>
+        <h3 id="intl-tag" style="margin-top:8px"></h3>
         <div class="ei-deg" id="intl-place" style="font-size:16px"></div>
         <div class="ei-sch" id="intl-text"></div>
         <div class="ei-when" id="intl-when"></div>
       </div>
     </div>
     <div class="mini reveal" style="--d:1">
-      <h4 id="cert-tag"></h4>
+      <h3 id="cert-tag"></h3>
       <ul class="certs" id="cert-list"></ul>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer id="contato">
   <div class="wrap">
     <div class="f-top">
@@ -873,6 +1085,46 @@ function parseNum(s){
   return n >= 10 ? {pre:m[1], n, post:m[3]} : null;
 }
 
+function analysisHTML(){
+  const A = C.analysis, a = A[L];
+  const esc = x => String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const cap = x => x.charAt(0)+x.slice(1).toLowerCase();
+  const pay = v => L==='pt' ? 'US$ '+Math.round(v/1000)+' mil' : '$'+Math.round(v/1000)+'k';
+  const MAX = Math.log10(1100), CUT = Math.log10(30)/MAX*100;
+  const rows = A.rows.map(r=>{
+    const thin = r.n < 30, w = Math.max(2, Math.log10(r.n)/MAX*100);
+    return `<div class="an-row" title="${esc(r.m)}: ${pay(r.pay)} ${a.pay}, ${r.n} ${a.n}">
+      <div class="an-line"><span class="r">${r.r}</span><span class="m">${esc(r.m)}</span>${thin?`<span class="an-tag">${a.thin_short}</span>`:''}<span class="pay">${pay(r.pay)}</span></div>
+      <div class="an-track"><div class="an-bar" style="--cut:${CUT}%"><b class="${thin?'an-thin':'an-ok'}" style="width:${w}%"></b></div><span class="an-n">n=${r.n}</span></div>
+    </div>`;
+  }).join('');
+  const tbl = `<div class="an-wrap"><table class="an-tbl"><thead><tr>${a.th.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${A.rows.map(r=>`<tr><td>${r.r}</td><td>${esc(r.m)}</td><td>${pay(r.pay)}</td><td>${r.n}</td><td>${r.n<30?a.thin:a.ok}</td></tr>`).join('')}</tbody></table></div>`;
+  const li = arr => '<ul>'+arr.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>';
+  return `<div class="an">
+    <div class="an-top">
+      <div class="an-leg"><span><i class="an-ok"></i>${a.legend_ok}</span><span><i class="an-thin"></i>${a.legend_thin}</span><span><i class="cut"></i>${a.cutoff} = 30</span></div>
+      <button class="an-btn" type="button" onclick="anView(this)" data-chart="${a.view_chart}" data-table="${a.view_table}" aria-pressed="false">${a.view_table}</button>
+    </div>
+    <div class="an-view an-chart" role="img" aria-label="${a.chart_label}">
+      <div class="an-bars">${rows}</div>
+      <p class="an-note" style="margin-top:6px">${a.axis}</p>
+    </div>
+    <div class="an-view an-table" hidden>${tbl}</div>
+    <div class="an-fix"><div><h4>${a.out}</h4>${li(A.dropped)}</div><div><h4>${a.in_}</h4>${li(A.entered)}</div></div>
+    <details ontoggle="anFit(this)"><summary>${a.show_sql}</summary><pre><code>${esc(A.sql)}</code></pre></details>
+    <p class="an-note">${a.note}</p>
+  </div>`;
+}
+function anFit(el){ const b = el.closest('.card-body'); if(b && b.parentElement.classList.contains('open')) b.style.maxHeight = b.scrollHeight+'px'; }
+function anView(btn){
+  const box = btn.closest('.an'), showTable = btn.getAttribute('aria-pressed') !== 'true';
+  btn.setAttribute('aria-pressed', showTable);
+  btn.textContent = showTable ? btn.dataset.chart : btn.dataset.table;
+  box.querySelector('.an-chart').hidden = showTable;
+  box.querySelector('.an-table').hidden = !showTable;
+  anFit(btn);
+}
+
 function render(){
   document.documentElement.lang = L;
   document.getElementById('btn-en').classList.toggle('active', L==='en');
@@ -890,9 +1142,10 @@ function render(){
   ['n-0','n-1','n-2'].forEach((id,i) => document.getElementById(id).textContent = t('nav')[i]);
 
   // HERO
-  document.getElementById('h-tag').textContent  = t('hero_tag');
-  document.getElementById('h-h1').innerHTML     = splitWords(t('hero_h1'));
-  document.getElementById('h-lead').innerHTML   = t('hero_lead');
+  [['h-tag',()=>t('hero_tag')],['h-h1',()=>splitWords(t('hero_h1'))],['h-lead',()=>t('hero_lead')]].forEach(([id,f])=>{
+    const el = document.getElementById(id);
+    if (el.dataset.l !== L) { el.innerHTML = f(); el.dataset.l = L; }
+  });
   document.getElementById('h-cta1').textContent = t('cta_proj');
   const cta2 = document.getElementById('h-cta2');
   cta2.textContent = t('cta_li');
@@ -928,7 +1181,9 @@ function render(){
     const d = p[L];
     const chips = p.stack.map(chip).join('');
     const link = p.url ? `<a class="view-link" href="${p.url}" target="_blank" rel="noopener">${t('view_dash')} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>` : '';
-    const bdg = p.live ? `<span class="badge live">${t('badge_live')}</span>` : `<span class="badge case">${t('badge_case')}</span>`;
+    const bdg = p.live ? `<span class="badge live">${t('badge_live')}</span>` : `<span class="badge case">${t(p.open?'badge_open':'badge_case')}</span>`;
+    const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+    const links = p.links ? `<div class="an-links">${p.links.map(l=>`<a class="view-link" href="${l.url}" target="_blank" rel="noopener">${l[L]} ${ext}</a>`).join('')}</div>` : '';
     return `<div class="card reveal${p.live?' is-live':''}" data-i="${i}" style="--d:${i}">
       <button class="card-head" aria-expanded="false" onclick="toggleCard(${i})">
         <span class="card-idx">${p.idx}</span>
@@ -940,7 +1195,8 @@ function render(){
         <div class="card-body-inner">
           <p>${d.body}</p>
           <div class="insight">${d.insight}</div>
-          <div class="card-meta"><div class="stack">${chips}</div>${link}</div>
+          ${p.analysis ? analysisHTML() : ''}
+          <div class="card-meta"><div class="stack">${chips}</div>${link}${links}</div>
         </div>
       </div>
     </div>`;
@@ -966,7 +1222,7 @@ function render(){
   document.getElementById('sk-h2').textContent  = t('skills_h2');
   document.getElementById('skill-groups').innerHTML = C.skills.map((g,i)=>`
     <div class="skill-group reveal" style="--d:${i}">
-      <h4>${g[L]}</h4>
+      <h3>${g[L]}</h3>
       <div class="stack">${g.chips.map(chip).join('')}</div>
     </div>`).join('');
 
@@ -1090,7 +1346,7 @@ function bindKpis(){
 
 // hero background: a quiet field of data points that breathes and leans toward the cursor.
 // Easter egg: window.heroChart() lines the points up into a bar chart with a trend line.
-(function(){
+const heroInit = function(){
   const cv = document.getElementById('hero-canvas'), shell = document.getElementById('hero-shell');
   if(!cv || !cv.getContext) return;
   const ctx = cv.getContext('2d');
@@ -1249,6 +1505,30 @@ function bindKpis(){
   const resized = ()=>{ clearTimeout(rt); rt = setTimeout(()=>{ size(); if(!running) draw(0); }, 120); };
   if('ResizeObserver' in window) new ResizeObserver(resized).observe(shell);
   else addEventListener('resize', resized);
+};
+(window.requestIdleCallback ? (f=>requestIdleCallback(f,{timeout:800})) : (f=>setTimeout(f,300)))(heroInit);
+
+/* ANALYTICS: cookie-free, off until CONFIG.analytics.goatcounter is set. Counts events only, no personal data. */
+const track = (name) => {
+  const code = C.analytics && C.analytics.goatcounter;
+  if (!code || !window.goatcounter || !goatcounter.count) return;
+  goatcounter.count({ path: 'event/' + name + '/' + L, title: name + ' (' + L + ')', event: true });
+};
+(function(){
+  const code = C.analytics && C.analytics.goatcounter;
+  if (!code) return;
+  const sc = document.createElement('script');
+  sc.async = true; sc.dataset.goatcounter = 'https://' + code + '.goatcounter.com/count';
+  sc.src = 'https://gc.zgo.at/count.js';
+  document.head.appendChild(sc);
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+    const h = a.getAttribute('href') || '';
+    if (a.hasAttribute('download') || /\.pdf$/i.test(h)) track('cv-download');
+    else if (h.startsWith('mailto:')) track('email-click');
+    else if (/linkedin\.com/i.test(h)) track('linkedin-click');
+    else if (/github\.com/i.test(h)) track('code-click');
+  });
 })();
 
 function setLang(l){
@@ -1257,6 +1537,7 @@ function setLang(l){
   const openCards = [...document.querySelectorAll('.card.open')].map(c=>c.dataset.i);
   const swap = ()=>{
     L = l;
+    track('lang-switch');
     render();
     settleAll();
     openCards.forEach(i => {
@@ -1272,6 +1553,7 @@ function setLang(l){
 }
 
 function toggleCard(i){
+  if (!document.querySelector(`.card[data-i="${i}"]`).classList.contains('open')) track('case-open-' + C.projects[i].idx);
   const card = document.querySelector(`.card[data-i="${i}"]`);
   const body = document.getElementById('cb-'+i);
   const open = card.classList.toggle('open');

@@ -1,0 +1,159 @@
+{
+  "headline_top10": [
+    {
+      "rank_headline": 1,
+      "Major": "PETROLEUM ENGINEERING",
+      "median_pay": 110000,
+      "respondents": 36,
+      "too_thin": false
+    },
+    {
+      "rank_headline": 2,
+      "Major": "MINING AND MINERAL ENGINEERING",
+      "median_pay": 75000,
+      "respondents": 7,
+      "too_thin": true
+    },
+    {
+      "rank_headline": 3,
+      "Major": "METALLURGICAL ENGINEERING",
+      "median_pay": 73000,
+      "respondents": 3,
+      "too_thin": true
+    },
+    {
+      "rank_headline": 4,
+      "Major": "NAVAL ARCHITECTURE AND MARINE ENGINEERING",
+      "median_pay": 70000,
+      "respondents": 16,
+      "too_thin": true
+    },
+    {
+      "rank_headline": 5,
+      "Major": "CHEMICAL ENGINEERING",
+      "median_pay": 65000,
+      "respondents": 289,
+      "too_thin": false
+    },
+    {
+      "rank_headline": 6,
+      "Major": "NUCLEAR ENGINEERING",
+      "median_pay": 65000,
+      "respondents": 17,
+      "too_thin": true
+    },
+    {
+      "rank_headline": 7,
+      "Major": "ACTUARIAL SCIENCE",
+      "median_pay": 62000,
+      "respondents": 51,
+      "too_thin": false
+    },
+    {
+      "rank_headline": 8,
+      "Major": "ASTRONOMY AND ASTROPHYSICS",
+      "median_pay": 62000,
+      "respondents": 10,
+      "too_thin": true
+    },
+    {
+      "rank_headline": 9,
+      "Major": "MECHANICAL ENGINEERING",
+      "median_pay": 60000,
+      "respondents": 1029,
+      "too_thin": false
+    },
+    {
+      "rank_headline": 10,
+      "Major": "ELECTRICAL ENGINEERING",
+      "median_pay": 60000,
+      "respondents": 631,
+      "too_thin": false
+    }
+  ],
+  "reliable_top10": [
+    {
+      "rank_reliable": 1,
+      "Major": "PETROLEUM ENGINEERING",
+      "expected_pay": 107978.0,
+      "respondents": 36,
+      "rank_headline": 1
+    },
+    {
+      "rank_reliable": 2,
+      "Major": "CHEMICAL ENGINEERING",
+      "expected_pay": 61029.0,
+      "respondents": 289,
+      "rank_headline": 5
+    },
+    {
+      "rank_reliable": 3,
+      "Major": "ENGINEERING MECHANICS PHYSICS AND SCIENCE",
+      "expected_pay": 57633.0,
+      "respondents": 30,
+      "rank_headline": 15
+    },
+    {
+      "rank_reliable": 4,
+      "Major": "MECHANICAL ENGINEERING",
+      "expected_pay": 56559.0,
+      "respondents": 1029,
+      "rank_headline": 9
+    },
+    {
+      "rank_reliable": 5,
+      "Major": "ELECTRICAL ENGINEERING",
+      "expected_pay": 56450.0,
+      "respondents": 631,
+      "rank_headline": 10
+    },
+    {
+      "rank_reliable": 6,
+      "Major": "AEROSPACE ENGINEERING",
+      "expected_pay": 56090.0,
+      "respondents": 147,
+      "rank_headline": 12
+    },
+    {
+      "rank_reliable": 7,
+      "Major": "COMPUTER ENGINEERING",
+      "expected_pay": 56075.0,
+      "respondents": 399,
+      "rank_headline": 11
+    },
+    {
+      "rank_reliable": 8,
+      "Major": "ACTUARIAL SCIENCE",
+      "expected_pay": 56070.0,
+      "respondents": 51,
+      "rank_headline": 7
+    },
+    {
+      "rank_reliable": 9,
+      "Major": "INDUSTRIAL AND MANUFACTURING ENGINEERING",
+      "expected_pay": 54556.0,
+      "respondents": 183,
+      "rank_headline": 17
+    },
+    {
+      "rank_reliable": 10,
+      "Major": "BIOMEDICAL ENGINEERING",
+      "expected_pay": 54475.0,
+      "respondents": 79,
+      "rank_headline": 13
+    }
+  ],
+  "overlap": [
+    {
+      "survive": 5,
+      "dropped": 5
+    }
+  ],
+  "thin_share": [
+    {
+      "majors": 173,
+      "under_30": 32,
+      "pct_under_30": 18.0
+    }
+  ]
+}
