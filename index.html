@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mateus Stoekly | Business Data Analyst</title>
-<meta name="description" content="Business before data. Data analyst with a background in International Business and hands-on experience in Business Intelligence, automation and KPI monitoring. SQL, Power BI and Excel/VBA.">
+<meta name="description" content="Business before data. Data analyst with a background in International Business, working as the data focal point for directors and business areas. SQL, Power BI and Excel.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mstoekly.github.io/">
 <meta property="og:title" content="Mateus Stoekly | Business Data Analyst">
@@ -43,11 +43,11 @@ const CONFIG = {
     nav:       ["Projects", "Experience", "Skills"],
     hero_tag:  "Business Data Analyst · SQL · Power BI · Excel",
     hero_h1:   "Business <em>before</em> data.",
-    hero_lead: `Data analyst with a background in <em>International Business</em> and hands-on experience
-                in Business Intelligence, automation and KPI monitoring. Proficient in SQL, Power BI and Excel/VBA,
-                I combine analytical skills with business sense to turn operational problems into solutions
-                that support decisions and deliver measurable results. A generalist with a systems view,
-                I connect data, processes and departments to spot opportunities and solve business problems.`,
+    hero_lead: `Data analyst with a background in <em>International Business</em>, working as the data focal point
+                for directors and business areas in the Paraná State Government. My work starts in the conversation
+                with whoever makes the decision: I understand the question, pick the indicators that answer it and see
+                the delivery through to real use. Advanced Excel and Power BI day to day, SQL for data preparation and
+                analysis, and consultative communication that turns technical results into recommendations leaders can act on.`,
     cta_proj:  "View projects",
     cta_li:    "Connect on LinkedIn",
     cta_cv:    "Download CV",
@@ -87,11 +87,11 @@ const CONFIG = {
     nav:       ["Projetos", "Experiência", "Competências"],
     hero_tag:  "Analista de Dados de Negócios · SQL · Power BI · Excel",
     hero_h1:   "Business <em>before</em> data.",
-    hero_lead: `Analista de dados com formação em <em>Negócios Internacionais</em> e experiência em Business Intelligence,
-                automação e monitoramento de indicadores. Domino SQL, Power BI e Excel/VBA, combinando capacidade
-                analítica e visão de negócio para transformar problemas operacionais em soluções que apoiam decisões
-                e geram resultados mensuráveis. Tenho perfil generalista e visão sistêmica, com facilidade para conectar
-                dados, processos e áreas distintas, identificar oportunidades e resolver problemas de negócio.`,
+    hero_lead: `Analista de dados com formação em <em>Negócios Internacionais</em>, atuando como ponto focal de dados
+                para diretoria e áreas de negócio no Governo do Paraná. Meu trabalho começa na conversa com quem decide:
+                entendo a pergunta, escolho os indicadores que a respondem e conduzo a entrega até o uso real. Excel avançado
+                e Power BI no dia a dia, SQL para tratamento e análise, e uma comunicação consultiva que transforma resultados
+                técnicos em recomendações que a liderança consegue aplicar.`,
     cta_proj:  "Ver projetos",
     cta_li:    "Conectar no LinkedIn",
     cta_cv:    "Baixar currículo",
@@ -385,29 +385,62 @@ LIMIT 10;`,
       idx:  "04",
       live: false,
       url:  null,
-      stack: ["SQL", "Power Query", "Power BI"],
+      stack: ["Power Query", "Power BI", {"en":"Data stewardship","pt":"Governança de dados"}],
       en: {
         title: "Monitoring ~250 municipal agreements",
-        sub:   "Data-flow redesign · R$690M in public works",
-        body:  `Monitoring about 250 municipal agreements, covering R$690 million in public works, relied on manual
-                preparation steps. I redesigned the data flow: standardized how the data came in and built the
-                transformations in SQL and Power Query to feed Power BI dashboards. The manual steps went away,
-                updates went from monthly to weekly, and managers got clear visibility into the status of each process.`,
-        insight: "The fix was upstream. Standardizing how the data came in is what removed the manual work.",
+        sub:   "Fixing the data at the source · R$690M in public works",
+        body:  `Monitoring about 250 municipal agreements, covering R$690 million in public works, depended on
+                spreadsheets sent by the technical team in a different shape every time. I first cleaned them in Power
+                Query to feed Power BI dashboards. Then I went to the person who maintained the data, showed her how much
+                time went into fixing formats and proposed a standard template that also made her own work easier. She
+                adopted it, the manual cleanup became obsolete, and updates went from monthly to weekly, becoming the base
+                of the director's report to the Secretary.`,
+        insight: "The best data transformation I did was convincing someone she no longer needed it.",
       },
       pt: {
         title: "Monitoramento de ~250 convênios municipais",
-        sub:   "Redesenho do fluxo de dados · R$ 690 milhões em obras",
-        body:  `O monitoramento de cerca de 250 convênios municipais, que somam R$ 690 milhões em obras, dependia
-                de etapas manuais de preparação. Redesenhei o fluxo de dados: padronizei a entrada e estruturei o
-                tratamento em SQL e Power Query para alimentar dashboards em Power BI. As etapas manuais saíram,
-                a atualização passou de mensal para semanal e os gestores ganharam visibilidade clara do andamento
-                dos processos.`,
-        insight: "A solução estava na origem. Padronizar a entrada dos dados é o que tirou o trabalho manual.",
+        sub:   "Corrigindo o dado na origem · R$ 690 milhões em obras",
+        body:  `O monitoramento de cerca de 250 convênios municipais, que somam R$ 690 milhões em obras, dependia de
+                planilhas enviadas pela área técnica, cada vez num formato. Primeiro tratei os dados em Power Query para
+                alimentar dashboards em Power BI. Depois fui até a responsável pelos dados, mostrei quanto tempo ia para
+                corrigir formato e propus um modelo padronizado que também facilitava o trabalho dela. Ela adotou, o
+                tratamento manual ficou obsoleto e a atualização passou de mensal para semanal, virando a base do reporte
+                do diretor ao Secretário.`,
+        insight: "A melhor transformação de dados que fiz foi convencer alguém a não precisar mais dela.",
       },
     },
     {
       idx:  "05",
+      live: false,
+      url:  null,
+      stack: ["Databricks", "Delta Lake", "SQL", "API", "Power BI"],
+      en: {
+        title: "Contracts and agreements: from one-off lookups to one monitoring base",
+        sub:   "DER-PR · SIDER · API + Databricks + SQL + Power BI",
+        body:  `Working with the DER-PR Planning team, I found room to improve how data for monitoring works contracts was
+                consolidated. In SIDER, contract information was available through operational reports, one contract at a
+                time, with no consolidated base for cross-portfolio analysis, and a first attempt in Excel did not scale.
+                Once Celepar made the raw data available as JSON via API, I built a pipeline in Databricks: the original
+                JSON is preserved in Delta Lake with its history, SQL transformations standardize contract, agreement and
+                works identifiers, handle duplicates and missing fields, and produce consolidated tables. Power BI sits on
+                top for the semantic model, measures and management monitoring.`,
+        insight: "The value was moving from looking up one contract to seeing the whole portfolio.",
+      },
+      pt: {
+        title: "Contratos e convênios: da consulta pontual a uma base única de monitoramento",
+        sub:   "DER-PR · SIDER · API + Databricks + SQL + Power BI",
+        body:  `Em conjunto com o Planejamento do DER-PR, identifiquei oportunidades de melhoria na consolidação dos dados
+                usados no monitoramento de contratos de obras. No SIDER, as informações eram acessadas por relatórios
+                operacionais, contrato a contrato, sem base consolidada para análise transversal, e a primeira tentativa em
+                Excel não escalou. Quando a Celepar disponibilizou os dados brutos em JSON via API, estruturei um pipeline no
+                Databricks: o JSON original fica preservado em Delta Lake com histórico, transformações em SQL padronizam os
+                identificadores de contratos, convênios e obras, tratam duplicidades e campos ausentes e geram tabelas
+                consolidadas. O Power BI fica por cima, com o modelo semântico, as medidas e o monitoramento gerencial.`,
+        insight: "O valor estava em passar da consulta pontual para a visão da carteira inteira.",
+      },
+    },
+    {
+      idx:  "06",
       live: false,
       url:  null,
       stack: ["Power BI", {"en":"Stakeholder mgmt","pt":"Gestão de stakeholders"}],
@@ -432,7 +465,7 @@ LIMIT 10;`,
       },
     },
     {
-      idx:  "06",
+      idx:  "07",
       live: false,
       url:  null,
       stack: ["Excel / VBA", "SAP"],
@@ -471,8 +504,10 @@ LIMIT 10;`,
         org:  "Paraná State Department of Planning (Brazil)",
         note: "Data analyst in sectoral planning units, first at the Department of Planning (SEPL), later at the Department of Infrastructure and Logistics (SEIL).",
         bullets: [
-          "Redesigned the data flow for monitoring ~250 municipal agreements covering R$ 690 million in public works. Standardized data entry and built SQL and Power Query transformations feeding Power BI dashboards. The solution removed manual preparation steps, raised the update frequency from monthly to weekly and gave managers clear visibility into project status.",
-          "Built in 2 hours, with Power BI and Power Query, an executive version of the dashboard tracking ~R$ 250 million in public works funded by the privatization of Copel (state utility), starting from an existing prototype. Working directly with the director, I redesigned the visuals and added the information required for accountability to the State Audit Court, such as beneficiary municipalities and planned vs. transferred amounts. The director used it in his first public interview about the dashboard, which stayed in use after my transfer to another department.",
+          "Built in 2 hours the executive version of the dashboard tracking ~R$ 250 million in public works funded by the privatization of Copel (state utility), a task the team had estimated at 5 days. I led the alignment with the director to define the indicators required for accountability to the State Audit Court, such as beneficiary municipalities and planned vs. transferred amounts, reconciled to the cent. The director used it in his first public interview on the topic, and it stayed in use after my transfer.",
+          "Restructured the monitoring of ~250 municipal agreements (R$ 690 million in public works). I cleaned the technical team's spreadsheets in Power Query to feed Power BI, then negotiated with the data owner the adoption of a standard template at the source, which removed the manual rework. Updates went from monthly to weekly and became the base of the director's report to the Secretary.",
+          "Working with the DER-PR Planning team, structured a data pipeline to integrate and standardize works-contract data from SIDER. I automated extraction of the raw JSON data made available by Celepar (the state IT company) via API, preserved the history in Delta Lake on Databricks and built SQL transformations to standardize identifiers, handle duplicates and missing fields and consolidate the records, delivering structured tables for consumption in Power BI.",
+          "On my own initiative, scraped the SEIL institutional Instagram posts, validated and cleaned the extracted CSV data in SQL and presented a Power BI dashboard to the Communications team. The analysis put a number on the weight of the Guaratuba Bridge in audience engagement, something the team sensed but could not measure, and the topic gained prominence in the communication strategy that followed.",
           "Developed 20+ dashboards for managers and administrative areas, including HR, Procurement and outsourced-services management, tailoring each solution to the area and turning operational data into information for monitoring and decision-making.",
           "Standardized spreadsheet templates and automated Excel controls for areas with low analytical maturity, improving data organization and making the data usable for analysis and monitoring.",
           "As part of a team, analyzed ~100 indicators of the Brazilian State Competitiveness Ranking (CLP) and presented diagnostics to the responsible departments, helping identify improvement opportunities in the state's indicators.",
@@ -483,8 +518,10 @@ LIMIT 10;`,
         org:  "Secretaria de Estado do Planejamento (PR)",
         note: "Atuação como analista de dados em núcleos de planejamento setorial, inicialmente na SEPL e posteriormente na SEIL.",
         bullets: [
-          "Redesenhei o fluxo de dados do monitoramento de aproximadamente 250 convênios municipais, abrangendo R$ 690 milhões em obras. Padronizei a entrada de dados e estruturei o tratamento em SQL e Power Query para alimentar dashboards em Power BI. A solução eliminou etapas de preparação manual para o monitoramento, elevou a frequência de atualização de mensal para semanal e ampliou a visibilidade dos gestores sobre o andamento dos processos.",
-          "Desenvolvi em 2 horas, com Power BI e Power Query, uma versão executiva do dashboard de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas com recursos da privatização da Copel, partindo de um protótipo existente. Em alinhamento direto com o diretor, reformulei visualizações e incluí informações essenciais à prestação de contas ao Tribunal de Contas, como municípios beneficiados e valores previstos e repassados. A entrega foi utilizada pelo diretor em sua primeira entrevista pública sobre o dashboard, que permaneceu em atualização até o presente momento, após minha realocação para outra secretaria.",
+          "Entreguei em 2 horas a versão executiva do painel de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas pela privatização da Copel, prazo que a equipe havia estimado em 5 dias. Conduzi o alinhamento direto com o diretor para definir os indicadores exigidos na prestação de contas ao Tribunal de Contas, como municípios beneficiados e valores previstos e repassados, conciliados ao centavo. O diretor usou o painel em sua primeira entrevista pública sobre o tema, e ele segue em uso após minha realocação.",
+          "Reestruturei o monitoramento de aproximadamente 250 convênios municipais (R$ 690 milhões em obras). Tratei em Power Query as planilhas enviadas pela área técnica para alimentar os painéis em Power BI e, em seguida, negociei com a responsável pelos dados a adoção de um modelo padronizado na origem, o que eliminou o retrabalho manual. A atualização passou de mensal para semanal e virou a base do reporte do diretor ao Secretário.",
+          "Estruturei, em conjunto com o Planejamento do DER-PR, um pipeline de dados para integrar e padronizar informações de contratos de obras do SIDER. Automatizei a extração dos dados brutos em JSON disponibilizados pela Celepar via API, preservei o histórico em Delta Lake no Databricks e desenvolvi transformações em SQL para padronizar identificadores, tratar duplicidades e campos ausentes e consolidar os registros, disponibilizando tabelas estruturadas para consumo no Power BI.",
+          "Por iniciativa própria, coletei via scraping as publicações institucionais da SEIL no Instagram, validei e tratei em SQL os dados extraídos em CSV e apresentei à Comunicação um dashboard em Power BI. A análise quantificou o peso da Ponte de Guaratuba no engajamento do público, algo que a equipe percebia mas não conseguia medir, e o tema ganhou destaque na estratégia de comunicação seguinte.",
           "Desenvolvi mais de 20 dashboards para gestores e áreas administrativas, incluindo RH, Compras e gestão de terceirizados, adaptando as soluções às necessidades de cada área e transformando dados operacionais em informações para acompanhamento e tomada de decisão.",
           "Padronizei modelos de planilhas e automatizei controles em Excel para áreas com baixa maturidade analítica, melhorando a organização dos dados e facilitando sua utilização em análises e monitoramentos.",
           "Em equipe, analisei de maneira aprofundada aproximadamente 100 indicadores do Ranking de Competitividade dos Estados (CLP) e apresentei diagnósticos às secretarias responsáveis, apoiando a identificação de oportunidades de melhoria nos indicadores estaduais.",
@@ -518,13 +555,13 @@ LIMIT 10;`,
   /* COMPETÊNCIAS (chips por grupo) */
   skills: [
     { en: "Data & BI",    pt: "Dados e BI",
-      chips: ["SQL","Power BI","DAX","Power Query (M)",{"en":"Data Modeling","pt":"Modelagem de Dados"},"ETL",{"en":"Data Visualization","pt":"Visualização de Dados"}] },
+      chips: ["SQL","Power BI","DAX","Power Query (M)",{"en":"Data Modeling","pt":"Modelagem de Dados"},"ETL",{"en":"API integration","pt":"Integração via API"},"Databricks",{"en":"Data Visualization","pt":"Visualização de Dados"}] },
     { en: "Analysis",     pt: "Análise",
       chips: ["Business Intelligence",{"en":"KPI Monitoring","pt":"Monitoramento de Indicadores"},"Dashboards",{"en":"Automation","pt":"Automação"}] },
     { en: "Tooling",      pt: "Ferramentas",
       chips: [{"en":"Advanced Excel (VBA)","pt":"Excel avançado (VBA)"},"SAP"] },
     { en: "Strengths",    pt: "Forças",
-      chips: [{"en":"Business-first thinking","pt":"Visão de negócio"},{"en":"Systems view","pt":"Visão sistêmica"},{"en":"Cross-functional","pt":"Atuação Interdepartamental"},{"en":"Data Adoption","pt":"Adoção de Dados"},{"en":"Problem-Solving","pt":"Resolução de Problemas"}] },
+      chips: [{"en":"Consultative communication","pt":"Comunicação consultiva"},{"en":"Stakeholder management","pt":"Gestão de stakeholders"},{"en":"Business-first thinking","pt":"Visão de negócio"},{"en":"Systems view","pt":"Visão sistêmica"},{"en":"Cross-functional","pt":"Atuação Interdepartamental"},{"en":"Data Adoption","pt":"Adoção de Dados"},{"en":"Problem-Solving","pt":"Resolução de Problemas"}] },
   ],
 
   /* IDIOMAS */
@@ -956,7 +993,7 @@ footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weig
   <header class="hero wrap" id="top">
     <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="h-tag" data-l="en">Business Data Analyst · SQL · Power BI · Excel</span></span>
     <h1 id="h-h1" data-l="en"><span class="w" style="--i:0">Business</span> <span class="w" style="--i:1"><em>before</em></span> <span class="w" style="--i:2">data.</span></h1>
-    <p class="lead" id="h-lead" data-l="en">Data analyst with a background in <em>International Business</em> and hands-on experience in Business Intelligence, automation and KPI monitoring. Proficient in SQL, Power BI and Excel/VBA, I combine analytical skills with business sense to turn operational problems into solutions that support decisions and deliver measurable results. A generalist with a systems view, I connect data, processes and departments to spot opportunities and solve business problems.</p>
+    <p class="lead" id="h-lead" data-l="en">Data analyst with a background in <em>International Business</em>, working as the data focal point for directors and business areas in the Paraná State Government. My work starts in the conversation with whoever makes the decision: I understand the question, pick the indicators that answer it and see the delivery through to real use. Advanced Excel and Power BI day to day, SQL for data preparation and analysis, and consultative communication that turns technical results into recommendations leaders can act on.</p>
     <div class="hero-cta">
       <a href="#projetos" class="btn btn-primary"><span id="h-cta1"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a href="#" class="btn btn-ghost" id="h-cta3" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span></span></a>
