@@ -499,6 +499,17 @@ footer h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:22px;max-width:24ch;tex
 .fb{font-size:13px;color:var(--dim);border-top:1px solid var(--line2);padding-top:14px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
 .print-head{display:none}
+body.mag{--ink:#ffd6ea;--dim:#e3a9c6;--line:#c0588a;--line2:#5f2c47;--panel:#150a12;--panel2:#1c0e18;--bg:#0d070b;--mag:#7fe3ff;--glow:0 0 4px rgba(255,190,225,.9),0 0 14px rgba(255,90,170,.55)}
+#poweron{position:fixed;inset:0;z-index:90;background:#000;pointer-events:none;animation:pwr .7s ease-out forwards}
+#poweron::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:#cdeefa;box-shadow:0 0 18px 4px rgba(190,230,245,.8);animation:pwrline .7s ease-out forwards}
+@keyframes pwr{0%{opacity:1}55%{opacity:1}100%{opacity:0}}
+@keyframes pwrline{0%{transform:scaleX(0)}35%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1) scaleY(60);opacity:0}}
+.tw-off{color:transparent;text-shadow:none}
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:95;font-family:var(--px);font-size:24px;letter-spacing:.1em;text-transform:uppercase;background:var(--bg);color:var(--mag);border:1px solid var(--mag);padding:8px 18px;text-shadow:var(--glow)}
+#term{position:fixed;inset:0;z-index:92;background:rgba(4,6,9,.94);display:flex;align-items:center;justify-content:center;padding:20px}
+#term .box{width:min(760px,100%);border:1px solid var(--ink);background:#05080c;box-shadow:0 0 30px rgba(170,220,245,.25)}
+#term pre{font:15px/1.6 var(--mono);color:var(--ink);padding:16px;white-space:pre-wrap;word-break:break-word;min-height:220px}
+#term .bar button{margin-left:auto;font:400 17px var(--px);background:none;color:var(--ink);border:1px solid var(--line);padding:2px 10px;cursor:pointer}
 
 @media (max-width:900px){
   .hero-g,.grid2,.lab-g,.sig,.cols{grid-template-columns:1fr}
@@ -517,6 +528,7 @@ footer h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:22px;max-width:24ch;tex
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
 @media print{
+  #poweron,#toast,#term{display:none!important}
   @page{margin:14mm}
   body{background:#fff;color:#000;font-size:10.5pt}
   body::before,body::after,#nav,.cta,.pv,.screen,.links,.badge,.bar .sp,#lab,.cursor,footer .fc,.cyc,.skip{display:none!important}
@@ -768,6 +780,44 @@ window.setLang = function(l){ L = l; try{ localStorage.setItem('lang', l) }catch
 try{ const s = localStorage.getItem('lang'); L = s || ((navigator.language || '').toLowerCase().startsWith('pt') ? 'pt' : 'en') }catch(e){}
 render();
 
+/* EASTER EGGS */
+const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+const toast = msg => { let el = $('toast'); if (!el){ el = document.createElement('div'); el.id = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); } el.textContent = msg; clearTimeout(toast.t); toast.t = setTimeout(() => el.remove(), 2400); };
+/* 1. Konami code */
+const K = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a']; let ki = 0;
+addEventListener('keydown', e => {
+  if (e.target.closest && e.target.closest('input,textarea,iframe')) return;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  ki = (k === K[ki]) ? ki + 1 : (k === K[0] ? 1 : 0);
+  if (ki === K.length){ ki = 0; const on = document.body.classList.toggle('mag'); toast(on ? (L === 'pt' ? 'Cheat ativado' : 'Cheat activated') : (L === 'pt' ? 'Modo normal' : 'Back to normal')); }
+});
+/* 2. logo x5 -> fake terminal */
+let clicks = [], term;
+const closeTerm = () => { if (term){ term.remove(); term = null; document.removeEventListener('keydown', escTerm); } };
+const escTerm = e => { if (e.key === 'Escape') closeTerm(); };
+function openTerm(){
+  const status = L === 'pt' ? 'aberto a oportunidades' : 'open to opportunities';
+  const lines = ['mateus@portfolio:~$ sqlite3 mateus.db', "sqlite> SELECT * FROM mateus WHERE curioso = true;", '', 'role                   | stack                        | status', '-----------------------+------------------------------+-----------------------', 'Business Data Analyst  | Power BI, SQL, Excel/VBA, AI | ' + status, '(1 row)', '', 'sqlite> -- business before data.', 'sqlite> _'];
+  term = document.createElement('div'); term.id = 'term'; term.setAttribute('role', 'dialog'); term.setAttribute('aria-modal', 'true'); term.setAttribute('aria-label', 'Terminal');
+  term.innerHTML = '<div class="box"><div class="bar"><span>MS//DATA TERMINAL</span><button type="button" aria-label="Close">ESC</button></div><pre></pre></div>';
+  document.body.appendChild(term); const pre = term.querySelector('pre'), btn = term.querySelector('button');
+  btn.onclick = closeTerm; term.addEventListener('click', e => { if (e.target === term) closeTerm(); }); document.addEventListener('keydown', escTerm); btn.focus();
+  const full = lines.join('\n'); let i = 0;
+  if (reduce){ pre.textContent = full; return; }
+  const tick = () => { if (!term) return; i += 2; pre.textContent = full.slice(0, i); if (i < full.length) setTimeout(tick, 14); }; tick();
+}
+const brand = document.querySelector('.brand');
+brand.addEventListener('click', e => { const now = Date.now(); clicks = clicks.filter(t => now - t < 2500); clicks.push(now); if (clicks.length >= 5){ e.preventDefault(); clicks = []; openTerm(); } });
+/* 3. console message */
+try{ console.log('%c MS//DATA ', 'background:#cdeefa;color:#080b10;font:700 16px monospace', '\nHello, curious one. You are the kind of person I like to work with.\nTry: Up Up Down Down Left Right Left Right B A  |  click the logo 5 times.\nBusiness before data. ' + C.email); }catch(e){}
+/* 4. CRT power-on (once per session) + typewriter on the subtitle */
+let seen = false; try{ seen = sessionStorage.getItem('boot') === '1'; sessionStorage.setItem('boot', '1'); }catch(e){}
+if (!reduce && !seen){
+  const po = document.createElement('div'); po.id = 'poweron'; po.setAttribute('aria-hidden', 'true'); document.body.appendChild(po); setTimeout(() => po.remove(), 800);
+  const sub = $('h-sub'), txt = sub.textContent; let n = 0;
+  const type = () => { sub.innerHTML = esc(txt.slice(0, n)) + '<span class="tw-off">' + esc(txt.slice(n)) + '</span>'; if (n++ < txt.length) setTimeout(type, 28); else sub.textContent = txt; };
+  setTimeout(type, 500); type();
+}
 if (C.analytics.goatcounter){ const s = document.createElement('script'); s.async = true; s.dataset.goatcounter = 'https://' + C.analytics.goatcounter + '.goatcounter.com/count'; s.src = '//gc.zgo.at/count.js'; document.body.appendChild(s); }
 })();
 </script>
