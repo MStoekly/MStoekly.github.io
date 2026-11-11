@@ -3,1640 +3,753 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mateus Stoekly | Business Data Analyst</title>
-<meta name="description" content="Business before data. Data analyst with a background in International Business, working as the data focal point for directors and business areas. SQL, Power BI and Excel.">
+<title>Mateus Stoekly | Business Data Analyst · Power BI · SQL · Applied AI</title>
+<meta name="description" content="Business data analyst in Curitiba, Brazil. I turn public-sector data into executive dashboards: R$ 690 million in public works monitored, 20+ Power BI dashboards, applied AI. Live dashboards and playable prototypes.">
+<meta name="theme-color" content="#080b10">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mstoekly.github.io/">
 <meta property="og:title" content="Mateus Stoekly | Business Data Analyst">
-<meta property="og:description" content="Business before data. Data analyst with a background in International Business. SQL, Power BI and Excel/VBA.">
+<meta property="og:description" content="I turn public-sector data into executive dashboards. Power BI, SQL, Excel/VBA and applied AI. Live dashboards and playable prototypes.">
 <meta property="og:image" content="https://mstoekly.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://mstoekly.github.io/og-image.png">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23faf9f5'/><path d='M16 2c1 6.8 3.2 9 9 10-6.8 1-9 3.2-10 10-1-6.8-3.2-9-9-10 6.8-1 9-3.2 10-10z' fill='%23cc785c'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080b10'/><path d='M4 4h24v24H4z' fill='none' stroke='%23bfe3f0' stroke-width='3'/><path d='M10 22V10l6 8 6-8v12' fill='none' stroke='%23ff6aa8' stroke-width='3'/></svg>">
+<link rel="preload" href="fonts/vt323-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add('js')</script>
 
 <!-- EDIT ZONE -->
 <script>
 const CONFIG = {
 
-  /* INFORMAÇÕES PESSOAIS */
-  name:      "Mateus Stoekly",
-  role_en:   "Business Data Analyst",
-  role_pt:   "Analista de Dados de Negócios",
-  /* ANALYTICS (sem cookies). Para ativar: crie uma conta grátis em goatcounter.com e coloque aqui só o código do site (ex.: "mateus"). Vazio = nada é carregado nem enviado. */
-  analytics: { goatcounter: "" },
-
-  email:     "mateus.stoekly@gmail.com",
-  linkedin:  "linkedin.com/in/mateusstoekly/",
-  location_en: "Curitiba, Brazil · Remote, hybrid or on-site · Open to relocation",
-  location_pt: "Curitiba, PR · Remoto, híbrido ou presencial · Aberto a realocação",
+  name: "Mateus Stoekly",
+  email: "mateus.stoekly@gmail.com",
+  linkedin: "linkedin.com/in/mateusstoekly/",
   portfolio: "mstoekly.github.io",
+  /* ANALYTICS (sem cookies): coloque o código do site no goatcounter.com. Vazio = nada é carregado. */
+  analytics: { goatcounter: "" },
   cv: {
     en: "cv/Mateus_Stoekly_Business_Data_Analyst_CV.pdf",
     pt: "cv/Mateus_Stoekly_Analista_de_Dados_CV.pdf",
   },
 
-  /* TEXTOS INGLÊS */
+  /* JOGOS (Lab). embed = URL do embed do itch.io (ou /play/...); vazio = mostra "em breve". */
+  lab: [
+    { id: "crimson-wake", embed: "", page: "", img: "img/crimson-wake.webp", tone: "mag" },
+    { id: "invasion",     embed: "", page: "", img: "img/invasion.webp",      tone: "grn" },
+  ],
+
   en: {
-    nav:       ["Projects", "Experience", "Skills"],
-    hero_tag:  "Business Data Analyst · SQL · Power BI · Excel",
-    hero_h1:   "Business <em>before</em> data.",
-    hero_lead: `Data analyst with a background in <em>International Business</em>, working as the data focal point
-                for directors and business areas in the Paraná State Government. My work starts in the conversation
-                with whoever makes the decision: I understand the question, pick the indicators that answer it and see
-                the delivery through to real use. Advanced Excel and Power BI day to day, SQL for data preparation and
-                analysis, and consultative communication that turns technical results into recommendations leaders can act on.`,
-    cta_proj:  "View projects",
-    cta_li:    "Connect on LinkedIn",
-    cta_cv:    "Download CV",
+    nav: ["Projects", "Lab", "Experience", "Skills"],
+    talk: "Talk to me",
+    role: "Business Data Analyst",
+    h1: "I turn public-sector data into <em>executive dashboards</em>.",
+    sub: "Business Data Analyst · Power BI · SQL · applied AI",
+    proof_k: "Proof",
+    proof: "R$ 690 million in public works monitored across ~250 municipal agreements, with the refresh moved from monthly to weekly.",
+    cta_live: "Open live dashboards",
+    cta_cv: "Download CV",
+    cta_play: "Play the prototypes",
+    lede: "Data analyst with a background in International Business. I build the dashboards managers decide from, and I use AI to prototype faster.",
 
-    kpi_tag:   "Career at a glance",
-    kpi_h2:    "My career, as a dashboard.",
+    subject: "SUBJECT",
+    rows: [
+      ["Name", "Mateus Stoekly"],
+      ["Function", "Business Data Analyst"],
+      ["Base", "Curitiba, Brazil"],
+      ["Track record", "Paraná State Government · Feb 2023 – Jun 2026"],
+      ["Stack", "Power BI · SQL · Excel/VBA · AI"],
+      ["Languages", "PT native · EN C1 · ES B2 · FR B1"],
+      ["Status", "Open to opportunities"],
+    ],
+    metrics: [
+      ["R$ 690M", "public works monitored, ~250 municipal agreements"],
+      ["20+", "dashboards for state managers"],
+      ["2 h", "executive Copel dashboard, ~R$ 250M in works"],
+      ["100", "CLP competitiveness indicators analyzed (approx.)"],
+    ],
+    cycle: "Update cycle: monthly → weekly",
+    cycle_label: "Step chart: update frequency moves from monthly to weekly",
 
-    proj_tag:  "Case studies",
-    proj_h2:   "Selected projects",
-    proj_sub:  "Open any case to see the context, what I did, and the live dashboard where there is one.",
+    proj_tag: "01 // Field work",
+    proj_h2: "Selected projects",
+    proj_sub: "Live dashboards first. Click a card to open it.",
+    badge: { live: "Live", open: "Open data", case: "Case" },
+    open_dash: "Open dashboard",
+    load_prev: "Load preview ▶",
+    press: "Press coverage (G1)",
+    preview_note: "Decorative preview. The real dashboard opens in Power BI.",
 
-    exp_tag:   "Track record",
-    exp_h2:    "Experience",
+    lab_tag: "02 // Lab",
+    lab_h2: "Lab: things I build to learn",
+    lab_sub: "Two playable prototypes and the AI work behind them. Press the button to load a game.",
+    coin: "Insert coin",
+    coin_soon: "Web build going online soon.",
+    coin_page: "Open on itch.io",
+    close: "Eject",
+    controls: "WASD or arrows",
+    games: {
+      "crimson-wake": {
+        title: "Crimson Wake",
+        sub: "Currency-acquisition engine · skin 1",
+        body: "Not a finished game: a prototype of the loop that earns the money in an incremental game. You are a vampire. Prey is currency, hunters are the cost, and every feeding draws more of them. Survive the night, then spend your blood at the Blood Market. Built with AI assistance. I worked on the engine, not the polish.",
+        stack: ["Ren'Py", "Python", "AI-assisted"],
+      },
+      "invasion": {
+        title: "Invasion",
+        sub: "Same engine · skin 2",
+        body: "The same currency engine under new art and sound: you are an alien, humans are the currency and soldiers are the cost. It shows the engine is reusable, which was the point.",
+        stack: ["Ren'Py", "Python", "AI-assisted"],
+      },
+    },
+    signals_h: "Other AI signals",
+    signals: [
+      { k: "Course", t: "“Artificial Intelligence and Its Applications”", b: "Created and taught in person for public servants: 16 h, in partnership with SEPL, Nov 2023, fully booked. Prompt engineering, Code Interpreter, prototyping and ethics." },
+      { k: "Award", t: "Aster Research Award (2024)", b: "For the undergraduate thesis “The Development of Competencies and People through the use of AI-supported OKRs” (originally in Portuguese)." },
+    ],
 
-    skills_tag: "Tools & strengths",
-    skills_h2:  "Skills",
-    lang_tag:   "Languages",
-    lang_h2:    "Communication",
-
-    edu_tag:   "Education",
-    intl_tag:  "International experience",
-    cert_tag:  "Certifications",
-
-    foot_h:    "Got a business problem hiding in your data? Let's talk.",
+    exp_tag: "03 // Track record",
+    exp_h2: "Experience",
+    skills_tag: "04 // Loadout",
+    skills_h2: "Skills",
+    lang_h2: "Languages",
+    edu_h2: "Education",
+    cert_h2: "Certifications",
+    foot_h: "Got a business problem hiding in your data? Let's talk.",
     foot_note: "Curitiba, Brazil · Remote, hybrid or on-site · Open to relocation",
-
-    badge_live: "Live",
-    badge_case: "Case",
-    badge_open: "Open data",
-    view_dash:  "View live dashboard",
-    present:    "present",
-    egg_toast:  "Data, organized. Now, what's the decision?",
+    view: "View the code",
+    run: "Run it yourself",
+    cases: "Case",
   },
 
-  /* TEXTOS PORTUGUÊS */
   pt: {
-    nav:       ["Projetos", "Experiência", "Competências"],
-    hero_tag:  "Analista de Dados de Negócios · SQL · Power BI · Excel",
-    hero_h1:   "Business <em>before</em> data.",
-    hero_lead: `Analista de dados com formação em <em>Negócios Internacionais</em>, atuando como ponto focal de dados
-                para diretoria e áreas de negócio no Governo do Paraná. Meu trabalho começa na conversa com quem decide:
-                entendo a pergunta, escolho os indicadores que a respondem e conduzo a entrega até o uso real. Excel avançado
-                e Power BI no dia a dia, SQL para tratamento e análise, e uma comunicação consultiva que transforma resultados
-                técnicos em recomendações que a liderança consegue aplicar.`,
-    cta_proj:  "Ver projetos",
-    cta_li:    "Conectar no LinkedIn",
-    cta_cv:    "Baixar currículo",
+    nav: ["Projetos", "Lab", "Experiência", "Competências"],
+    talk: "Vamos conversar",
+    role: "Analista de Dados de Negócios",
+    h1: "Transformo dados do setor público em <em>dashboards executivos</em>.",
+    sub: "Analista de Dados de Negócios · Power BI · SQL · IA aplicada",
+    proof_k: "Prova",
+    proof: "R$ 690 milhões em obras monitoradas, em ~250 convênios municipais, com a atualização passando de mensal para semanal.",
+    cta_live: "Abrir dashboards ao vivo",
+    cta_cv: "Baixar currículo",
+    cta_play: "Jogar os protótipos",
+    lede: "Analista de dados com formação em Negócios Internacionais. Construo os dashboards em que gestores se baseiam para decidir e uso IA para prototipar mais rápido.",
 
-    kpi_tag:   "A carreira em números",
-    kpi_h2:    "Minha carreira, em formato de dashboard.",
+    subject: "SUJEITO",
+    rows: [
+      ["Nome", "Mateus Stoekly"],
+      ["Função", "Analista de Dados de Negócios"],
+      ["Base", "Curitiba, PR"],
+      ["Histórico", "Governo do Paraná · fev. 2023 – jun. 2026"],
+      ["Stack", "Power BI · SQL · Excel/VBA · IA"],
+      ["Idiomas", "PT nativo · EN C1 · ES B2 · FR B1"],
+      ["Status", "Aberto a oportunidades"],
+    ],
+    metrics: [
+      ["R$ 690 mi", "em obras monitoradas, ~250 convênios municipais"],
+      ["20+", "dashboards para gestores do estado"],
+      ["2 h", "versão executiva do dashboard Copel, ~R$ 250 mi em obras"],
+      ["100", "indicadores do CLP analisados (aprox.)"],
+    ],
+    cycle: "Ciclo de atualização: mensal → semanal",
+    cycle_label: "Gráfico em degraus: a frequência de atualização passa de mensal para semanal",
 
-    proj_tag:  "Estudos de caso",
-    proj_h2:   "Projetos selecionados",
-    proj_sub:  "Abra cada caso para ver o contexto, o que eu fiz e, quando houver, o dashboard ao vivo.",
+    proj_tag: "01 // Trabalho de campo",
+    proj_h2: "Projetos selecionados",
+    proj_sub: "Dashboards ao vivo primeiro. Clique no cartão para abrir.",
+    badge: { live: "Ao vivo", open: "Dados abertos", case: "Case" },
+    open_dash: "Abrir dashboard",
+    load_prev: "Carregar prévia ▶",
+    press: "Reportagem (G1)",
+    preview_note: "Prévia decorativa. O dashboard real abre no Power BI.",
 
-    exp_tag:   "Trajetória",
-    exp_h2:    "Experiência",
+    lab_tag: "02 // Lab",
+    lab_h2: "Lab: o que eu construo para aprender",
+    lab_sub: "Dois protótipos jogáveis e o trabalho com IA por trás deles. Aperte o botão para carregar o jogo.",
+    coin: "Inserir ficha",
+    coin_soon: "A versão web entra no ar em breve.",
+    coin_page: "Abrir no itch.io",
+    close: "Ejetar",
+    controls: "WASD ou setas",
+    games: {
+      "crimson-wake": {
+        title: "Crimson Wake",
+        sub: "Engine de aquisição de moeda · skin 1",
+        body: "Não é um jogo acabado: é o protótipo do ciclo que gera dinheiro num jogo incremental. Você é um vampiro. Presas são a moeda, caçadores são o custo, e cada refeição atrai mais deles. Sobreviva à noite e gaste o sangue no Mercado de Sangue. Feito com apoio de IA. Trabalhei na engine, não no acabamento. (O jogo está em inglês.)",
+        stack: ["Ren'Py", "Python", "Com apoio de IA"],
+      },
+      "invasion": {
+        title: "Invasion",
+        sub: "Mesma engine · skin 2",
+        body: "A mesma engine de moeda com outra arte e outro som: você é um alienígena, humanos são a moeda e soldados são o custo. Mostra que a engine é reutilizável, que era o objetivo. (O jogo está em inglês.)",
+        stack: ["Ren'Py", "Python", "Com apoio de IA"],
+      },
+    },
+    signals_h: "Outros sinais de IA",
+    signals: [
+      { k: "Curso", t: "“Inteligência Artificial e suas aplicações”", b: "Criei e ministrei presencialmente para servidores públicos: 16h, parceria com a SEPL, nov. 2023, com vagas esgotadas. Engenharia de prompt, Code Interpreter, prototipagem e ética." },
+      { k: "Prêmio", t: "Prêmio Aster de Pesquisa (2024)", b: "Pelo TCC “O Desenvolvimento de Competências e Pessoas através do uso de OKRs suportados por IA”." },
+    ],
 
-    skills_tag: "Ferramentas e forças",
-    skills_h2:  "Competências",
-    lang_tag:   "Idiomas",
-    lang_h2:    "Comunicação",
-
-    edu_tag:   "Formação",
-    intl_tag:  "Experiência internacional",
-    cert_tag:  "Certificações",
-
-    foot_h:    "Tem um problema de negócio escondido nos seus dados? Vamos conversar.",
+    exp_tag: "03 // Histórico",
+    exp_h2: "Experiência",
+    skills_tag: "04 // Arsenal",
+    skills_h2: "Competências",
+    lang_h2: "Idiomas",
+    edu_h2: "Formação",
+    cert_h2: "Certificações",
+    foot_h: "Tem um problema de negócio escondido nos seus dados? Vamos conversar.",
     foot_note: "Curitiba, PR · Remoto, híbrido ou presencial · Aberto a realocação",
-
-    badge_live: "Ao vivo",
-    badge_case: "Case",
-    badge_open: "Dados abertos",
-    view_dash:  "Ver dashboard ao vivo",
-    present:    "atual",
-    egg_toast:  "Dados organizados. Agora, qual é a decisão?",
+    view: "Ver o código",
+    run: "Rodar por conta própria",
+    cases: "Case",
   },
 
-  /* KPIs  (num e unit podem ser texto ou {en, pt}) */
-  kpis: [
-    {
-      tag:  {"en":"Paraná State","pt":"Estado do Paraná"},
-      num:  {"en":"R$690M","pt":"R$ 690 mi"}, unit: "",
-      sparkline: "0,16 10,15 20,11 30,6 46,2",
-      en: "in public works monitored, across ~250 municipal agreements",
-      pt: "em obras monitoradas, em ~250 convênios municipais",
-    },
-    {
-      tag:  {"en":"Paraná State","pt":"Estado do Paraná"},
-      num:  "~100", unit: "",
-      en: "indicators analyzed in the State Competitiveness Ranking (CLP)",
-      pt: "indicadores analisados no Ranking de Competitividade dos Estados (CLP)",
-    },
-    {
-      tag:  "Copel",
-      num:  {"en":"~R$250M","pt":"~R$ 250 mi"}, unit: "",
-      dark: true,
-      en: "in works on the Copel dashboard, executive version built in 2 hours",
-      pt: "em obras no dashboard da Copel, versão executiva montada em 2 horas",
-    },
-    {
-      tag:  {"en":"Paraná State","pt":"Estado do Paraná"},
-      num:  "20", unit: "+",
-      en: "dashboards for managers and admin areas, incl. HR and Procurement",
-      pt: "dashboards para gestores e áreas administrativas, como RH e Compras",
-    },
-    {
-      tag:  "Faurecia",
-      num:  {"en":"R$1.5M","pt":"R$ 1,5 mi"}, unit: {"en":"→ 9 CT-e","pt":"→ 9 CT-es"},
-      sparkline: "0,2 12,4 24,9 34,15 46,18",
-      teal: true,
-      en: "freight backlog helped down to 9 pending documents, in five months",
-      pt: "ajudei a reduzir o passivo de fretes a 9 pendências, em cinco meses",
-    },
-    {
-      tag:  "Faurecia",
-      num:  "86", unit: "%+",
-      sparkline: "0,15 12,13 24,8 34,7 46,3",
-      en: "container utilization, against an 80% target",
-      pt: "ocupação de contêineres, contra meta de 80%",
-    },
-  ],
-
-  /* ANÁLISE ABERTA (resultado de analysis/run.py) */
+  /* ANÁLISE ABERTA (analysis/run.py) */
   analysis: {
-    "rows": [
-        {
-            "r": 1,
-            "m": "Petroleum engineering",
-            "pay": 110000,
-            "n": 36
-        },
-        {
-            "r": 2,
-            "m": "Mining and mineral engineering",
-            "pay": 75000,
-            "n": 7
-        },
-        {
-            "r": 3,
-            "m": "Metallurgical engineering",
-            "pay": 73000,
-            "n": 3
-        },
-        {
-            "r": 4,
-            "m": "Naval architecture and marine engineering",
-            "pay": 70000,
-            "n": 16
-        },
-        {
-            "r": 5,
-            "m": "Chemical engineering",
-            "pay": 65000,
-            "n": 289
-        },
-        {
-            "r": 6,
-            "m": "Nuclear engineering",
-            "pay": 65000,
-            "n": 17
-        },
-        {
-            "r": 7,
-            "m": "Actuarial science",
-            "pay": 62000,
-            "n": 51
-        },
-        {
-            "r": 8,
-            "m": "Astronomy and astrophysics",
-            "pay": 62000,
-            "n": 10
-        },
-        {
-            "r": 9,
-            "m": "Mechanical engineering",
-            "pay": 60000,
-            "n": 1029
-        },
-        {
-            "r": 10,
-            "m": "Electrical engineering",
-            "pay": 60000,
-            "n": 631
-        }
+    rows: [
+      { r: 1, m: "Petroleum engineering", n: 36 },
+      { r: 2, m: "Mining and mineral engineering", n: 7 },
+      { r: 3, m: "Metallurgical engineering", n: 3 },
+      { r: 4, m: "Naval architecture and marine engineering", n: 16 },
+      { r: 5, m: "Chemical engineering", n: 289 },
+      { r: 6, m: "Nuclear engineering", n: 17 },
+      { r: 7, m: "Actuarial science", n: 51 },
+      { r: 8, m: "Astronomy and astrophysics", n: 10 },
+      { r: 9, m: "Mechanical engineering", n: 1029 },
+      { r: 10, m: "Electrical engineering", n: 631 },
     ],
-    "dropped": [
-        "Mining and mineral engineering",
-        "Metallurgical engineering",
-        "Naval architecture and marine engineering",
-        "Nuclear engineering",
-        "Astronomy and astrophysics"
-    ],
-    "entered": [
-        "Engineering mechanics physics and science",
-        "Aerospace engineering",
-        "Computer engineering",
-        "Industrial and manufacturing engineering",
-        "Biomedical engineering"
-    ],
-    "repo": "https://github.com/MStoekly/MStoekly.github.io/blob/main/analysis/",
-    "source": "https://github.com/fivethirtyeight/data/tree/master/college-majors",
-    "thin_in_top10": 5,
-    "survive": 5,
-    "pct_under_30": 18,
-    sql: `SELECT
-    Rank                                AS rank_headline,
-    Major,
-    Median                              AS median_pay,
-    Sample_size                         AS respondents,
-    Sample_size < 30                    AS too_thin
-FROM grads
-ORDER BY Rank
-LIMIT 10;
-
-WITH scored AS (
-    SELECT
-        Rank,
-        Major,
-        Median,
-        Sample_size,
-        Median * (1 - Unemployment_rate) AS expected_pay
-    FROM grads
-    WHERE Sample_size >= 30
-)
-SELECT
-    RANK() OVER (ORDER BY expected_pay DESC) AS rank_reliable,
-    Major,
-    round(expected_pay)                       AS expected_pay,
-    Sample_size                               AS respondents,
-    Rank                                      AS rank_headline
-FROM scored
-ORDER BY rank_reliable
-LIMIT 10;`,
-    en: {
-      legend_ok: "30+ respondents", legend_thin: "Under 30 (too thin to rank on)",
-      axis: "Respondents behind each number (log scale)", cutoff: "cutoff",
-      view_table: "View as table", view_chart: "View as chart", show_sql: "Show the SQL",
-      th: ["#", "Major", "Median pay", "Respondents", "Status"], ok: "OK", thin: "Too thin",
-      thin_short: "thin", pay: "median pay", n: "respondents", fixed_title: "After the fix",
-      out: "Out of the top 10", in_: "In the top 10",
-      note: "The 30-respondent cutoff is a rule of thumb. Data: FiveThirtyEight, built from US Census Bureau survey data (ACS 2010-2012), CC BY 4.0. Petroleum engineering (n=36) sits just above the cutoff. It is an older US cut, so read it for the method, not for today's salaries.",
-      chart_label: "Bar chart: respondents behind each of the 10 best-paid majors",
-    },
-    pt: {
-      legend_ok: "30+ respondentes", legend_thin: "Menos de 30 (pouco para ranquear)",
-      axis: "Respondentes por trás de cada número (escala log)", cutoff: "corte",
-      view_table: "Ver como tabela", view_chart: "Ver como gráfico", show_sql: "Mostrar o SQL",
-      th: ["#", "Curso", "Salário mediano", "Respondentes", "Status"], ok: "OK", thin: "Pouco dado",
-      thin_short: "pouco", pay: "salário mediano", n: "respondentes", fixed_title: "Depois da correção",
-      out: "Saem do top 10", in_: "Entram no top 10",
-      note: "O corte de 30 respondentes é uma regra prática. Dados: FiveThirtyEight, a partir de pesquisa do Censo dos EUA (ACS 2010-2012), CC BY 4.0. Engenharia de petróleo (n=36) fica logo acima do corte. É um recorte antigo dos EUA, então vale pelo método, não pelos salários de hoje. Os nomes dos cursos ficam em inglês, como na fonte.",
-      chart_label: "Gráfico de barras: respondentes por trás de cada um dos 10 cursos mais bem pagos",
-    },
+    label_en: "Bar chart, log scale: respondents behind each of the 10 best-paid majors. Five rest on fewer than 30 respondents.",
+    label_pt: "Gráfico de barras, escala log: respondentes por trás de cada um dos 10 cursos mais bem pagos. Cinco têm menos de 30.",
+    cap_en: "Respondents per top-10 major · line = 30",
+    cap_pt: "Respondentes por curso do top 10 · linha = 30",
+    repo: "https://github.com/MStoekly/MStoekly.github.io/blob/main/analysis/",
   },
 
-  /* PROJETOS */
+  /* PROJETOS (show:false oculta). Ordem: ao vivo primeiro. */
   projects: [
-    {
-      idx: "01",
-      live: true,
+    { idx: "01", kind: "live", show: true, tags: ["Power BI", "Power Query"],
       url: "https://app.powerbi.com/view?r=eyJrIjoiMWIyMDk5NDctOGJjNS00M2QwLThlYmQtODMzNGQxNDM4MjZmIiwidCI6IjZlY2NiMTczLTA1OTUtNGE3MS05OGI3LTE4ZDFmNDkyMzA4NCJ9",
-      stack: ["Power BI", "Power Query"],
-      en: {
-        title: "Copel Resource-Allocation Dashboard",
-        sub: "Public accountability · executive version in 2 hours",
-        body: `The state was tracking about R$250 million in public works funded by the privatization of Copel,
-                and a prototype dashboard already existed. Working directly with the director, I turned it into an
-                executive version in 2 hours. I redesigned the visuals and added what the State Audit Court needs for
-                accountability, such as beneficiary municipalities and planned vs. transferred amounts. The director
-                used it in his first public interview about the dashboard, and it stayed in use after I moved to
-                another department. The spending plan was also covered by <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1</a>.`,
-        insight: "Building it fast was the easy part. The value was knowing what an audit court needs to see.",
-      },
-      pt: {
-        title: "Dashboard do Plano de Aplicação dos Recursos da Copel",
-        sub: "Prestação de contas · versão executiva em 2 horas",
-        body: `O estado acompanhava cerca de R$ 250 milhões em obras financiadas com a privatização da Copel,
-                e já existia um protótipo de dashboard. Em alinhamento direto com o diretor, transformei o protótipo
-                numa versão executiva em 2 horas. Reformulei as visualizações e incluí o que o Tribunal de Contas
-                precisa para a prestação de contas, como os municípios beneficiados e os valores previstos e
-                repassados. O diretor usou o painel em sua primeira entrevista pública sobre o assunto, e ele
-                continuou em uso depois que fui realocado para outra secretaria. O plano de aplicação também foi noticiado pelo <a href="https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml" target="_blank" rel="noopener noreferrer">G1</a>.`,
-        insight: "Montar rápido era a parte fácil. O valor estava em saber o que um tribunal de contas precisa enxergar.",
-      },
-    },
-    {
-      idx:  "02",
-      live: true,
-      url:  "https://app.powerbi.com/view?r=eyJrIjoiMjdmZjNlNjItODI0Ny00MWRiLTgzMDgtZTVhN2M5ZmI0NTViIiwidCI6IjZlY2NiMTczLTA1OTUtNGE3MS05OGI3LTE4ZDFmNDkyMzA4NCJ9",
-      stack: ["Power BI", "Power Query"],
-      en: {
-        title: "CLP State Competitiveness Ranking Analysis",
-        sub:   "Team analysis · ~100 indicators",
-        body:  `As part of a team, I analyzed about 100 indicators of the Brazilian State Competitiveness Ranking
-                (CLP) and presented diagnostics to the departments responsible for them. That helped identify
-                where the state's indicators had room to improve.`,
-        insight: "A ranking is only useful once each department can see which of its own numbers to act on.",
-      },
-      pt: {
-        title: "Análise do Ranking de Competitividade dos Estados (CLP)",
-        sub:   "Análise em equipe · ~100 indicadores",
-        body:  `Em equipe, analisei cerca de 100 indicadores do Ranking de Competitividade dos Estados (CLP) e
-                apresentei diagnósticos às secretarias responsáveis. Isso ajudou a identificar onde os
-                indicadores do estado tinham espaço para melhorar.`,
-        insight: "Um ranking só serve quando cada secretaria enxerga quais dos seus números pedem ação.",
-      },
-    },
-    {
-      idx:  "03",
-      live: false,
-      open: true,
-      analysis: true,
-      url:  null,
-      links: [
-        { url: "https://github.com/MStoekly/MStoekly.github.io/blob/main/analysis/majors.sql", en: "View the query", pt: "Ver a query" },
-        { url: "https://github.com/MStoekly/MStoekly.github.io/blob/main/analysis/run.py", en: "Run it yourself", pt: "Rodar por conta própria" },
-      ],
-      stack: ["SQL", "DuckDB"],
-      en: {
-        title: "Best-paid majors: who is behind each number?",
-        sub:   "Personal project · open data · SQL",
-        body:  `The usual "best-paid majors" list ranks by median pay. I took the survey data behind it (173 majors) and checked how many graduates each number rests on. Five of the top 10 rest on fewer than 30 respondents, and the #2, mining engineering, rests on 7. Drop those five and 5 of the original 10 remain. Re-ranking the rest by expected pay (median pay x employment rate, with 30+ respondents) brings in five different majors. The SQL is below.`,
-        insight: "Before ranking anything, check how many people each number rests on.",
-      },
-      pt: {
-        title: "Cursos mais bem pagos: quem está por trás de cada número?",
-        sub:   "Projeto pessoal · dados abertos · SQL",
-        body:  `A lista de "cursos mais bem pagos" costuma ranquear pelo salário mediano. Peguei os dados da pesquisa por trás dela (173 cursos) e conferi em quantos formados cada número se apoia. Cinco dos 10 primeiros têm menos de 30 respondentes, e o segundo, engenharia de minas, tem 7. Tirando esses cinco, restam 5 dos 10 originais. Reranqueando o resto por salário esperado (mediana x taxa de emprego, com 30+ respondentes), entram cinco cursos diferentes. O SQL está abaixo.`,
-        insight: "Antes de ranquear qualquer coisa, confira em quantas pessoas cada número se apoia.",
-      },
-    },
-    {
-      idx:  "04",
-      live: false,
-      url:  null,
-      stack: ["Power Query", "Power BI", {"en":"Data stewardship","pt":"Governança de dados"}],
-      en: {
-        title: "Monitoring ~250 municipal agreements",
-        sub:   "Fixing the data at the source · R$690M in public works",
-        body:  `Monitoring about 250 municipal agreements, covering R$690 million in public works, depended on
-                spreadsheets sent by the technical team in a different shape every time. I first cleaned them in Power
-                Query to feed Power BI dashboards. Then I went to the person who maintained the data, showed her how much
-                time went into fixing formats and proposed a standard template that also made her own work easier. She
-                adopted it, the manual cleanup became obsolete, and updates went from monthly to weekly, becoming the base
-                of the director's report to the Secretary.`,
-        insight: "The best data transformation I did was convincing someone she no longer needed it.",
-      },
-      pt: {
-        title: "Monitoramento de ~250 convênios municipais",
-        sub:   "Corrigindo o dado na origem · R$ 690 milhões em obras",
-        body:  `O monitoramento de cerca de 250 convênios municipais, que somam R$ 690 milhões em obras, dependia de
-                planilhas enviadas pela área técnica, cada vez num formato. Primeiro tratei os dados em Power Query para
-                alimentar dashboards em Power BI. Depois fui até a responsável pelos dados, mostrei quanto tempo ia para
-                corrigir formato e propus um modelo padronizado que também facilitava o trabalho dela. Ela adotou, o
-                tratamento manual ficou obsoleto e a atualização passou de mensal para semanal, virando a base do reporte
-                do diretor ao Secretário.`,
-        insight: "A melhor transformação de dados que fiz foi convencer alguém a não precisar mais dela.",
-      },
-    },
-    {
-      idx:  "05",
-      live: false,
-      url:  null,
-      stack: ["Databricks", "Delta Lake", "SQL", "API", "Power BI"],
-      en: {
-        title: "Contracts and agreements: from one-off lookups to one monitoring base",
-        sub:   "DER-PR · SIDER · API + Databricks + SQL + Power BI",
-        body:  `Working with the DER-PR Planning team, I found room to improve how data for monitoring works contracts was
-                consolidated. In SIDER, contract information was available through operational reports, one contract at a
-                time, with no consolidated base for cross-portfolio analysis, and a first attempt in Excel did not scale.
-                Once Celepar made the raw data available as JSON via API, I built a pipeline in Databricks: the original
-                JSON is preserved in Delta Lake with its history, SQL transformations standardize contract, agreement and
-                works identifiers, handle duplicates and missing fields, and produce consolidated tables. Power BI sits on
-                top for the semantic model, measures and management monitoring.`,
-        insight: "The value was moving from looking up one contract to seeing the whole portfolio.",
-      },
-      pt: {
-        title: "Contratos e convênios: da consulta pontual a uma base única de monitoramento",
-        sub:   "DER-PR · SIDER · API + Databricks + SQL + Power BI",
-        body:  `Em conjunto com o Planejamento do DER-PR, identifiquei oportunidades de melhoria na consolidação dos dados
-                usados no monitoramento de contratos de obras. No SIDER, as informações eram acessadas por relatórios
-                operacionais, contrato a contrato, sem base consolidada para análise transversal, e a primeira tentativa em
-                Excel não escalou. Quando a Celepar disponibilizou os dados brutos em JSON via API, estruturei um pipeline no
-                Databricks: o JSON original fica preservado em Delta Lake com histórico, transformações em SQL padronizam os
-                identificadores de contratos, convênios e obras, tratam duplicidades e campos ausentes e geram tabelas
-                consolidadas. O Power BI fica por cima, com o modelo semântico, as medidas e o monitoramento gerencial.`,
-        insight: "O valor estava em passar da consulta pontual para a visão da carteira inteira.",
-      },
-    },
-    {
-      idx:  "06",
-      live: false,
-      url:  null,
-      stack: ["Power BI", {"en":"Stakeholder mgmt","pt":"Gestão de stakeholders"}],
-      en: {
-        title: "Data adoption in a resistant environment",
-        sub:   "Product + behavioral strategy",
-        body:  `I worked from Planning with the Infrastructure teams, without formal authority over
-                the people who held the data. Instead of escalating, I took the little
-                data that already existed and turned it into BI people actually found useful. Usefulness
-                became the hook: the more useful it got, the more (and better) data the teams handed over.`,
-        insight: "It was a political and behavioral problem, and I solved it with product thinking.",
-      },
-      pt: {
-        title: "Adoção de dados em ambiente resistente",
-        sub:   "Estratégia de produto + comportamento",
-        body:  `Eu atuava a partir do Planejamento junto às equipes da Infraestrutura, sem
-                autoridade formal sobre quem detinha os dados. Em vez de levar o problema
-                para cima, peguei os poucos dados que já existiam e transformei em BI que era de fato
-                útil. A utilidade virou isca: quanto mais útil, mais (e melhores) dados as equipes
-                passavam a entregar.`,
-        insight: "Era um problema político e comportamental, e resolvi com pensamento de produto.",
-      },
-    },
-    {
-      idx:  "07",
-      live: false,
-      url:  null,
-      stack: ["Excel / VBA", "SAP"],
-      en: {
-        title: "Freight automation → second role",
-        sub:   "Faurecia · efficiency & initiative",
-        body:  `I built three Excel/VBA automations, tied into SAP, for freight validation, for correcting entries
-                returned by Controllership and for updating source records. Processing dropped from a full day to
-                about 3 hours, and within five months I helped bring a R$1.5 million backlog down to just 9 pending freight
-                documents (CT-e, freight transport records). With the time that freed up, I took over container allocation and built a
-                load-optimization tool that kept utilization above 86%, against an 80% target. I also managed
-                international freight with China and France for several plants.`,
-        insight: "The time freed by automating the repetitive work went into a bigger role.",
-      },
-      pt: {
-        title: "Automação de fretes → segunda função",
-        sub:   "Faurecia · eficiência e iniciativa",
-        body:  `Desenvolvi três automações em Excel/VBA, integradas ao SAP, para validar fretes, corrigir lançamentos
-                devolvidos pela Controladoria e atualizar registros de origem. O processamento caiu de um dia para
-                cerca de 3 horas e, em cinco meses, ajudei a reduzir um passivo de R$ 1,5 milhão a apenas 9 CT-es (conhecimentos de transporte) pendentes.
-                Com o tempo que sobrou, assumi a alocação de contêineres e criei uma ferramenta de otimização de
-                carga que manteve a ocupação acima de 86%, contra uma meta de 80%. Também cuidei de fretes
-                internacionais com China e França para várias plantas.`,
-        insight: "O tempo liberado pela automação do trabalho repetitivo foi para uma função maior.",
-      },
-    },
+      press: "https://g1.globo.com/pr/parana/economia/fiscaliza/noticia/2023/12/12/dinheiro-da-venda-da-copel-governo-do-parana-inclui-obras-que-somam-r-250-milhoes-em-plano-de-aplicacao-dos-recursos.ghtml",
+      en: { title: "Copel privatization funds: executive dashboard", sub: "Public accountability · built in 2 hours",
+        body: "From an existing prototype, I built in 2 hours the executive version of the dashboard tracking about R$ 250 million in public works funded by the privatization of Copel, the state utility. Working directly with the director, I added the information required for accountability reporting to the State Audit Court. The director used it in his first public interview on the topic, and it is still being updated." },
+      pt: { title: "Recursos da privatização da Copel: dashboard executivo", sub: "Prestação de contas · feito em 2 horas",
+        body: "A partir de um protótipo existente, desenvolvi em 2 horas a versão executiva do dashboard de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas com recursos da privatização da Copel. Em alinhamento direto com o diretor, incluí as informações exigidas na prestação de contas ao Tribunal de Contas. O painel foi usado pelo diretor em sua primeira entrevista pública sobre o tema e segue em atualização." } },
+    { idx: "02", kind: "live", show: true, tags: ["Power BI", "VBA"],
+      url: "https://app.powerbi.com/view?r=eyJrIjoiMjdmZjNlNjItODI0Ny00MWRiLTgzMDgtZTVhN2M5ZmI0NTViIiwidCI6IjZlY2NiMTczLTA1OTUtNGE3MS05OGI3LTE4ZDFmNDkyMzA4NCJ9",
+      en: { title: "State Competitiveness Ranking (CLP) analysis", sub: "Team analysis · ~100 indicators",
+        body: "As part of a team, I analyzed in depth about 100 indicators of the Brazilian State Competitiveness Ranking (CLP) and presented diagnostics to the responsible departments. I wrote the VBA that automated the extraction and consolidation of the indicators: about 4 hours of development versus a week of manual work." },
+      pt: { title: "Análise do Ranking de Competitividade dos Estados (CLP)", sub: "Análise em equipe · ~100 indicadores",
+        body: "Em equipe, analisei de forma aprofundada aproximadamente 100 indicadores do Ranking de Competitividade dos Estados (CLP) e apresentei diagnósticos às secretarias responsáveis. Escrevi o VBA que automatizou a extração e a consolidação dos indicadores: cerca de 4 horas de desenvolvimento contra uma semana de trabalho manual." } },
+    { idx: "03", kind: "open", show: true, tags: ["SQL", "DuckDB"], chart: true,
+      links: [ { u: "majors.sql", en: "View the query", pt: "Ver a query" }, { u: "run.py", en: "Run it yourself", pt: "Rodar por conta própria" } ],
+      en: { title: "Best-paid majors: who is behind each number?", sub: "Personal project · open data · SQL",
+        body: "The usual “best-paid majors” list ranks by median pay. I took the survey data behind it (173 majors) and checked how many graduates each number rests on. Five of the top 10 rest on fewer than 30 respondents, and the #2, mining engineering, rests on 7. Re-ranking the rest by expected pay (median pay × employment rate, with 30+ respondents) brings in five different majors. Data: FiveThirtyEight (US Census survey, 2010-2012, CC BY 4.0), so read it for the method, not today’s salaries." },
+      pt: { title: "Cursos mais bem pagos: quem está por trás de cada número?", sub: "Projeto pessoal · dados abertos · SQL",
+        body: "A lista de “cursos mais bem pagos” costuma ranquear pelo salário mediano. Peguei os dados da pesquisa por trás dela (173 cursos) e conferi em quantos formados cada número se apoia. Cinco dos 10 primeiros têm menos de 30 respondentes, e o segundo, engenharia de minas, tem 7. Reranqueando o resto por salário esperado (mediana × taxa de emprego, com 30+ respondentes), entram cinco cursos diferentes. Dados: FiveThirtyEight (pesquisa do Censo dos EUA, 2010-2012, CC BY 4.0): vale pelo método, não pelos salários de hoje." } },
+    { idx: "04", kind: "case", show: true, tags: ["SQL", "Power Query", "Power BI"], big: ["R$ 690M", "R$ 690 mi"],
+      en: { title: "Monitoring ~250 municipal agreements", sub: "Redesigning the data flow · monthly → weekly",
+        body: "I redesigned the data flow for monitoring about 250 municipal agreements, covering R$ 690 million in public works. I standardized data entry and built SQL and Power Query transformations feeding Power BI dashboards, moving the refresh from monthly to weekly and giving managers better visibility into the progress of each process." },
+      pt: { title: "Monitoramento de ~250 convênios municipais", sub: "Redesenho do fluxo de dados · mensal → semanal",
+        body: "Redesenhei o fluxo de dados do monitoramento de aproximadamente 250 convênios municipais, abrangendo R$ 690 milhões em obras. Padronizei a entrada de dados e estruturei o tratamento em SQL e Power Query para alimentar dashboards em Power BI, elevando a atualização de mensal para semanal e ampliando a visibilidade dos gestores sobre o andamento dos processos." } },
+    { idx: "05", kind: "case", show: true, tags: ["API", "SQL"], big: ["1 table", "1 tabela"],
+      en: { title: "SIDER contracts: from one-by-one to one monitoring table", sub: "DER-PR · API + SQL",
+        body: "SIDER, the DER-PR contracts system, only exported contract by contract. I built the extraction of the contracts through its API and standardized the data in SQL into a single monitoring table. The same flow was reused at the Municipal Development Department." },
+      pt: { title: "Contratos do SIDER: do contrato a contrato a uma tabela única", sub: "DER-PR · API + SQL",
+        body: "O SIDER, sistema de contratos do DER-PR, só exportava contrato a contrato. Estruturei a extração dos contratos via API e padronizei os dados em SQL em uma única tabela de monitoramento. O mesmo fluxo foi reaplicado no Departamento de Fomento Municipal." } },
+    { idx: "06", kind: "case", show: true, tags: ["SQL", "Power BI"], big: ["Instagram", "Instagram"],
+      en: { title: "Measuring the Guaratuba Bridge on Instagram", sub: "SEIL · communications analytics",
+        body: "I extracted the posts of SEIL’s institutional Instagram account, processed the data in SQL and presented a Power BI dashboard that quantified the weight of the Guaratuba Bridge as a communications asset, something the team sensed but could not measure." },
+      pt: { title: "Medindo a Ponte de Guaratuba no Instagram", sub: "SEIL · análise de comunicação",
+        body: "Extraí os posts do Instagram institucional da SEIL, tratei os dados em SQL e apresentei um dashboard em Power BI que quantificou o peso da Ponte de Guaratuba como ativo de comunicação, algo que a equipe percebia mas não conseguia medir." } },
   ],
 
-  /* EXPERIÊNCIA */
+  /* EXPERIÊNCIA (texto = CV UniOpet) */
   experience: [
-    {
-      date_en: "Feb 2023 – present",
-      date_pt: "fev 2023 – atual",
-      en: {
-        role: "Business Data Analyst",
-        org:  "Paraná State Department of Planning (Brazil)",
+    { en: { date: "Feb 2023 – Jun 2026", role: "Business Data Analyst", org: "Paraná State Department of Planning (Brazil)",
         note: "Data analyst in sectoral planning units, first at the Department of Planning (SEPL), later at the Department of Infrastructure and Logistics (SEIL).",
         bullets: [
-          "Built in 2 hours the executive version of the dashboard tracking ~R$ 250 million in public works funded by the privatization of Copel (state utility), a task the team had estimated at 5 days. I led the alignment with the director to define the indicators required for accountability to the State Audit Court, such as beneficiary municipalities and planned vs. transferred amounts, reconciled to the cent. The director used it in his first public interview on the topic, and it stayed in use after my transfer.",
-          "Restructured the monitoring of ~250 municipal agreements (R$ 690 million in public works). I cleaned the technical team's spreadsheets in Power Query to feed Power BI, then negotiated with the data owner the adoption of a standard template at the source, which removed the manual rework. Updates went from monthly to weekly and became the base of the director's report to the Secretary.",
-          "Working with the DER-PR Planning team, structured a data pipeline to integrate and standardize works-contract data from SIDER. I automated extraction of the raw JSON data made available by Celepar (the state IT company) via API, preserved the history in Delta Lake on Databricks and built SQL transformations to standardize identifiers, handle duplicates and missing fields and consolidate the records, delivering structured tables for consumption in Power BI.",
-          "On my own initiative, scraped the SEIL institutional Instagram posts, validated and cleaned the extracted CSV data in SQL and presented a Power BI dashboard to the Communications team. The analysis put a number on the weight of the Guaratuba Bridge in audience engagement, something the team sensed but could not measure, and the topic gained prominence in the communication strategy that followed.",
-          "Developed 20+ dashboards for managers and administrative areas, including HR, Procurement and outsourced-services management, tailoring each solution to the area and turning operational data into information for monitoring and decision-making.",
-          "Standardized spreadsheet templates and automated Excel controls for areas with low analytical maturity, improving data organization and making the data usable for analysis and monitoring.",
-          "As part of a team, analyzed ~100 indicators of the Brazilian State Competitiveness Ranking (CLP) and presented diagnostics to the responsible departments, helping identify improvement opportunities in the state's indicators.",
-        ],
-      },
-      pt: {
-        role: "Analista de Dados de Negócios",
-        org:  "Secretaria de Estado do Planejamento (PR)",
+          "Redesigned the data flow for monitoring ~250 municipal agreements covering R$ 690 million in public works. Standardized data entry and built SQL and Power Query transformations feeding Power BI dashboards, moving the refresh from monthly to weekly and giving managers better visibility into the progress of each process.",
+          "Built in 2 hours, with Power BI and Power Query, the executive version of the dashboard tracking ~R$ 250 million in public works funded by the privatization of Copel (state utility), starting from an existing prototype. Working directly with the director, I added the information required for accountability reporting to the State Audit Court. The director used the dashboard in his first public interview on the topic, and it is still being updated.",
+          "Built the extraction of contracts from SIDER (DER-PR) through its API, since the system only exported contract by contract, and standardized the data in SQL into a single monitoring table. The same flow was reused at the Municipal Development Department.",
+          "Extracted the posts of SEIL’s institutional Instagram account, processed the data in SQL and presented a Power BI dashboard that quantified the weight of the Guaratuba Bridge as a communications asset, something the team sensed but could not measure.",
+          "As part of a team, analyzed in depth ~100 indicators of the Brazilian State Competitiveness Ranking (CLP) and presented diagnostics to the responsible departments. Wrote the VBA that automated the extraction and consolidation of the indicators: about 4 hours of development versus a week of manual work.",
+          "Created and taught the in-person course “Artificial Intelligence and Its Applications” for public servants (16h, in partnership with SEPL, Nov 2023), fully booked. Content: prompt engineering, Code Interpreter, prototyping and ethics.",
+          "Built 20+ dashboards for managers and administrative areas such as HR, Procurement and outsourced-services management, always starting from the decision each area needed to make.",
+        ] },
+      pt: { date: "fev. 2023 – jun. 2026", role: "Analista de Dados de Negócios", org: "Secretaria de Estado do Planejamento (PR)",
         note: "Atuação como analista de dados em núcleos de planejamento setorial, inicialmente na SEPL e posteriormente na SEIL.",
         bullets: [
-          "Entreguei em 2 horas a versão executiva do painel de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas pela privatização da Copel, prazo que a equipe havia estimado em 5 dias. Conduzi o alinhamento direto com o diretor para definir os indicadores exigidos na prestação de contas ao Tribunal de Contas, como municípios beneficiados e valores previstos e repassados, conciliados ao centavo. O diretor usou o painel em sua primeira entrevista pública sobre o tema, e ele segue em uso após minha realocação.",
-          "Reestruturei o monitoramento de aproximadamente 250 convênios municipais (R$ 690 milhões em obras). Tratei em Power Query as planilhas enviadas pela área técnica para alimentar os painéis em Power BI e, em seguida, negociei com a responsável pelos dados a adoção de um modelo padronizado na origem, o que eliminou o retrabalho manual. A atualização passou de mensal para semanal e virou a base do reporte do diretor ao Secretário.",
-          "Estruturei, em conjunto com o Planejamento do DER-PR, um pipeline de dados para integrar e padronizar informações de contratos de obras do SIDER. Automatizei a extração dos dados brutos em JSON disponibilizados pela Celepar via API, preservei o histórico em Delta Lake no Databricks e desenvolvi transformações em SQL para padronizar identificadores, tratar duplicidades e campos ausentes e consolidar os registros, disponibilizando tabelas estruturadas para consumo no Power BI.",
-          "Por iniciativa própria, coletei via scraping as publicações institucionais da SEIL no Instagram, validei e tratei em SQL os dados extraídos em CSV e apresentei à Comunicação um dashboard em Power BI. A análise quantificou o peso da Ponte de Guaratuba no engajamento do público, algo que a equipe percebia mas não conseguia medir, e o tema ganhou destaque na estratégia de comunicação seguinte.",
-          "Desenvolvi mais de 20 dashboards para gestores e áreas administrativas, incluindo RH, Compras e gestão de terceirizados, adaptando as soluções às necessidades de cada área e transformando dados operacionais em informações para acompanhamento e tomada de decisão.",
-          "Padronizei modelos de planilhas e automatizei controles em Excel para áreas com baixa maturidade analítica, melhorando a organização dos dados e facilitando sua utilização em análises e monitoramentos.",
-          "Em equipe, analisei de maneira aprofundada aproximadamente 100 indicadores do Ranking de Competitividade dos Estados (CLP) e apresentei diagnósticos às secretarias responsáveis, apoiando a identificação de oportunidades de melhoria nos indicadores estaduais.",
-        ],
-      },
-    },
-    {
-      date_en: "Jun 2022 – Feb 2023",
-      date_pt: "jun 2022 – fev 2023",
-      en: {
-        role: "Production Control & Logistics Trainee",
-        org:  "Faurecia · Curitiba, Brazil",
+          "Redesenhei o fluxo de dados do monitoramento de aproximadamente 250 convênios municipais, abrangendo R$ 690 milhões em obras. Padronizei a entrada de dados e estruturei o tratamento em SQL e Power Query para alimentar dashboards em Power BI, elevando a atualização de mensal para semanal e ampliando a visibilidade dos gestores sobre o andamento dos processos.",
+          "Desenvolvi em 2 horas, com Power BI e Power Query, a versão executiva do dashboard de acompanhamento de aproximadamente R$ 250 milhões em obras financiadas com recursos da privatização da Copel, a partir de um protótipo existente. Em alinhamento direto com o diretor, incluí as informações exigidas na prestação de contas ao Tribunal de Contas. O painel foi usado pelo diretor em sua primeira entrevista pública sobre o tema e segue em atualização.",
+          "Estruturei a extração dos contratos do SIDER (DER-PR) via API, já que o sistema só exportava contrato a contrato, e padronizei os dados em SQL em uma única tabela de monitoramento. O mesmo fluxo foi reaplicado no Departamento de Fomento Municipal.",
+          "Extraí os posts do Instagram institucional da SEIL, tratei os dados em SQL e apresentei um dashboard em Power BI que quantificou o peso da Ponte de Guaratuba como ativo de comunicação, algo que a equipe percebia mas não conseguia medir.",
+          "Em equipe, analisei de forma aprofundada aproximadamente 100 indicadores do Ranking de Competitividade dos Estados (CLP) e apresentei diagnósticos às secretarias responsáveis. Escrevi o VBA que automatizou a extração e a consolidação dos indicadores: cerca de 4 horas de desenvolvimento contra uma semana de trabalho manual.",
+          "Criei o curso presencial “Inteligência Artificial e suas aplicações” para servidores públicos (16h, parceria com a SEPL, nov. 2023), com vagas esgotadas. Conteúdo: engenharia de prompt, Code Interpreter, prototipagem e ética.",
+          "Desenvolvi mais de 20 dashboards para gestores e áreas administrativas, como RH, Compras e gestão de terceirizados, sempre partindo da decisão que cada área precisava tomar.",
+        ] } },
+    { en: { date: "Jun 2022 – Feb 2023", role: "Production Control & Logistics Trainee", org: "Faurecia", note: "",
         bullets: [
-          "Developed three Excel/VBA automations for freight validation, correction of entries returned by Controllership and source-record updates, integrating the review process with SAP. Cut processing time from a full day to ~3 hours and helped reduce, within five months, a R$ 1.5 million backlog to just 9 pending freight documents (CT-e).",
+          "Developed three Excel/VBA automations for freight validation, correction of entries returned by Controllership and source-record updates, integrating the review process with SAP. Processing time dropped from a full day to about 3 hours, and the R$ 1.5 million backlog fell to 9 pending CT-es within five months.",
           "Took over container allocation and built a load-optimization tool that kept utilization above 86%, beating the 80% operational target.",
-          "Managed international freight with China and France for multiple plants, coordinating transportation and international logistics activities.",
-        ],
-      },
-      pt: {
-        role: "Trainee de Controle de Produção e Logística",
-        org:  "Faurecia · Curitiba, PR",
+        ] },
+      pt: { date: "jun. 2022 – fev. 2023", role: "Trainee de Controle de Produção e Logística", org: "Faurecia", note: "",
         bullets: [
-          "Desenvolvi três automações em Excel/VBA para validação de fretes, correção de lançamentos devolvidos pela Controladoria e atualização de registros de origem, integrando o processo de conferência ao SAP. A solução reduziu o processamento de um dia para aproximadamente 3 horas e contribuiu para reduzir, em cinco meses, um passivo de R$ 1,5 milhão para apenas 9 CT-es pendentes.",
+          "Desenvolvi três automações em Excel/VBA para validação de fretes, correção de lançamentos devolvidos pela Controladoria e atualização de registros de origem, integrando a conferência ao SAP. O processamento caiu de um dia para cerca de 3 horas, e o passivo de R$ 1,5 milhão caiu para 9 CT-es pendentes em cinco meses.",
           "Assumi a alocação de contêineres e desenvolvi uma ferramenta de otimização de carga que manteve a ocupação acima de 86%, superando a meta operacional de 80%.",
-          "Gerenciei fretes internacionais envolvendo China e França para múltiplas plantas, coordenando atividades de transporte e logística internacional.",
-        ],
-      },
-    },
+        ] } },
   ],
 
-  /* COMPETÊNCIAS (chips por grupo) */
-  skills: [
-    { en: "Data & BI",    pt: "Dados e BI",
-      chips: ["SQL","Power BI","DAX","Power Query (M)",{"en":"Data Modeling","pt":"Modelagem de Dados"},"ETL",{"en":"API integration","pt":"Integração via API"},"Databricks",{"en":"Data Visualization","pt":"Visualização de Dados"}] },
-    { en: "Analysis",     pt: "Análise",
-      chips: ["Business Intelligence",{"en":"KPI Monitoring","pt":"Monitoramento de Indicadores"},"Dashboards",{"en":"Automation","pt":"Automação"}] },
-    { en: "Tooling",      pt: "Ferramentas",
-      chips: [{"en":"Advanced Excel (VBA)","pt":"Excel avançado (VBA)"},"SAP"] },
-    { en: "Strengths",    pt: "Forças",
-      chips: [{"en":"Consultative communication","pt":"Comunicação consultiva"},{"en":"Stakeholder management","pt":"Gestão de stakeholders"},{"en":"Business-first thinking","pt":"Visão de negócio"},{"en":"Systems view","pt":"Visão sistêmica"},{"en":"Cross-functional","pt":"Atuação Interdepartamental"},{"en":"Data Adoption","pt":"Adoção de Dados"},{"en":"Problem-Solving","pt":"Resolução de Problemas"}] },
-  ],
-
-  /* IDIOMAS */
-  languages: [
-    { en:"Portuguese", pt:"Português",  level_en:"Native",       level_pt:"Nativo",             pct:100 },
-    { en:"English",    pt:"Inglês",     level_en:"C1 · Fluent",  level_pt:"C1 · Fluente",        pct:92  },
-    { en:"Spanish",    pt:"Espanhol",   level_en:"B2 · Intermediate", level_pt:"B2 · Intermediário", pct:58 },
-    { en:"French",     pt:"Francês",    level_en:"B1 · Basic",   level_pt:"B1 · Básico",         pct:42  },
-  ],
-
-  /* FORMAÇÃO */
+  skills: {
+    en: ["Power BI (DAX, Power Query)", "SQL", "Advanced Excel (VBA)", "Data Modeling", "ETL", "Data Visualization", "Generative AI (LLMs) and Prompt Engineering", "Python (in progress)", "SAP"],
+    pt: ["Power BI (DAX, Power Query)", "SQL", "Excel avançado (VBA)", "Modelagem de dados", "ETL", "Visualização de dados", "IA generativa (LLMs) e engenharia de prompt", "Python (em desenvolvimento)", "SAP"],
+  },
+  languages: {
+    en: [["Portuguese", "Native"], ["English", "C1"], ["Spanish", "B2"], ["French", "B1"]],
+    pt: [["Português", "Nativo"], ["Inglês", "C1"], ["Espanhol", "B2"], ["Francês", "B1"]],
+  },
   education: {
-    en: { degree: "Bachelor's in International Business", period: "2020 – 2023" },
-    pt: { degree: "Bacharelado em Negócios Internacionais", period: "2020 – 2023" },
-    school: "ESIC Business & Marketing School",
-    award_en: "Aster Research Award (2024), for an undergraduate thesis on AI-supported OKRs for performance management.",
-    award_pt: "Prêmio Aster de Pesquisa (2024), pelo TCC sobre OKRs apoiados por inteligência artificial na gestão de desempenho.",
+    en: ["Bachelor’s Degree in International Business", "ESIC Business & Marketing School · 2020–2023", "Aster Research Award (2024) for undergraduate thesis on AI-supported OKRs."],
+    pt: ["Bacharelado em Negócios Internacionais", "ESIC Business & Marketing School · 2020–2023", "Prêmio Aster de Pesquisa (2024) pelo TCC sobre OKRs apoiados por inteligência artificial."],
   },
-  intl: {
-    en: { text: "Went from beginner to advanced English in seven months.", period: "2018 – 2019" },
-    pt: { text: "Do inglês básico ao avançado em sete meses.", period: "2018 – 2019" },
-    place: "Limerick, Ireland",
+  certs: {
+    en: ["CS50 SQL · Harvard/edX (2024)", "Power BI Complete Course · Maven Analytics (130h, 2024)", "Power BI Masterclass (72h, 2022)", "Excel · Maven Analytics (2021–2022)"],
+    pt: ["CS50 SQL · Harvard/edX (2024)", "Power BI Completo · Maven Analytics (130h, 2024)", "Power BI Masterclass (72h, 2022)", "Excel · Maven Analytics (2021–2022)"],
   },
-
-  /* CERTIFICAÇÕES */
-  certs: [
-    { bold: "CS50 SQL",                    rest: "· Harvard / edX (2024)" },
-    { bold: {"en":"Power BI Complete Course","pt":"Power BI Completo"}, rest: "· 130h, Maven Analytics (2024)" },
-    { bold: "Power BI Masterclass",        rest: "· 72h (2022)" },
-    { bold: "Excel",                       rest: "· Maven Analytics (2021–2022)" },
-  ],
-
 }; // END CONFIG
 </script>
-<!-- ============================================================
-  END EDIT ZONE
-=============================================================== -->
 
 <style>
-@font-face{font-family:'Lora';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lora-latin-400-normal.woff2) format('woff2')}
-@font-face{font-family:'Lora';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/lora-latin-500-normal.woff2) format('woff2')}
-@font-face{font-family:'Lora';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/lora-latin-600-normal.woff2) format('woff2')}
-@font-face{font-family:'Lora';font-style:italic;font-weight:400;font-display:swap;src:url(fonts/lora-latin-400-italic.woff2) format('woff2')}
-@font-face{font-family:'Lora';font-style:italic;font-weight:500;font-display:swap;src:url(fonts/lora-latin-500-italic.woff2) format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format('woff2')}
-@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
-@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:"VT";src:url(fonts/vt323-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"JBMono";src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"JBMono";src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"PixelFallback";src:local("Courier New"),local("Menlo"),local("monospace");size-adjust:92%;ascent-override:90%;descent-override:20%;line-gap-override:0%}
+@font-face{font-family:"MonoFallback";src:local("Courier New"),local("Menlo"),local("monospace");size-adjust:100%;ascent-override:102%;descent-override:30%;line-gap-override:0%}
 
 :root{
-  --canvas:#faf9f5;--surface-soft:#f5f0e8;--surface-card:#efe9de;--cream-strong:#e8e0d2;
-  --dark:#181715;--dark-elevated:#252320;
-  --ink:#141413;--body-strong:#252523;--body:#3d3d3a;--muted:#6c6a64;--muted-soft:#8e8b82;
-  --primary:#cc785c;--primary-active:#a9583e;--on-dark:#faf9f5;--on-dark-soft:#a09d96;
-  --hairline:#e6dfd8;--hairline-soft:#ebe6df;--teal:#5db8a6;--amber:#e8a55a;
-  --serif:'Lora',Georgia,serif;--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,monospace;--maxw:1120px;
-  --ease:cubic-bezier(.2,.7,.2,1);
+  --bg:#080b10; --panel:#0d131c; --panel2:#111a26;
+  --ink:#cdeefa; --dim:#a6c4d6; --line:#5a7794; --line2:#2f4258;
+  --mag:#ff6aa8; --mag-d:#bd2d71; --vio:#b79bf2; --vio-d:#673379; --grn:#8dff5a;
+  --px:"VT","PixelFallback",monospace; --mono:"JBMono","MonoFallback",ui-monospace,monospace;
+  --glow:0 0 4px rgba(190,230,245,.9),0 0 14px rgba(120,180,230,.55);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{background:var(--canvas);color:var(--body);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:500;letter-spacing:-0.02em;line-height:1.12}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--maxw);margin:0 auto;padding-left:28px;padding-right:28px}
-@media(max-width:560px){.wrap{padding-left:20px;padding-right:20px}}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--primary-active);display:inline-flex;align-items:center;gap:8px}
-.spark{display:inline-block;width:13px;height:13px;flex:none}
-#content{transition:opacity .18s ease}
-#content.swapping{opacity:0}
-
-/* SCROLL PROGRESS */
-.progress{position:fixed;top:0;left:0;right:0;height:2px;background:var(--primary);transform-origin:0 50%;transform:scaleX(0);z-index:60;pointer-events:none}
+html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:15px;line-height:1.65;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.22) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:0;z-index:49;pointer-events:none;opacity:.5;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .8 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:100;background:var(--ink);color:var(--bg);padding:8px 12px}
+:focus-visible{outline:2px solid var(--mag);outline-offset:3px}
+h1,h2,h3,.px{font-family:var(--px);font-weight:400;text-transform:uppercase;letter-spacing:.04em;line-height:1}
+em{font-style:normal;color:var(--mag);text-shadow:0 0 8px rgba(255,106,168,.45)}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:50;background:rgba(250,249,245,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--hairline-soft);transition:box-shadow .3s ease}
-nav.scrolled{box-shadow:0 10px 30px -22px rgba(20,20,19,.45)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;color:var(--ink);letter-spacing:-0.02em}
-.brand .spark{color:var(--primary);transition:transform .6s var(--ease)}
-.brand:hover .spark{transform:rotate(90deg) scale(1.15)}
-.brand .spark.tap{animation:tap .35s var(--ease)}
-@keyframes tap{50%{transform:rotate(180deg) scale(1.6)}}
-.toast{position:fixed;left:16px;right:16px;margin:0 auto;width:fit-content;bottom:28px;z-index:70;transform:translateY(20px);opacity:0;pointer-events:none;
-  background:var(--dark);color:var(--on-dark);font-size:14px;font-weight:500;padding:12px 20px;border-radius:9999px;
-  box-shadow:0 16px 40px -16px rgba(20,20,19,.6);transition:opacity .35s ease,transform .45s var(--ease);
-  display:flex;align-items:center;gap:10px}
-.toast svg{width:13px;height:13px;color:var(--amber);flex:none}
-.toast.show{opacity:1;transform:none}
-.nav-links{display:flex;align-items:center;gap:6px}
-.nav-links a{font-size:14px;font-weight:500;color:var(--muted);padding:8px 12px;border-radius:8px;transition:.15s}
-.nav-links a:hover{color:var(--ink);background:var(--surface-card)}
-.lang-toggle{margin-left:8px;display:inline-flex;border:1px solid var(--hairline);border-radius:9999px;overflow:hidden;background:var(--canvas)}
-.lang-toggle button{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.4px;padding:6px 13px;border:0;background:transparent;color:var(--muted);cursor:pointer;transition:.15s}
-.lang-toggle button.active{background:var(--ink);color:var(--on-dark)}
-@media(max-width:760px){.nav-links a{display:none}.nav-inner{padding:0 20px}}
+#nav{position:sticky;top:0;z-index:40;background:rgba(8,11,16,.92);border-bottom:1px solid var(--line2);backdrop-filter:blur(4px)}
+.nav-in{display:flex;align-items:center;gap:18px;height:52px}
+.brand{font-family:var(--px);font-weight:400;font-size:22px;text-decoration:none;letter-spacing:.06em;text-shadow:var(--glow);margin-right:auto;white-space:nowrap}
+.brand b{color:var(--mag)}
+.nl{display:flex;gap:16px;align-items:center}
+.nl a{font-family:var(--px);font-size:18px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--dim);padding:6px 2px}
+.nl a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line)}
+.lang button{font:400 17px var(--px);background:none;color:var(--dim);border:0;padding:5px 9px;cursor:pointer;letter-spacing:.06em}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+
+/* FRAME (dossier language: hairline box, corner studs, title bar) */
+.frame{position:relative;border:1px solid var(--line);background:var(--panel);
+  background-image:
+   radial-gradient(circle,var(--ink) 0 2px,transparent 2.5px),radial-gradient(circle,var(--ink) 0 2px,transparent 2.5px),
+   radial-gradient(circle,var(--ink) 0 2px,transparent 2.5px),radial-gradient(circle,var(--ink) 0 2px,transparent 2.5px);
+  background-size:8px 8px;background-repeat:no-repeat;background-position:-4px -4px,calc(100% + 4px) -4px,-4px calc(100% + 4px),calc(100% + 4px) calc(100% + 4px)}
+.bar{display:flex;align-items:center;gap:10px;padding:7px 12px;border-bottom:1px solid var(--line);font-family:var(--px);font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:.08em;text-shadow:var(--glow)}
+.bar .sp{margin-left:auto;display:flex;gap:5px}
+.bar .sp i{width:9px;height:9px;border:1px solid var(--line);border-radius:50%}
+.frame.mag{border-color:var(--mag-d)}
+.frame.mag .bar{background:var(--mag-d);color:#fff;border-color:var(--mag-d);text-shadow:none}
+.frame.mag .bar .sp i{border-color:#fff}
+.frame.grn{border-color:#3d7a28}
+.frame.grn .bar{background:#2c5a1c;color:#e9ffe0;border-color:#2c5a1c;text-shadow:none}
+.frame.vio{border-color:var(--vio-d)}
+.frame.vio .bar{background:var(--vio-d);color:#fff;border-color:var(--vio-d);text-shadow:none}
 
 /* HERO */
-.hero-shell{position:relative;isolation:isolate;overflow:hidden}
-#hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-@media(max-width:760px){#hero-canvas{opacity:.55}}
-.hero{padding-top:96px;padding-bottom:40px}
-.hero h1{font-size:clamp(44px,8vw,84px);font-weight:500;letter-spacing:-0.035em;line-height:1.02;max-width:12ch;margin:20px 0 26px}
-.hero h1 em{font-style:italic;color:var(--primary);position:relative;white-space:nowrap}
-.hero h1 em::after{content:"";position:absolute;left:2%;right:2%;bottom:.04em;height:.06em;background:var(--primary);opacity:.35;border-radius:2px;transform-origin:left;transform:scaleX(0);animation:underline 1s var(--ease) 1s forwards}
-.hero .lead{font-size:clamp(17px,2.2vw,20px);color:var(--body);max-width:60ch;line-height:1.55}
-.hero .lead em{color:var(--primary-active);font-style:normal;font-weight:500}
-.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.btn{font-family:var(--sans);font-size:14px;font-weight:600;padding:0 22px;height:46px;display:inline-flex;align-items:center;gap:8px;border-radius:8px;cursor:pointer;border:1px solid transparent;transition:background .18s,border-color .18s,transform .18s,box-shadow .18s}
-.btn svg{transition:transform .25s var(--ease)}
-.btn-primary{background:var(--primary-active);color:#fff;box-shadow:0 8px 20px -12px rgba(204,120,92,.9)}
-.btn-primary:hover{background:#8f4731;transform:translateY(-1px)}
-.btn-primary:hover svg{transform:translateX(3px)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--hairline)}
-.btn-ghost:hover{background:var(--surface-card);border-color:var(--cream-strong);transform:translateY(-1px)}
+.hero{padding-top:44px;padding-bottom:56px}
+.hero-g{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:start}
+.tag{font-family:var(--px);font-size:18px;color:var(--dim);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;display:flex;gap:10px;align-items:center}
+.tag::before{content:"";width:10px;height:10px;background:var(--mag);box-shadow:0 0 8px var(--mag)}
+h1{font-size:clamp(42px,6.6vw,76px);text-shadow:var(--glow);margin-bottom:16px}
+.sub{font-family:var(--px);font-size:clamp(19px,2.3vw,24px);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:22px}
+.proof{border-left:3px solid var(--mag);padding:10px 14px;background:var(--panel);margin-bottom:18px;max-width:60ch}
+.proof .k{font-family:var(--px);font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:var(--mag);display:block}
+.lede{color:var(--ink);max-width:58ch;margin-bottom:24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--px);font-weight:400;font-size:19px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:11px 16px;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer;min-height:44px}
+.btn:hover{box-shadow:0 0 14px rgba(170,208,223,.45)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn.m{border-color:var(--mag);color:var(--mag)}
+.btn.m:hover{box-shadow:0 0 14px rgba(255,106,168,.5)}
+.cursor{display:inline-block;width:.55em;height:1em;background:var(--mag);vertical-align:-.12em;margin-left:4px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
 
-/* hero entrance */
-.hero .eyebrow,.hero .lead,.hero-cta{animation:rise .9s var(--ease) both}
-.hero .eyebrow{animation-delay:.05s}
-.hero .lead{animation-delay:.55s}
-.hero-cta{animation-delay:.7s}
-.hero h1 .w{display:inline-block;animation:rise .9s var(--ease) both;animation-delay:calc(.15s + var(--i) * .1s)}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@keyframes underline{to{transform:scaleX(1)}}
-
-/* SCROLL REVEAL */
-.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s var(--ease),background .2s,border-color .2s,box-shadow .25s;transition-delay:calc(var(--d,0) * 80ms),calc(var(--d,0) * 80ms),0s,0s,0s}
-.js .reveal.in{opacity:1;transform:none}
-.no-anim .reveal,.no-anim .reveal *{transition:none!important}
+/* DOSSIER */
+.dossier .rows{display:grid}
+.row{display:flex;justify-content:space-between;gap:14px;padding:7px 12px;border-bottom:1px solid var(--line2);font-size:13.5px}
+.row .k{font-family:var(--px);font-size:18px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);white-space:nowrap}
+.row .v{text-align:right;text-transform:uppercase;letter-spacing:.02em;font-weight:500}
+.met{display:grid;grid-template-columns:1fr 1fr}
+.met div{padding:12px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.met div:nth-child(2n){border-right:0}
+.met b{display:block;font-family:var(--px);font-size:40px;line-height:1;text-shadow:var(--glow)}
+.met span{display:block;font-size:13.5px;color:var(--dim);line-height:1.4;margin-top:6px}
+.cyc{padding:10px 12px 12px}
+.cyc svg{width:100%;height:56px;display:block;margin-bottom:6px}
+.cyc p{font-family:var(--px);font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
 
 /* SECTIONS */
-section{padding-top:84px;padding-bottom:84px}
-@media(max-width:680px){section{padding-top:56px;padding-bottom:56px}}
-.sec-head{margin-bottom:40px;max-width:62ch}
-.sec-head h2{font-size:clamp(28px,4vw,40px);font-weight:500;letter-spacing:-0.025em;margin:12px 0 0}
-.sec-head p{margin-top:14px;color:var(--muted);font-size:16.5px}
+section.s{padding:64px 0;border-top:1px solid var(--line2)}
+.sh{margin-bottom:28px;max-width:70ch}
+.sh h2{font-size:clamp(34px,4.6vw,52px);text-shadow:var(--glow);margin-bottom:8px}
+.sh p{color:var(--dim)}
 
-/* KPI BAND */
-.kpi-band{background:var(--surface-soft);border-top:1px solid var(--hairline-soft);border-bottom:1px solid var(--hairline-soft)}
-.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hairline);border:1px solid var(--hairline);border-radius:14px;overflow:hidden}
-@media(max-width:780px){.kpi-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:460px){.kpi-grid{grid-template-columns:1fr}}
-.kpi{background:var(--canvas);padding:26px 24px;display:flex;flex-direction:column;gap:6px;min-height:156px;position:relative}
-.kpi:hover{background:#fff}
-.kpi .num{font-family:var(--serif);font-size:42px;font-weight:500;color:var(--ink);letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}
-.kpi .unit{font-size:21px;color:var(--primary);font-family:var(--serif);margin-left:2px}
-.kpi .lbl{font-size:13.5px;color:var(--muted);line-height:1.45;margin-top:auto}
-.kpi .ktag{font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--muted-soft)}
-.kpi.dark{background:var(--dark)}
-.kpi.dark .num,.kpi.dark .lbl{color:var(--on-dark)}
-.kpi.dark .unit{color:var(--amber)}
-.kpi.dark .ktag{color:var(--teal)}
-.kpi.dark:hover{background:#1e1c1a}
-.kpi.dark::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,80%) var(--my,20%),rgba(232,165,90,.16),transparent 55%);pointer-events:none;transition:opacity .3s}
-.spark-line{position:absolute;right:18px;top:22px;width:46px;height:20px;opacity:.6;overflow:visible;transform-origin:right top;transition:opacity .25s,transform .35s var(--ease)}
-.kpi:hover .spark-line{opacity:1;transform:scale(1.25)}
-.js .spark-line polyline{stroke-dasharray:var(--len,60);stroke-dashoffset:var(--len,60);transition:stroke-dashoffset 1.3s var(--ease) .35s}
-.js .kpi.in .spark-line polyline{stroke-dashoffset:0}
-.spark-line circle{opacity:0;transition:opacity .3s 1.5s}
-.kpi.in .spark-line circle,html:not(.js) .spark-line circle{opacity:1}
+/* PROJECT MATRIX */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{display:flex;flex-direction:column;position:relative}
+.card .body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:26px;line-height:1.15;letter-spacing:.03em}
+.card h3 a{text-decoration:none}
+.card.link h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.card.link{border-color:var(--ink);box-shadow:0 0 18px rgba(170,220,245,.28)}
+.links a.btn.go{color:var(--bg);border:1px solid var(--ink);padding:8px 14px;font-size:19px}
+.links a.btn.go:hover{color:var(--bg)}
+.card:not(.link):not(.vio) .bar{opacity:.85}
+.card.link:hover{box-shadow:0 0 22px rgba(170,208,223,.25);border-color:var(--ink)}
+.card .st{font-family:var(--px);font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.card p.t{color:var(--ink);font-size:15px}
+.badge{font-family:var(--px);font-size:16px;border:1px solid currentColor;padding:1px 7px;margin-left:auto;letter-spacing:.1em}
+.badge.live{color:var(--bg);background:var(--ink);border-color:var(--ink)}
+.badge.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--mag);margin-right:6px;animation:blink 1.4s steps(1) infinite}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.chips span{font-size:13px;border:1px solid var(--line2);padding:1px 8px;color:var(--dim)}
+.links{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:2}
+.links a{font-family:var(--px);font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--mag);text-decoration:none;padding:4px 0;min-height:24px}
+.links a:hover{color:var(--mag)}
+.pv{position:relative;aspect-ratio:16/9;background:#05080c;border-bottom:1px solid var(--line2);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pv img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;display:block}
+.pv pre{font:9px/9px var(--mono);color:#7d9fba;white-space:pre;position:absolute;inset:0;padding:6px;overflow:hidden;letter-spacing:0}
+.pv .cap{position:absolute;left:10px;bottom:8px;font-family:var(--px);font-size:16px;letter-spacing:.1em;text-transform:uppercase;background:var(--bg);color:var(--ink);padding:2px 8px;border:1px solid var(--line)}
+.pv .cap.top{top:6px;bottom:auto;left:auto;right:8px}
+.pv .pvbtn{position:absolute;right:10px;bottom:10px;z-index:3;background:var(--bg)}
+.pv iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff;z-index:4}
+.pv .big{position:relative;font-family:var(--px);font-weight:400;font-size:clamp(40px,5.4vw,64px);color:var(--ink);text-shadow:var(--glow);text-transform:uppercase}
+.pv svg.ch{position:absolute;inset:0;width:100%;height:100%}
+.pv svg text{font-family:var(--px)}
+.pv.live .big{color:var(--ink)}
 
-/* PROJECT CARDS */
-.proj-list{display:flex;flex-direction:column;gap:14px}
-.card{background:var(--surface-card);border:1px solid var(--hairline);border-radius:13px;overflow:hidden}
-.card.is-live{background:var(--canvas);border-color:var(--cream-strong)}
-.card:hover{border-color:var(--primary);box-shadow:0 14px 34px -26px rgba(169,88,62,.55)}
-.card-head{display:flex;align-items:center;gap:18px;padding:22px 26px;cursor:pointer;width:100%;text-align:left;background:none;border:0;font-family:inherit}
-.card-idx{font-family:var(--mono);font-size:12px;color:var(--muted-soft);width:28px;flex:none;transition:color .2s}
-.card:hover .card-idx,.card.open .card-idx{color:var(--primary)}
-.card-tt{flex:1;min-width:0}
-.card-tt h3{font-size:19px;font-weight:600;letter-spacing:-0.015em;line-height:1.25}
-.card-tt .sub{font-size:13.5px;color:var(--muted);margin-top:3px}
-.badge{font-size:10.5px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;padding:4px 10px;border-radius:9999px;flex:none;display:inline-flex;align-items:center;gap:6px}
-.badge.live{background:var(--primary);color:#fff}
-.badge.live::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;animation:pulse 1.8s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
-.badge.case{background:var(--cream-strong);color:var(--body-strong)}
-.chev{width:20px;height:20px;flex:none;color:var(--muted);transition:transform .3s var(--ease)}
-.card.open .chev{transform:rotate(180deg)}
-.card-body{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
-.card-body-inner{padding:2px 26px 26px 72px;opacity:0;transform:translateY(-6px);transition:opacity .35s ease,transform .35s var(--ease)}
-.card.open .card-body-inner{opacity:1;transform:none;transition-delay:.08s}
-@media(max-width:560px){.card-body-inner{padding:2px 20px 22px 20px}.card-head{padding:18px 20px;gap:12px}.card-idx{display:none}}
-.card-body p{font-size:15.5px;color:var(--body);line-height:1.65;max-width:70ch}
-.card-body p a,.insight a{color:var(--primary-active);text-decoration:underline;text-underline-offset:2px;font-weight:500;transition:color .15s}
-.card-body p a:hover,.insight a:hover{color:var(--primary)}
-.insight{margin-top:14px;padding:14px 16px;background:var(--surface-soft);border-left:3px solid var(--primary);border-radius:0 8px 8px 0;font-size:14.5px;color:var(--body-strong)}
-.card.is-live .insight{background:var(--surface-card)}
-.card-meta{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:18px}
-.stack{display:flex;flex-wrap:wrap;gap:7px}
-.chip{font-family:var(--mono);font-size:11.5px;color:var(--body);background:var(--canvas);border:1px solid var(--hairline);padding:4px 10px;border-radius:6px}
-.card.is-live .chip{background:var(--surface-soft)}
-.view-link{font-size:13.5px;font-weight:600;color:var(--primary-active);display:inline-flex;align-items:center;gap:6px}
-.view-link:hover{text-decoration:underline}
-.view-link svg{width:14px;height:14px;transition:transform .25s var(--ease)}
-.view-link:hover svg{transform:translate(2px,-2px)}
+/* LAB */
+.lab-g{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px}
+.screen{position:relative;aspect-ratio:4/3;background:#05080c;border-bottom:1px solid var(--line2);overflow:hidden}
+.screen img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;display:block}
+.screen .noimg{display:none;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(90deg,#0a1a07 0 6px,#0d2209 6px 12px);font-family:var(--px);font-size:clamp(26px,3.6vw,40px);color:var(--grn);text-transform:uppercase;letter-spacing:.1em}
+.screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.coin{position:absolute;left:12px;top:12px;animation:coin 1.2s steps(2) infinite}
+@keyframes coin{50%{opacity:.55}}
+.soon{font-size:12.5px;color:var(--dim)}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.sig .body{padding:14px;display:flex;flex-direction:column;gap:8px}
+.sig h3{font-size:24px}
 
+/* EXPERIENCE */
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line2)}
+.job:first-child{border-top:0;padding-top:0}
+.job .dt{font-family:var(--px);color:var(--mag);letter-spacing:.06em;text-transform:uppercase;font-size:20px}
+.job h3{font-size:28px;margin-bottom:4px}
+.job .org{color:var(--dim);margin-bottom:10px}
+.job ul{list-style:none;display:grid;gap:10px}
+.job li{position:relative;padding-left:20px;font-size:14px}
+.job li::before{content:">";position:absolute;left:0;color:var(--mag);font-weight:500}
 
-/* ANÁLISE ABERTA */
-.an{margin-top:20px}
-.an-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;justify-content:space-between}
-.an-leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--body)}
-.an-leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
-.an-ok{background:#4a4a46}.an-thin{background:#a9583e}
-.an-btn{font:inherit;font-size:12.5px;font-weight:600;color:var(--primary-active);background:none;border:1px solid var(--hairline);border-radius:9999px;padding:5px 12px;cursor:pointer}
-.an-btn:hover{border-color:var(--primary)}
-.an-bars{margin-top:10px}
-.an-bar{position:relative}
-.an-bar::after{content:"";position:absolute;left:var(--cut);top:-4px;bottom:-4px;border-left:1.5px dashed var(--body)}
-.an-leg .cut{display:inline-block;width:0;height:11px;border-left:1.5px dashed var(--body);margin-right:8px;vertical-align:-2px}
-.an-row{padding:7px 0}
-.an-line{display:flex;align-items:baseline;gap:8px;font-size:13.5px;color:var(--body-strong)}
-.an-line .r{font-family:var(--mono);font-size:11.5px;color:var(--muted);width:22px;flex:none}
-.an-line .m{flex:1;min-width:0}
-.an-line .pay{font-family:var(--mono);font-size:12px;color:var(--muted);flex:none}
-.an-tag{font-size:10.5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--primary-active);border:1px solid var(--primary-active);border-radius:4px;padding:0 5px;flex:none}
-.an-track{display:flex;align-items:center;gap:8px;margin-top:4px}
-.an-bar{flex:1;height:10px}
-.an-bar b{display:block;height:100%;border-radius:0 4px 4px 0}
-.js .an-bar b{transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
-.js .card.open .an-bar b{transform:none}
-.an-n{font-family:var(--mono);font-size:12px;color:var(--body-strong);width:58px;text-align:right;flex:none}
-.an-fix{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
-.an-fix div{background:var(--canvas);border:1px solid var(--hairline);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--body)}
-.an-fix h4{font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.an-fix ul{list-style:none;padding:0}
-.an-fix li{padding:2px 0}
-@media(max-width:560px){.an-fix{grid-template-columns:1fr}}
-.an-tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:14px}
-.an-tbl th,.an-tbl td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--hairline)}
-.an-tbl th{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
-.an-tbl td:nth-child(3),.an-tbl td:nth-child(4){font-family:var(--mono);white-space:nowrap}
-.an-wrap{overflow-x:auto}
-.an details{margin-top:16px;border:1px solid var(--hairline);border-radius:8px;background:var(--canvas)}
-.an summary{cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;color:var(--primary-active)}
-.an pre{margin:0;padding:4px 14px 14px;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.55;color:var(--body-strong)}
-.an-note{margin-top:14px;font-size:12.5px;color:var(--muted);max-width:70ch}
-.an-links{display:flex;flex-wrap:wrap;gap:6px 18px}
-
-/* TIMELINE */
-.tl{position:relative;padding-left:26px}
-.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1.5px;background:var(--hairline)}
-.js .tl::before{transform:scaleY(0);transform-origin:top;transition:transform 1.6s var(--ease) .2s}
-.js .tl.in::before{transform:scaleY(1)}
-.tl-item{position:relative;padding-bottom:34px}
-.tl-item:last-child{padding-bottom:0}
-.tl-item::before{content:"";position:absolute;left:-26px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px var(--canvas)}
-.tl-item:first-child::after{content:"";position:absolute;left:-26px;top:5px;width:11px;height:11px;border-radius:50%;border:1.5px solid var(--primary);animation:ring 2.4s ease-out infinite}
-@keyframes ring{from{transform:scale(1);opacity:.7}to{transform:scale(2.6);opacity:0}}
-.tl-item .role{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink)}
-.tl-item .org{font-size:14.5px;color:var(--body-strong);margin-top:2px}
-.tl-item .when{font-family:var(--mono);font-size:12px;color:var(--muted-soft);margin-top:4px;display:block}
-.tl-note{font-size:14.5px;color:var(--muted);margin-top:10px;max-width:68ch;line-height:1.5}
-.tl-item ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:7px}
-.tl-item li{font-size:14.5px;color:var(--body);padding-left:18px;position:relative;line-height:1.55;max-width:68ch}
-.tl-item li::before{content:"–";position:absolute;left:0;color:var(--primary)}
-
-/* SKILLS + LANGUAGES */
-.cols{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
-@media(max-width:780px){.cols{grid-template-columns:1fr;gap:40px}}
-.skill-group{margin-bottom:22px}
-.skill-group h3{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
-.skill-group .stack .chip{font-family:var(--sans);font-size:13px;padding:6px 13px;border-radius:9999px;background:var(--surface-card);border-color:var(--hairline);transition:background .2s,border-color .2s,color .2s,transform .2s}
-.skill-group .stack .chip:hover{background:var(--canvas);border-color:var(--primary);color:var(--ink);transform:translateY(-1px)}
-.lang-row{margin-bottom:16px}
-.lr-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
-.lr-name{font-size:15px;font-weight:500;color:var(--ink)}
-.lr-lvl{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
-.meter{height:6px;background:var(--surface-card);border-radius:9999px;overflow:hidden}
-.meter span{display:block;height:100%;background:var(--primary);border-radius:9999px}
-.js .meter span{transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease) .25s}
-.js .lang-row.in .meter span{transform:scaleX(1)}
-
-/* EDU / CERTS */
-.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-@media(max-width:680px){.mini-grid{grid-template-columns:1fr;gap:32px}}
-.mini h3{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.ei-deg{font-family:var(--serif);font-size:18px;color:var(--ink)}
-.ei-sch{font-size:14px;color:var(--body)}
-.ei-when{font-family:var(--mono);font-size:12px;color:var(--muted-soft);margin-top:2px}
-.certs{list-style:none;display:flex;flex-direction:column;gap:9px}
-.certs li{font-size:14px;color:var(--body);padding-left:18px;position:relative}
-.certs li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--primary)}
-.certs li b{color:var(--ink);font-weight:600}
+/* LOADOUT */
+.cols{display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
+.mini{padding:16px}
+.mini h3{font-size:24px;margin-bottom:12px;color:var(--ink)}
+.mini ul{list-style:none;display:grid;gap:8px;font-size:14px}
+.sk{display:flex;flex-wrap:wrap;gap:8px}
+.sk span{border:1px solid var(--line);padding:3px 10px;font-size:13.5px}
+.lg li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line2);padding-bottom:6px}
+.lg b{font-size:18px;font-family:var(--px);color:var(--mag);letter-spacing:.06em}
+.stack{display:grid;gap:22px}
 
 /* FOOTER */
-footer{background:var(--dark);color:var(--on-dark-soft);padding:64px 0 40px;margin-top:40px;position:relative;overflow:hidden}
-footer::before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(204,120,92,.22),transparent 65%);animation:drift 14s ease-in-out infinite alternate;pointer-events:none}
-@keyframes drift{to{transform:translate(-120px,60px)}}
-.f-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;position:relative}
-footer h3{font-family:var(--serif);font-size:30px;color:var(--on-dark);font-weight:500;letter-spacing:-0.02em;max-width:20ch;line-height:1.18}
-.f-contact{display:flex;flex-direction:column;gap:11px;font-size:14.5px}
-.f-contact a{color:var(--on-dark);display:inline-flex;align-items:center;gap:9px;transition:color .15s,transform .2s}
-.f-contact a:hover{color:var(--amber);transform:translateX(3px)}
-.f-contact svg{width:16px;height:16px;color:var(--on-dark-soft);flex:none}
-.f-bottom{margin-top:46px;padding-top:22px;border-top:1px solid var(--dark-elevated);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:var(--muted-soft);position:relative}
+footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--panel)}
+footer h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:22px;max-width:24ch;text-shadow:var(--glow)}
+.fc{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.fb{font-size:13px;color:var(--dim);border-top:1px solid var(--line2);padding-top:14px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
-  .hero h1 em::after{transform:scaleX(1)}
-  .js .reveal{opacity:1;transform:none}
-  .js .tl::before,.js .meter span{transform:none}
-  .js .spark-line polyline{stroke-dashoffset:0}
-  .spark-line circle{opacity:1}
-}
-:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
-
-/* PRINT: Ctrl+P turns the site into a clean CV */
 .print-head{display:none}
+
+@media (max-width:900px){
+  .hero-g,.grid2,.lab-g,.sig,.cols{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:6px}
+  .nl a.hide-s{display:none}
+}
+@media (max-width:520px){
+  .nl{gap:10px} .nl a{font-size:13px}
+  .nav-in{gap:8px}
+  .met b{font-size:24px}
+  .row{flex-direction:column;gap:0}
+  .row .v{text-align:left}
+  .nl a:not(.talk){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
 @media print{
-  @page{size:A4;margin:11mm 13mm 10mm}
-  .print-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16pt;border-bottom:1.5px solid #cc785c;padding-bottom:6pt;margin-bottom:8pt}
-  .print-head .ph-name{font-family:var(--serif);font-size:20pt;color:#141413;letter-spacing:-.02em;line-height:1}
-  .print-head .ph-role{font-size:9pt;color:#a9583e;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;margin-top:3pt}
-  .print-head .ph-contact{font-size:8.5pt;color:#444;text-align:right;line-height:1.5}
-  footer{display:none!important}
-  #projetos{display:none!important}
-  #competencias .cols{break-inside:avoid}
-  .mini-grid{break-inside:avoid}
-  .hero .eyebrow{display:none}
-  .tl::before{display:none}
-  *,*::before,*::after{animation:none!important;transition:none!important;box-shadow:none!important}
-  html,body{background:#fff!important;font-size:9.5pt;color:#222}
-  .progress,nav,#hero-canvas,.hero-cta,.toast,.chev,.badge,.spark-line,.card-idx,footer::before,.kpi-band .eyebrow,.view-link{display:none!important}
-  .reveal,.js .reveal{opacity:1!important;transform:none!important}
-  .js .tl::before,.js .meter span{transform:none!important}
-  .wrap{max-width:none;padding:0!important}
-  section{padding:0 0 10pt!important}
-  .kpi-band,#competencias,#competencias+*{background:none!important;border:0!important}
-  div[style*="surface-soft"]{background:none!important;border:0!important}
-  .hero{padding:0 0 8pt!important}
-  .hero h1{font-size:17pt;max-width:none;margin:0 0 3pt}
-  .hero h1 .w{animation:none!important;opacity:1!important}
-  .hero h1 em::after{display:none}
-  .hero .lead{font-size:9.5pt;max-width:none;line-height:1.45}
-  .hero .eyebrow,.hero .lead{animation:none!important}
-  .sec-head{margin-bottom:8pt!important;max-width:none}
-  .sec-head h2{font-size:15pt;margin-top:2pt}
-  .sec-head p{display:none}
-  .eyebrow{font-size:7.5pt}
-  .kpi-band section{padding:0 0 10pt!important}
-  .kpi-band .sec-head{display:none}
-  .kpi-grid{grid-template-columns:repeat(3,1fr)!important;border-radius:6px}
-  .kpi{min-height:0;padding:5pt 8pt;gap:2pt;background:#fff!important}
-  .kpi.dark{background:#fff!important}
-  .kpi.dark .num,.kpi.dark .lbl{color:#222!important}
-  .kpi.dark::before{display:none}
-  .kpi .num{font-size:14pt}
-  .kpi .unit{font-size:11pt}
-  .kpi .lbl{font-size:7.5pt;line-height:1.3}
-  .proj-list{gap:4pt}
-  .card,.card.is-live{background:#fff!important;border:1px solid #ddd!important;break-inside:avoid}
-  .card-head{padding:5pt 9pt 1pt}
-  .card-tt h3{font-size:11pt}
-  .card-tt .sub{font-size:8.5pt}
-  .card-body{max-height:none!important;overflow:visible}
-  .card-body-inner{opacity:1!important;transform:none!important;padding:1pt 9pt 6pt!important}
-  .card-body p{font-size:8.8pt;line-height:1.4;max-width:none}
-  .card-body p a{color:inherit;text-decoration:none}
-  .insight{font-size:8.5pt;padding:3pt 7pt;margin-top:3pt;background:#f6f3ee!important}
-  .card-meta{display:none}
-  .card-meta{margin-top:5pt}
-  .chip{font-size:7.5pt;padding:1pt 6pt}
-  .tl-item{padding-bottom:6pt;break-inside:avoid}
-  .tl-item:first-child::after{display:none}
-  .tl-item .role{font-size:12pt}
-  .tl-item li{font-size:8.8pt;max-width:none;line-height:1.4}
-  .tl-item ul{margin-top:3pt;gap:2pt}
-  .tl-note{font-size:8.8pt;margin-top:3pt;max-width:none}
-  .tl{padding-left:14pt}
-  .tl-item::before{left:-14pt}
-  .cols{grid-template-columns:1.3fr 1fr;gap:20pt}
-  .skill-group{margin-bottom:5pt}
-  .skill-group h3,.mini h3{margin-bottom:4pt}
-  .lang-row{margin-bottom:6pt}
-  .sec-head .eyebrow{display:none}
-  .skill-group .stack .chip{font-size:8pt;padding:2pt 7pt;background:#fff!important}
-  .meter{height:4px}
-  .mini-grid{gap:20pt}
-  #projetos,#experiencia{break-before:auto}
-  footer{background:#fff!important;color:#222!important;padding:10pt 0 0!important;margin:0;border-top:1px solid #ddd}
-  footer h3{display:none}
-  .f-contact{flex-direction:row;flex-wrap:wrap;gap:16pt;font-size:9.5pt}
-  .f-contact a{color:#222!important}
-  .f-contact svg{color:#cc785c}
-  .f-bottom{display:none}
-  a[href]::after{content:none!important}
+  @page{margin:14mm}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  body::before,body::after,#nav,.cta,.pv,.screen,.links,.badge,.bar .sp,#lab,.cursor,footer .fc,.cyc,.skip{display:none!important}
+  .frame{border:1px solid #000;background:#fff}
+  .frame,.card{break-inside:avoid}
+  .bar,.frame .bar{background:#fff!important;color:#000!important;border-color:#000;text-shadow:none}
+  *{color:#000!important;text-shadow:none!important;box-shadow:none!important}
+  .row .k,.dim{color:#333!important}
+  .print-head{display:flex;justify-content:space-between;border-bottom:2px solid #000;padding-bottom:6px;margin-bottom:10px}
+  .grid2{grid-template-columns:1fr 1fr;gap:8px}
+  section.s{padding:14px 0;border-color:#000}
+  .hero{padding:8px 0}
+  .hero-g{grid-template-columns:1fr}
+  footer{background:#fff;padding:12px 0}
+  em{color:#000}
 }
 </style>
 </head>
 <body>
+<a class="skip sr" href="#main">Skip to content</a>
 
-<div class="progress" id="progress" aria-hidden="true"></div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<!-- SVG defs -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs><g id="sp"><path d="M8 0c.5 3.4 1.6 4.5 5 5-3.4.5-4.5 1.6-5 5-.5-3.4-1.6-4.5-5-5 3.4-.5 4.5-1.6 5-5z"/></g></defs>
-</svg>
-
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="brand"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="n-brand">Mateus Stoekly</span></a>
-    <div class="nav-links">
-      <a href="#projetos" id="n-0"></a>
-      <a href="#experiencia" id="n-1"></a>
-      <a href="#competencias" id="n-2"></a>
-      <div class="lang-toggle">
-        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-        <button id="btn-pt" onclick="setLang('pt')">PT</button>
+<nav id="nav" aria-label="Main">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand">MS<b>//</b>DATA</a>
+    <div class="nl">
+      <a href="#projetos" id="n0"></a>
+      <a href="#lab" id="n1"></a>
+      <a href="#experiencia" id="n2" class="hide-s"></a>
+      <a href="#competencias" id="n3" class="hide-s"></a>
+      <a href="#contato" id="ntalk" class="talk"></a>
+      <div class="lang" role="group" aria-label="Language">
+        <button id="b-en" aria-pressed="true" onclick="setLang('en')">EN</button>
+        <button id="b-pt" aria-pressed="false" onclick="setLang('pt')">PT</button>
       </div>
     </div>
   </div>
 </nav>
 
-<div id="content">
-
-<div class="print-head" aria-hidden="true">
-  <div><div class="ph-name" id="ph-name"></div><div class="ph-role" id="ph-role"></div></div>
-  <div class="ph-contact"><span id="ph-email"></span><br><span id="ph-li"></span><br><span id="ph-loc"></span></div>
-</div>
+<div class="print-head" aria-hidden="true"><div><b id="ph-name"></b><br><span id="ph-role"></span></div><div id="ph-c" style="text-align:right"></div></div>
 
 <main id="main">
-<!-- HERO -->
-<div class="hero-shell" id="hero-shell">
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
-  <header class="hero wrap" id="top">
-    <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="h-tag" data-l="en">Business Data Analyst · SQL · Power BI · Excel</span></span>
-    <h1 id="h-h1" data-l="en"><span class="w" style="--i:0">Business</span> <span class="w" style="--i:1"><em>before</em></span> <span class="w" style="--i:2">data.</span></h1>
-    <p class="lead" id="h-lead" data-l="en">Data analyst with a background in <em>International Business</em>, working as the data focal point for directors and business areas in the Paraná State Government. My work starts in the conversation with whoever makes the decision: I understand the question, pick the indicators that answer it and see the delivery through to real use. Advanced Excel and Power BI day to day, SQL for data preparation and analysis, and consultative communication that turns technical results into recommendations leaders can act on.</p>
-    <div class="hero-cta">
-      <a href="#projetos" class="btn btn-primary"><span id="h-cta1"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a href="#" class="btn btn-ghost" id="h-cta3" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span></span></a>
-      <a href="#" target="_blank" rel="noopener" class="btn btn-ghost" id="h-cta2"></a>
+<header class="hero wrap" id="top">
+  <div class="hero-g">
+    <div>
+      <div class="tag" id="h-tag"></div>
+      <h1 id="h-h1"></h1>
+      <p class="sub" id="h-sub"></p>
+      <p class="proof"><span class="k" id="h-pk"></span><span id="h-proof"></span></p>
+      <p class="lede" id="h-lede"></p>
+      <div class="cta">
+        <a class="btn p" href="#projetos" id="c-live"></a>
+        <a class="btn m" href="#lab" id="c-play"></a>
+        <a class="btn" id="c-cv" href="#" download></a>
+      </div>
     </div>
-  </header>
-</div>
-
-<!-- KPI BAND -->
-<div class="kpi-band">
-  <section class="wrap" style="padding-top:72px;padding-bottom:72px">
-    <div class="sec-head reveal" style="margin-bottom:24px">
-      <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="kpi-tag"></span></span>
-      <h2 id="kpi-h2"></h2>
-    </div>
-    <div class="kpi-grid" id="kpi-grid"></div>
-  </section>
-</div>
-
-<!-- PROJECTS -->
-<section class="wrap" id="projetos">
-  <div class="sec-head reveal">
-    <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="p-tag"></span></span>
-    <h2 id="p-h2"></h2>
-    <p id="p-sub"></p>
+    <aside class="frame dossier" aria-labelledby="d-title">
+      <div class="bar"><span id="d-title"></span><span style="color:var(--mag)">A-26</span><span class="sp" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="rows" id="d-rows"></div>
+      <div class="met" id="d-met"></div>
+      <div class="cyc">
+        <svg id="d-svg" viewBox="0 0 200 56" preserveAspectRatio="none" role="img"></svg>
+        <p id="d-cyc"></p>
+      </div>
+    </aside>
   </div>
-  <div class="proj-list" id="proj-list"></div>
-</section>
+</header>
 
-<!-- EXPERIENCE -->
-<section class="wrap" id="experiencia">
-  <div class="sec-head reveal">
-    <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="e-tag"></span></span>
-    <h2 id="e-h2"></h2>
-  </div>
-  <div class="tl reveal-line" id="tl"></div>
-</section>
+<section class="s" id="projetos"><div class="wrap">
+  <div class="sh"><div class="tag" id="p-tag"></div><h2 id="p-h2"></h2><p id="p-sub"></p></div>
+  <div class="grid2" id="p-grid"></div>
+</div></section>
 
-<!-- SKILLS + LANGUAGES -->
-<div style="background:var(--surface-soft);border-top:1px solid var(--hairline-soft);border-bottom:1px solid var(--hairline-soft)">
-<section class="wrap" id="competencias">
+<section class="s" id="lab"><div class="wrap">
+  <div class="sh"><div class="tag" id="l-tag"></div><h2 id="l-h2"></h2><p id="l-sub"></p></div>
+  <div class="lab-g" id="l-games"></div>
+  <h3 class="px" id="l-sigh" style="font-size:24px;margin:8px 0 14px;color:var(--dim)"></h3>
+  <div class="sig" id="l-sig"></div>
+</div></section>
+
+<section class="s" id="experiencia"><div class="wrap">
+  <div class="sh"><div class="tag" id="e-tag"></div><h2 id="e-h2"></h2></div>
+  <div id="e-list"></div>
+</div></section>
+
+<section class="s" id="competencias"><div class="wrap">
+  <div class="sh"><div class="tag" id="s-tag"></div><h2 id="s-h2"></h2></div>
   <div class="cols">
-    <div>
-      <div class="sec-head reveal" style="margin-bottom:28px">
-        <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="sk-tag"></span></span>
-        <h2 id="sk-h2"></h2>
-      </div>
-      <div id="skill-groups"></div>
+    <div class="stack">
+      <div class="frame mini"><h3 id="s-skh"></h3><div class="sk" id="s-sk"></div></div>
+      <div class="frame mini"><h3 id="s-cth"></h3><ul id="s-ct"></ul></div>
     </div>
-    <div>
-      <div class="sec-head reveal" style="margin-bottom:28px">
-        <span class="eyebrow"><svg class="spark" viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg><span id="lg-tag"></span></span>
-        <h2 id="lg-h2"></h2>
-      </div>
-      <div id="lang-rows"></div>
+    <div class="stack">
+      <div class="frame mini"><h3 id="s-edh"></h3><ul id="s-ed"></ul></div>
+      <div class="frame mini"><h3 id="s-lgh"></h3><ul class="lg" id="s-lg"></ul></div>
     </div>
   </div>
-</section>
-</div>
-
-<!-- EDUCATION + CERTS -->
-<section class="wrap">
-  <div class="mini-grid">
-    <div class="mini reveal">
-      <h3 id="edu-tag"></h3>
-      <div class="ei-deg" id="edu-deg"></div>
-      <div class="ei-sch" id="edu-sch"></div>
-      <div class="ei-when" id="edu-when"></div>
-      <div class="ei-award" id="edu-award" style="margin-top:8px;font-size:13px;color:var(--primary-active);font-weight:500;line-height:1.5"></div>
-      <div style="margin-top:22px">
-        <h3 id="intl-tag" style="margin-top:8px"></h3>
-        <div class="ei-deg" id="intl-place" style="font-size:16px"></div>
-        <div class="ei-sch" id="intl-text"></div>
-        <div class="ei-when" id="intl-when"></div>
-      </div>
-    </div>
-    <div class="mini reveal" style="--d:1">
-      <h3 id="cert-tag"></h3>
-      <ul class="certs" id="cert-list"></ul>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+</div></section>
 </main>
-<footer id="contato">
-  <div class="wrap">
-    <div class="f-top">
-      <h3 id="foot-h" class="reveal"></h3>
-      <div class="f-contact reveal" style="--d:1">
-        <a id="foot-email" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span></span></a>
-        <a id="foot-cv" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span></span></a>
-        <a id="foot-li" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg><span></span></a>
-        <a href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="foot-loc"></span></a>
-      </div>
-    </div>
-    <div class="f-bottom">
-      <span id="foot-brand"></span>
-      <span id="foot-note"></span>
-    </div>
-  </div>
-</footer>
 
-</div><!-- /content -->
+<footer id="contato"><div class="wrap">
+  <h2 id="f-h"></h2>
+  <div class="fc">
+    <a class="btn p" id="f-mail" href="#"></a>
+    <a class="btn" id="f-li" href="#" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" id="f-cv" href="#" download></a>
+  </div>
+  <div class="fb"><span id="f-brand"></span><span id="f-note"></span></div>
+</div></footer>
 
 <script>
-/* RENDERER */
-let L = 'en';
+(function(){
 const C = CONFIG;
-const t = k => C[L][k];
-const tr = v => (v && typeof v === 'object' && 'en' in v) ? v[L] : v;
-const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let L = 'en';
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const T = () => C[L];
 
-function chip(c){ return `<span class="chip">${tr(c)}</span>`; }
-
-// split a short HTML headline into word spans for the staggered entrance
-function splitWords(html){
-  return html.split(' ').map((w,i)=>`<span class="w" style="--i:${i}">${w}</span>`).join(' ');
+/* decorative ASCII preview: deterministic, aria-hidden */
+function ascii(seed, cols, rows){
+  let s = seed * 9301 + 49297, out = [];
+  const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+  const heights = Array.from({length: Math.ceil(cols / 3)}, () => .25 + rnd() * .65);
+  for (let y = 0; y < rows; y++){
+    let line = '';
+    for (let x = 0; x < cols; x++){
+      const h = heights[Math.floor(x / 3)], on = (rows - y) / rows < h && x % 3 !== 2;
+      line += on ? (rnd() > .25 ? '#' : ':') : (rnd() > .93 ? '.' : ' ');
+    }
+    out.push(line);
+  }
+  return out.join('\n');
 }
 
-// "R$250M+" -> {pre:"R$", n:250, post:"M+"}; returns null when not worth counting
-function parseNum(s){
-  const m = String(s).match(/^([^\d]*)(\d+(?:\.\d+)?)(.*)$/);
-  if(!m) return null;
-  const n = parseFloat(m[2]);
-  return n >= 10 ? {pre:m[1], n, post:m[3]} : null;
+function chart(){
+  const rows = C.analysis.rows, W = 400, H = 236, pad = 24, bh = 14, gap = 6.5, max = Math.log10(1100), x30 = pad + 120 + (Math.log10(30) / max) * (W - pad - 140);
+  let g = '';
+  rows.forEach((r, i) => {
+    const y = 26 + i * (bh + gap), w = (Math.log10(r.n) / max) * (W - pad - 140), thin = r.n < 30;
+    g += `<text x="${pad}" y="${y + 11}" fill="#8fb1c8" font-size="11">#${r.r}</text>`
+      + `<rect x="${pad + 120}" y="${y}" width="${Math.max(w, 3)}" height="${bh}" fill="${thin ? '#ff6aa8' : '#bfe3f0'}"/>`
+      + `<text x="${pad + 124 + w}" y="${y + 11}" fill="#bfe3f0" font-size="11">${r.n}</text>`;
+  });
+  g += `<line x1="${x30}" y1="14" x2="${x30}" y2="${H - 12}" stroke="#ff6aa8" stroke-dasharray="3 3"/><text x="${x30 + 4}" y="12" fill="#ff6aa8" font-size="11">30</text>`;
+  return `<svg class="ch" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(C.analysis['label_' + L])}">${g}</svg>`;
 }
 
-function analysisHTML(){
-  const A = C.analysis, a = A[L];
-  const esc = x => String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-  const cap = x => x.charAt(0)+x.slice(1).toLowerCase();
-  const pay = v => L==='pt' ? 'US$ '+Math.round(v/1000)+' mil' : '$'+Math.round(v/1000)+'k';
-  const MAX = Math.log10(1100), CUT = Math.log10(30)/MAX*100;
-  const rows = A.rows.map(r=>{
-    const thin = r.n < 30, w = Math.max(2, Math.log10(r.n)/MAX*100);
-    return `<div class="an-row" title="${esc(r.m)}: ${pay(r.pay)} ${a.pay}, ${r.n} ${a.n}">
-      <div class="an-line"><span class="r">${r.r}</span><span class="m">${esc(r.m)}</span>${thin?`<span class="an-tag">${a.thin_short}</span>`:''}<span class="pay">${pay(r.pay)}</span></div>
-      <div class="an-track"><div class="an-bar" style="--cut:${CUT}%"><b class="${thin?'an-thin':'an-ok'}" style="width:${w}%"></b></div><span class="an-n">n=${r.n}</span></div>
-    </div>`;
-  }).join('');
-  const tbl = `<div class="an-wrap"><table class="an-tbl"><thead><tr>${a.th.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${A.rows.map(r=>`<tr><td>${r.r}</td><td>${esc(r.m)}</td><td>${pay(r.pay)}</td><td>${r.n}</td><td>${r.n<30?a.thin:a.ok}</td></tr>`).join('')}</tbody></table></div>`;
-  const li = arr => '<ul>'+arr.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>';
-  return `<div class="an">
-    <div class="an-top">
-      <div class="an-leg"><span><i class="an-ok"></i>${a.legend_ok}</span><span><i class="an-thin"></i>${a.legend_thin}</span><span><i class="cut"></i>${a.cutoff} = 30</span></div>
-      <button class="an-btn" type="button" onclick="anView(this)" data-chart="${a.view_chart}" data-table="${a.view_table}" aria-pressed="false">${a.view_table}</button>
-    </div>
-    <div class="an-view an-chart" role="img" aria-label="${a.chart_label}">
-      <div class="an-bars">${rows}</div>
-      <p class="an-note" style="margin-top:6px">${a.axis}</p>
-    </div>
-    <div class="an-view an-table" hidden>${tbl}</div>
-    <div class="an-fix"><div><h4>${a.out}</h4>${li(A.dropped)}</div><div><h4>${a.in_}</h4>${li(A.entered)}</div></div>
-    <details ontoggle="anFit(this)"><summary>${a.show_sql}</summary><pre><code>${esc(A.sql)}</code></pre></details>
-    <p class="an-note">${a.note}</p>
-  </div>`;
-}
-function anFit(el){ const b = el.closest('.card-body'); if(b && b.parentElement.classList.contains('open')) b.style.maxHeight = b.scrollHeight+'px'; }
-function anView(btn){
-  const box = btn.closest('.an'), showTable = btn.getAttribute('aria-pressed') !== 'true';
-  btn.setAttribute('aria-pressed', showTable);
-  btn.textContent = showTable ? btn.dataset.chart : btn.dataset.table;
-  box.querySelector('.an-chart').hidden = showTable;
-  box.querySelector('.an-table').hidden = !showTable;
-  anFit(btn);
+function cycleSvg(){
+  const mo = [], wk = [];
+  let pts = '', x = 0;
+  const step = (w, hi) => { pts += `${x},${hi ? 14 : 42} ${x + w},${hi ? 14 : 42} `; x += w; };
+  for (let i = 0; i < 3; i++){ step(30, false); step(8, true); }
+  step(14, false);
+  for (let i = 0; i < 10; i++){ step(6, false); step(4, true); }
+  let grid = '';
+  for (let i = 1; i < 10; i++) grid += `<line x1="${i * 20}" y1="0" x2="${i * 20}" y2="56" stroke="#2f4258" stroke-width=".5"/>`;
+  $('d-svg').innerHTML = grid + `<polyline points="${pts.trim()}" fill="none" stroke="#bfe3f0" stroke-width="1.6" vector-effect="non-scaling-stroke"/>`;
+  $('d-svg').setAttribute('aria-label', T().cycle_label);
 }
 
 function render(){
-  document.documentElement.lang = L;
-  document.getElementById('btn-en').classList.toggle('active', L==='en');
-  document.getElementById('btn-pt').classList.toggle('active', L==='pt');
+  const t = T();
+  document.documentElement.lang = L === 'pt' ? 'pt-BR' : 'en';
+  $('b-en').setAttribute('aria-pressed', L === 'en'); $('b-pt').setAttribute('aria-pressed', L === 'pt');
+  t.nav.forEach((n, i) => $('n' + i).textContent = n);
+  $('ntalk').textContent = t.talk;
+  $('h-tag').textContent = t.role + ' // ' + 'BR';
+  $('h-h1').innerHTML = t.h1 + '<span class="cursor" aria-hidden="true"></span>';
+  $('h-sub').textContent = t.sub; $('h-pk').textContent = t.proof_k; $('h-proof').textContent = t.proof; $('h-lede').textContent = t.lede;
+  $('c-live').textContent = t.cta_live + ' →'; $('c-play').textContent = t.cta_play; $('c-cv').textContent = t.cta_cv;
+  $('c-cv').href = C.cv[L]; $('f-cv').href = C.cv[L]; $('f-cv').textContent = t.cta_cv;
+  $('d-title').textContent = t.subject;
+  $('d-rows').innerHTML = t.rows.map(r => `<div class="row"><span class="k">${esc(r[0])}</span><span class="v">${esc(r[1])}</span></div>`).join('');
+  $('d-met').innerHTML = t.metrics.map(m => `<div><b>${esc(m[0])}</b><span>${esc(m[1])}</span></div>`).join('');
+  $('d-cyc').textContent = t.cycle; cycleSvg();
 
-  // NAV
-  document.getElementById('n-brand').textContent = C.name;
-
-  // PRINT HEADER
-  document.getElementById('ph-name').textContent  = C.name;
-  document.getElementById('ph-role').textContent  = L==='pt' ? C.role_pt : C.role_en;
-  document.getElementById('ph-email').textContent = C.email;
-  document.getElementById('ph-li').textContent    = C.linkedin;
-  document.getElementById('ph-loc').textContent   = L==='pt' ? C.location_pt : C.location_en;
-  ['n-0','n-1','n-2'].forEach((id,i) => document.getElementById(id).textContent = t('nav')[i]);
-
-  // HERO
-  [['h-tag',()=>t('hero_tag')],['h-h1',()=>splitWords(t('hero_h1'))],['h-lead',()=>t('hero_lead')]].forEach(([id,f])=>{
-    const el = document.getElementById(id);
-    if (el.dataset.l !== L) { el.innerHTML = f(); el.dataset.l = L; }
-  });
-  document.getElementById('h-cta1').textContent = t('cta_proj');
-  const cta2 = document.getElementById('h-cta2');
-  cta2.textContent = t('cta_li');
-  cta2.href = 'https://' + C.linkedin;
-  const cvFile = C.cv[L];
-  const cta3 = document.getElementById('h-cta3');
-  cta3.href = cvFile; cta3.setAttribute('download', cvFile.split('/').pop());
-  cta3.querySelector('span').textContent = t('cta_cv');
-
-  // KPI
-  document.getElementById('kpi-tag').textContent = t('kpi_tag');
-  document.getElementById('kpi-h2').textContent  = t('kpi_h2');
-  document.getElementById('kpi-grid').innerHTML  = C.kpis.map((k,i)=>{
-    const num = tr(k.num);
-    const pn = parseNum(num);
-    const last = k.sparkline ? k.sparkline.trim().split(' ').pop().split(',') : null;
-    const col = k.teal ? 'var(--teal)' : 'var(--primary)';
-    const sp = k.sparkline ? `<svg class="spark-line" viewBox="0 0 46 20"><polyline points="${k.sparkline}" fill="none" stroke="${col}" stroke-width="1.6" stroke-linejoin="round"/><circle cx="${last[0]}" cy="${last[1]}" r="2" fill="${col}"/></svg>` : '';
-    const countAttr = pn ? ` data-count="${pn.n}" data-pre="${pn.pre}" data-post="${pn.post}"` : '';
-    return `<div class="kpi reveal${k.dark?' dark':''}" style="--d:${i}">
-      ${sp}
-      <span class="ktag">${tr(k.tag)}</span>
-      <span class="num"><span class="nv"${countAttr}>${num}</span><span class="unit">${tr(k.unit)}</span></span>
-      <span class="lbl">${k[L]}</span>
-    </div>`;
+  $('p-tag').textContent = t.proj_tag; $('p-h2').textContent = t.proj_h2; $('p-sub').textContent = t.proj_sub;
+  $('p-grid').innerHTML = C.projects.filter(p => p.show).map((p, i) => {
+    const c = p[L], live = p.kind === 'live', open = p.kind === 'open';
+    let pv;
+    if (live) pv = `<div class="pv live"><pre aria-hidden="true">${ascii(+p.idx, 110, 26)}</pre><span class="cap">Power BI ↗</span><button class="btn m pvbtn" data-u="${p.url}">${esc(t.load_prev)}</button></div>`;
+    else if (p.chart) pv = `<div class="pv">${chart()}<span class="cap top">${esc(C.analysis['cap_' + L])}</span></div>`;
+    else pv = `<div class="pv"><pre aria-hidden="true">${ascii(+p.idx, 110, 26)}</pre><span class="big">${esc(p.big[L === 'pt' ? 1 : 0])}</span></div>`;
+    const title = live ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer">${esc(c.title)}<span class="sr"> (${esc(t.open_dash)}, ${L === 'pt' ? 'abre em nova aba' : 'opens in a new tab'})</span></a>` : esc(c.title);
+    let links = '';
+    if (live) links += `<a class="btn p go" href="${p.url}" target="_blank" rel="noopener noreferrer">${esc(t.open_dash)} ↗</a>`;
+    if (p.press) links += `<a href="${p.press}" target="_blank" rel="noopener noreferrer">${esc(t.press)} ↗</a>`;
+    if (p.links) links += p.links.map(k => `<a href="${C.analysis.repo + k.u}" target="_blank" rel="noopener noreferrer">${esc(k[L])} ↗</a>`).join('');
+    const kcls = live ? '' : open ? 'vio' : '';
+    return `<article class="frame card ${live ? 'link' : ''} ${kcls}">
+      <div class="bar"><span>${p.idx} // ${esc(c.sub.split(' · ')[0])}</span><span class="badge ${p.kind}">${esc(t.badge[p.kind])}</span></div>
+      ${pv}
+      <div class="body"><h3>${title}</h3><div class="st">${esc(c.sub)}</div><p class="t">${esc(c.body)}</p>
+      ${links ? `<div class="links">${links}</div>` : ''}<div class="chips">${p.tags.map(x => `<span>${esc(x)}</span>`).join('')}</div></div></article>`;
   }).join('');
 
-  // PROJECTS
-  document.getElementById('p-tag').textContent = t('proj_tag');
-  document.getElementById('p-h2').textContent  = t('proj_h2');
-  document.getElementById('p-sub').textContent = t('proj_sub');
-  document.getElementById('proj-list').innerHTML = C.projects.map((p,i)=>{
-    const d = p[L];
-    const chips = p.stack.map(chip).join('');
-    const link = p.url ? `<a class="view-link" href="${p.url}" target="_blank" rel="noopener">${t('view_dash')} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>` : '';
-    const bdg = p.live ? `<span class="badge live">${t('badge_live')}</span>` : `<span class="badge case">${t(p.open?'badge_open':'badge_case')}</span>`;
-    const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
-    const links = p.links ? `<div class="an-links">${p.links.map(l=>`<a class="view-link" href="${l.url}" target="_blank" rel="noopener">${l[L]} ${ext}</a>`).join('')}</div>` : '';
-    return `<div class="card reveal${p.live?' is-live':''}" data-i="${i}" style="--d:${i}">
-      <button class="card-head" aria-expanded="false" onclick="toggleCard(${i})">
-        <span class="card-idx">${p.idx}</span>
-        <span class="card-tt"><h3>${d.title}</h3><div class="sub">${d.sub}</div></span>
-        ${bdg}
-        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-      </button>
-      <div class="card-body" id="cb-${i}">
-        <div class="card-body-inner">
-          <p>${d.body}</p>
-          <div class="insight">${d.insight}</div>
-          ${p.analysis ? analysisHTML() : ''}
-          <div class="card-meta"><div class="stack">${chips}</div>${link}${links}</div>
-        </div>
-      </div>
-    </div>`;
+  $('l-tag').textContent = t.lab_tag; $('l-h2').textContent = t.lab_h2; $('l-sub').textContent = t.lab_sub;
+  $('l-games').innerHTML = C.lab.map((g, i) => {
+    const c = t.games[g.id];
+    const shot = g.img ? `<img src="${g.img}" width="800" height="594" loading="lazy" alt="">` : `<div class="noimg" aria-hidden="true">${esc(c.title)}</div>`;
+    return `<article class="frame card ${g.tone}" id="g-${g.id}">
+      <div class="bar"><span>${esc(c.title)}</span><span class="sp" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <div class="screen" id="s-${g.id}">${shot}<button class="btn p coin" data-g="${i}">${esc(t.coin)} ▶</button></div>
+      <div class="body"><div class="st">${esc(c.sub)} · ${esc(t.controls)}</div><p class="t">${esc(c.body)}</p>
+      <div class="links" id="gl-${g.id}">${g.page ? `<a href="${g.page}" target="_blank" rel="noopener noreferrer">${esc(t.coin_page)} ↗</a>` : ''}</div>
+      <div class="soon" id="gs-${g.id}" role="status"></div>
+      <div class="chips">${c.stack.map(x => `<span>${esc(x)}</span>`).join('')}</div></div></article>`;
   }).join('');
+  document.querySelectorAll('.pvbtn').forEach(b => b.onclick = () => { const pv = b.closest('.pv'); pv.innerHTML = `<iframe src="${b.dataset.u}" title="Power BI" loading="lazy" allowfullscreen></iframe>`; });
+  document.querySelectorAll('.coin').forEach(b => b.onclick = () => loadGame(+b.dataset.g));
+  $('l-sigh').textContent = t.signals_h;
+  $('l-sig').innerHTML = t.signals.map(s => `<article class="frame vio"><div class="bar"><span>${esc(s.k)}</span></div><div class="body"><h3>${esc(s.t)}</h3><p class="t">${esc(s.b)}</p></div></article>`).join('');
 
-  // EXPERIENCE
-  document.getElementById('e-tag').textContent = t('exp_tag');
-  document.getElementById('e-h2').textContent  = t('exp_h2');
-  document.getElementById('tl').innerHTML = C.experience.map((e,i)=>{
-    const d = e[L];
-    const bullets = d.bullets.map(b=>`<li>${b}</li>`).join('');
-    return `<div class="tl-item reveal" style="--d:${i}">
-      <div class="role">${d.role}</div>
-      <div class="org">${d.org}</div>
-      <span class="when">${e['date_'+L]}</span>
-      ${d.note ? `<p class="tl-note">${d.note}</p>` : ''}
-      <ul>${bullets}</ul>
-    </div>`;
-  }).join('');
+  $('e-tag').textContent = t.exp_tag; $('e-h2').textContent = t.exp_h2;
+  $('e-list').innerHTML = C.experience.map(j => { const c = j[L];
+    return `<article class="job"><div class="dt">${esc(c.date)}</div><div><h3>${esc(c.role)}</h3><div class="org">${esc(c.org)}${c.note ? ' · ' + esc(c.note) : ''}</div><ul>${c.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul></div></article>`; }).join('');
 
-  // SKILLS
-  document.getElementById('sk-tag').textContent = t('skills_tag');
-  document.getElementById('sk-h2').textContent  = t('skills_h2');
-  document.getElementById('skill-groups').innerHTML = C.skills.map((g,i)=>`
-    <div class="skill-group reveal" style="--d:${i}">
-      <h3>${g[L]}</h3>
-      <div class="stack">${g.chips.map(chip).join('')}</div>
-    </div>`).join('');
+  $('s-tag').textContent = t.skills_tag; $('s-h2').textContent = t.skills_h2;
+  $('s-skh').textContent = t.skills_h2; $('s-sk').innerHTML = C.skills[L].map(s => `<span>${esc(s)}</span>`).join('');
+  $('s-cth').textContent = t.cert_h2; $('s-ct').innerHTML = C.certs[L].map(s => `<li>${esc(s)}</li>`).join('');
+  $('s-edh').textContent = t.edu_h2; $('s-ed').innerHTML = C.education[L].map(s => `<li>${esc(s)}</li>`).join('');
+  $('s-lgh').textContent = t.lang_h2; $('s-lg').innerHTML = C.languages[L].map(r => `<li><span>${esc(r[0])}</span><b>${esc(r[1])}</b></li>`).join('');
 
-  // LANGUAGES
-  document.getElementById('lg-tag').textContent = t('lang_tag');
-  document.getElementById('lg-h2').textContent  = t('lang_h2');
-  document.getElementById('lang-rows').innerHTML = C.languages.map((l,i)=>`
-    <div class="lang-row reveal" style="--d:${i}">
-      <div class="lr-top"><span class="lr-name">${l[L]}</span><span class="lr-lvl">${l['level_'+L]}</span></div>
-      <div class="meter"><span style="width:${l.pct}%"></span></div>
-    </div>`).join('');
-
-  // EDUCATION
-  document.getElementById('edu-tag').textContent  = t('edu_tag');
-  document.getElementById('edu-deg').textContent  = C.education[L].degree;
-  document.getElementById('edu-sch').textContent  = C.education.school;
-  document.getElementById('edu-when').textContent = C.education[L].period;
-  document.getElementById('edu-award').textContent = C.education['award_'+L];
-  document.getElementById('intl-tag').textContent  = t('intl_tag');
-  document.getElementById('intl-place').textContent = C.intl.place;
-  document.getElementById('intl-text').textContent  = C.intl[L].text;
-  document.getElementById('intl-when').textContent  = C.intl[L].period;
-
-  // CERTS
-  document.getElementById('cert-tag').textContent = t('cert_tag');
-  document.getElementById('cert-list').innerHTML = C.certs.map(c=>`
-    <li><b>${tr(c.bold)}</b> ${c.rest}</li>`).join('');
-
-  // FOOTER
-  document.getElementById('foot-h').textContent    = t('foot_h');
-  document.getElementById('foot-note').textContent = t('foot_note');
-  document.getElementById('foot-loc').textContent  = L==='pt' ? C.location_pt : C.location_en;
-  document.getElementById('foot-brand').textContent = `${C.name} · ${L==='pt' ? C.role_pt : C.role_en}`;
-  const ea = document.getElementById('foot-email');
-  ea.href = 'mailto:'+C.email; ea.querySelector('span').textContent = C.email;
-  const fc = document.getElementById('foot-cv');
-  fc.href = cvFile; fc.setAttribute('download', cvFile.split('/').pop()); fc.querySelector('span').textContent = t('cta_cv');
-  const la = document.getElementById('foot-li');
-  la.href = 'https://'+C.linkedin; la.querySelector('span').textContent = C.linkedin;
-
-  document.querySelectorAll('.spark-line polyline').forEach(pl=>pl.style.setProperty('--len', Math.ceil(pl.getTotalLength()) + 2));
-  bindKpis();
+  $('f-h').textContent = t.foot_h; $('f-note').textContent = t.foot_note; $('f-brand').textContent = C.name + ' · ' + C.portfolio;
+  $('f-mail').href = 'mailto:' + C.email; $('f-mail').textContent = C.email;
+  $('f-li').href = 'https://' + C.linkedin;
+  $('ph-name').textContent = C.name; $('ph-role').textContent = t.sub;
+  $('ph-c').innerHTML = esc(C.email) + '<br>' + esc(C.linkedin) + '<br>' + esc(C.portfolio);
 }
 
-/* ---------- MOTION ---------- */
-
-// count a KPI number up from zero
-function countUp(el){
-  if(!el || el.dataset.done) return;
-  el.dataset.done = '1';
-  const target = parseFloat(el.dataset.count), pre = el.dataset.pre, post = el.dataset.post;
-  if(REDUCE){ el.textContent = pre + target + post; return; }
-  const dur = 1400, t0 = performance.now();
-  (function step(now){
-    const p = Math.min((now - t0) / dur, 1);
-    const e = 1 - Math.pow(1 - p, 3);
-    el.textContent = pre + Math.round(target * e) + post;
-    if(p < 1) requestAnimationFrame(step);
-  })(t0);
+function loadGame(i){
+  const g = C.lab[i], t = T(), scr = $('s-' + g.id);
+  if (!g.embed){ $('gs-' + g.id).textContent = t.coin_soon; return; }
+  scr.innerHTML = `<iframe src="${g.embed}" title="${esc(t.games[g.id].title)}" allow="fullscreen; autoplay; gamepad" allowfullscreen loading="lazy"></iframe>`;
+  scr.querySelector('iframe').focus();
 }
 
-// reveal elements as they scroll into view
-const io = ('IntersectionObserver' in window) ? new IntersectionObserver(entries=>{
-  entries.forEach(en=>{
-    if(!en.isIntersecting) return;
-    const el = en.target;
-    el.classList.add('in');
-    el.querySelectorAll('[data-count]').forEach(n=>setTimeout(()=>countUp(n), 150));
-    io.unobserve(el);
-  });
-}, {threshold:0.15, rootMargin:'0px 0px -40px 0px'}) : null;
-
-function observeReveals(){
-  const els = document.querySelectorAll('.reveal:not(.in), .reveal-line:not(.in)');
-  if(!io){ els.forEach(el=>{ el.classList.add('in'); el.querySelectorAll('[data-count]').forEach(countUp); }); return; }
-  els.forEach(el=>io.observe(el));
-}
-
-// after a language switch: show everything at its final state, no replay
-function settleAll(){
-  document.body.classList.add('no-anim');
-  document.querySelectorAll('.reveal, .reveal-line').forEach(el=>{ el.classList.add('in'); io && io.unobserve(el); });
-  document.querySelectorAll('[data-count]').forEach(n=>{ n.dataset.done='1'; n.textContent = n.dataset.pre + n.dataset.count + n.dataset.post; });
-  requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.remove('no-anim')));
-}
-
-// KPI tiles: sparkline redraws on hover; amber glow follows the cursor on the dark tile
-function bindKpis(){
-  document.querySelectorAll('.kpi').forEach(k=>{
-    const line = k.querySelector('.spark-line polyline');
-    if(!line || REDUCE) return;
-    k.addEventListener('pointerenter', ()=>{
-      if(!k.classList.contains('in')) return;
-      line.style.transition = 'none'; line.style.strokeDashoffset = line.style.getPropertyValue('--len');
-      line.getBoundingClientRect();
-      line.style.transition = 'stroke-dashoffset .9s cubic-bezier(.2,.7,.2,1)'; line.style.strokeDashoffset = '0';
-    });
-  });
-  document.querySelectorAll('.kpi.dark').forEach(k=>{
-    k.addEventListener('pointermove', e=>{
-      const r = k.getBoundingClientRect();
-      k.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-      k.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
-    });
-  });
-}
-
-// scroll progress bar + nav shadow
-(function(){
-  const bar = document.getElementById('progress'), nav = document.getElementById('nav');
-  let ticking = false;
-  function update(){
-    const h = document.documentElement.scrollHeight - innerHeight;
-    bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
-    nav.classList.toggle('scrolled', scrollY > 8);
-    ticking = false;
-  }
-  addEventListener('scroll', ()=>{ if(!ticking){ ticking = true; requestAnimationFrame(update); } }, {passive:true});
-  update();
-})();
-
-// hero background: a quiet field of data points that breathes and leans toward the cursor.
-// Easter egg: window.heroChart() lines the points up into a bar chart with a trend line.
-const heroInit = function(){
-  const cv = document.getElementById('hero-canvas'), shell = document.getElementById('hero-shell');
-  if(!cv || !cv.getContext) return;
-  const ctx = cv.getContext('2d');
-  const GAP = 26, R = 150;
-  let w = 0, h = 0, cols = 0, rows = 0, dots = [], mask = null;
-  let mx = -1e4, my = -1e4, tmx = -1e4, tmy = -1e4, running = false, raf = 0;
-  let chart = null;
-
-  const clamp = v => v < 0 ? 0 : v > 1 ? 1 : v;
-  const smooth = (a, b, v) => { const t = clamp((v - a) / (b - a)); return t * t * (3 - 2 * t); };
-  const ease = p => 1 - Math.pow(1 - p, 3);
-
-  function size(){
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const r = cv.getBoundingClientRect();
-    w = r.width; h = r.height;
-    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    dots = []; cols = 0; rows = 0;
-    for(let y = GAP / 2; y < h; y += GAP){ rows++; cols = 0; for(let x = GAP / 2; x < w; x += GAP){ dots.push(x, y); cols++; } }
-    // soft elliptical mask, densest top-right, fading toward the text
-    const mobile = w < 760;
-    mask = new Float32Array(dots.length / 2);
-    for(let i = 0; i < mask.length; i++){
-      const x = dots[i * 2] / w, y = dots[i * 2 + 1] / h;
-      const dn = mobile ? Math.hypot((x - .5) / .9, (y - .5) / .9)
-                        : Math.hypot((x - .82) / .65, (y - .42) / .85);
-      mask[i] = 1 - smooth(.25, .72, dn);
-    }
-    chart = null;
-  }
-
-  function buildChart(){
-    const vals = [.24, .32, .28, .44, .39, .56, .51, .7, .66, .84, 1];
-    // start the chart to the right of the text when there is room; otherwise use the full width
-    const lead = document.getElementById('h-lead').getBoundingClientRect(), box = cv.getBoundingClientRect();
-    const cEnd = cols - 2;
-    let c0 = Math.ceil((lead.right - box.left + 24) / GAP);
-    let behindText = false;
-    if(cEnd - c0 + 1 < 12){ c0 = Math.max(1, Math.floor(cols * .06)); behindText = true; }
-    const n = Math.min(vals.length, Math.floor((cEnd - c0 + 1) / 3));
-    const v = vals.slice(vals.length - n);
-    const base = Math.round(rows * .84), maxH = Math.max(3, Math.round(rows * .62));
-    const delay = new Float32Array(dots.length / 2).fill(-1);
-    const line = [];
-    let maxDelay = 0;
-    for(let b = 0; b < n; b++){
-      const c = c0 + b * 3, hgt = Math.max(1, Math.round(v[b] * maxH));
-      for(let cc = c; cc < c + 2; cc++) for(let k = 0; k < hgt; k++){
-        const rr = base - k; if(rr < 0) continue;
-        const d = b * 85 + k * 32; delay[rr * cols + cc] = d; if(d > maxDelay) maxDelay = d;
-      }
-      line.push([(c + 1) * GAP, (base - hgt + .5) * GAP - GAP * .55]);
-    }
-    if(behindText) line.length = 0; // narrow screens: bars only, no line across the text
-    const inEnd = maxDelay + 500;
-    return { t0: null, delay, line, lineAt: inEnd - 150, outAt: inEnd + 2900, end: inEnd + 3700 };
-  }
-
-  function draw(time){
-    mx += (tmx - mx) * 0.12; my += (tmy - my) * 0.12;
-    ctx.clearRect(0, 0, w, h);
-
-    let e = 0, out = 1, dim = 0;
-    if(chart){
-      if(chart.t0 === null) chart.t0 = time;
-      e = REDUCE ? chart.lineAt + 2000 : time - chart.t0;
-      out = 1 - clamp((e - chart.outAt) / (chart.end - chart.outAt));
-      dim = ease(clamp(e / 500)) * out;
-      if(!REDUCE && e > chart.end) chart = null;
-    }
-
-    for(let i = 0, j = 0; i < dots.length; i += 2, j++){
-      const x = dots[i], y = dots[i + 1];
-      const wave = (Math.sin(x * 0.011 + time * 0.0006) + Math.cos(y * 0.017 - time * 0.00045) + 2) / 4; // 0..1
-      let a = (0.07 + 0.16 * wave) * mask[j], r = 1 + 0.7 * wave, near = 0, ox = 0, oy = 0, lit = 0;
-
-      if(chart){
-        const d = chart.delay[j];
-        if(d >= 0){
-          lit = ease(clamp((e - d) / 420)) * out;
-          a = a * (1 - lit) + 0.88 * lit;
-          r = r * (1 - lit) + 2.4 * lit;
-          oy = GAP * 1.2 * (1 - lit) * (lit > 0 ? 1 : 0);
-        } else {
-          a *= 1 - 0.8 * dim;
-        }
-      }
-
-      const dx = x - mx, dy = y - my, dist = Math.sqrt(dx * dx + dy * dy);
-      if(dist < R){
-        near = 1 - dist / R; near *= near;
-        a += 0.6 * near * Math.max(mask[j], lit); r += 1.6 * near;
-        ox = -dx * near * 0.18; oy += -dy * near * 0.18;
-      }
-      if(a < 0.01) continue;
-      ctx.fillStyle = (near > 0.04 || lit > 0.05) ? `rgba(204,120,92,${a})` : `rgba(20,20,19,${a})`;
-      ctx.beginPath(); ctx.arc(x + ox, y + oy, r, 0, 6.283); ctx.fill();
-    }
-
-    // trend line over the bars
-    if(chart && chart.line.length > 1){
-      const lp = ease(clamp((e - chart.lineAt) / 900)) * out;
-      if(lp > 0){
-        const pts = chart.line;
-        let len = 0; for(let k = 1; k < pts.length; k++) len += Math.hypot(pts[k][0] - pts[k-1][0], pts[k][1] - pts[k-1][1]);
-        const drawn = len * ease(clamp((e - chart.lineAt) / 900));
-        ctx.save();
-        ctx.globalAlpha = out;
-        ctx.strokeStyle = '#141413'; ctx.lineWidth = 1.8; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-        ctx.setLineDash([drawn, len + 1]);
-        ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
-        for(let k = 1; k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        if(drawn >= len - 1){
-          const [ex, ey] = pts[pts.length - 1];
-          ctx.fillStyle = '#cc785c';
-          ctx.beginPath(); ctx.arc(ex, ey, 4.5, 0, 6.283); ctx.fill();
-          ctx.strokeStyle = 'rgba(204,120,92,.35)'; ctx.lineWidth = 6;
-          ctx.beginPath(); ctx.arc(ex, ey, 9 + 3 * Math.sin(time * 0.006), 0, 6.283); ctx.stroke();
-        }
-        ctx.restore();
-      }
-    }
-
-    if(running) raf = requestAnimationFrame(draw);
-  }
-
-  function start(){ if(running || REDUCE) return; running = true; raf = requestAnimationFrame(draw); }
-  function stop(){ running = false; cancelAnimationFrame(raf); }
-
-  window.heroChart = function(){
-    if(!w) return;
-    chart = buildChart();
-    if(REDUCE){
-      draw(0);
-      setTimeout(()=>{ chart = null; draw(0); }, 4000);
-    } else start();
-  };
-
-  size();
-  if(REDUCE){ draw(0); }
-  else {
-    shell.addEventListener('pointermove', e=>{
-      const r = cv.getBoundingClientRect(); tmx = e.clientX - r.left; tmy = e.clientY - r.top;
-    });
-    shell.addEventListener('pointerleave', ()=>{ tmx = tmy = -1e4; });
-    if('IntersectionObserver' in window){
-      new IntersectionObserver(([en])=> en.isIntersecting ? start() : stop()).observe(shell);
-    } else start();
-    document.addEventListener('visibilitychange', ()=> document.hidden ? stop() : start());
-  }
-  // re-measure whenever the hero changes size (window resize, web fonts loading, language switch)
-  let rt;
-  const resized = ()=>{ clearTimeout(rt); rt = setTimeout(()=>{ size(); if(!running) draw(0); }, 120); };
-  if('ResizeObserver' in window) new ResizeObserver(resized).observe(shell);
-  else addEventListener('resize', resized);
-};
-(window.requestIdleCallback ? (f=>requestIdleCallback(f,{timeout:800})) : (f=>setTimeout(f,300)))(heroInit);
-
-/* ANALYTICS: cookie-free, off until CONFIG.analytics.goatcounter is set. Counts events only, no personal data. */
-const track = (name) => {
-  const code = C.analytics && C.analytics.goatcounter;
-  if (!code || !window.goatcounter || !goatcounter.count) return;
-  goatcounter.count({ path: 'event/' + name + '/' + L, title: name + ' (' + L + ')', event: true });
-};
-(function(){
-  const code = C.analytics && C.analytics.goatcounter;
-  if (!code) return;
-  const sc = document.createElement('script');
-  sc.async = true; sc.dataset.goatcounter = 'https://' + code + '.goatcounter.com/count';
-  sc.src = 'https://gc.zgo.at/count.js';
-  document.head.appendChild(sc);
-  document.addEventListener('click', e => {
-    const a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
-    const h = a.getAttribute('href') || '';
-    if (a.hasAttribute('download') || /\.pdf$/i.test(h)) track('cv-download');
-    else if (h.startsWith('mailto:')) track('email-click');
-    else if (/linkedin\.com/i.test(h)) track('linkedin-click');
-    else if (/github\.com/i.test(h)) track('code-click');
-  });
-})();
-
-function setLang(l){
-  if(l === L) return;
-  const content = document.getElementById('content');
-  const openCards = [...document.querySelectorAll('.card.open')].map(c=>c.dataset.i);
-  const swap = ()=>{
-    L = l;
-    track('lang-switch');
-    render();
-    settleAll();
-    openCards.forEach(i => {
-      const card = document.querySelector(`.card[data-i="${i}"]`);
-      const body = document.getElementById('cb-'+i);
-      if(card && body){ card.classList.add('open'); body.style.maxHeight = body.scrollHeight+'px'; }
-    });
-    content.classList.remove('swapping');
-  };
-  if(REDUCE){ swap(); return; }
-  content.classList.add('swapping');
-  setTimeout(swap, 180);
-}
-
-function toggleCard(i){
-  if (!document.querySelector(`.card[data-i="${i}"]`).classList.contains('open')) track('case-open-' + C.projects[i].idx);
-  const card = document.querySelector(`.card[data-i="${i}"]`);
-  const body = document.getElementById('cb-'+i);
-  const open = card.classList.toggle('open');
-  card.querySelector('.card-head').setAttribute('aria-expanded', open);
-  body.style.maxHeight = open ? body.scrollHeight+'px' : '0';
-}
-
+window.setLang = function(l){ L = l; try{ localStorage.setItem('lang', l) }catch(e){} render(); };
+try{ const s = localStorage.getItem('lang'); L = s || ((navigator.language || '').toLowerCase().startsWith('pt') ? 'pt' : 'en') }catch(e){}
 render();
-observeReveals();
 
-addEventListener('beforeprint', settleAll);
-
-// Ctrl/Cmd+P opens the real CV (PDF) in the current language, so printing from there gives the exact document
-addEventListener('keydown', e=>{
-  if(!(e.ctrlKey || e.metaKey) || e.shiftKey || e.altKey || e.key.toLowerCase() !== 'p') return;
-  e.preventDefault();
-  const w = window.open(C.cv[L], '_blank');
-  if(w){ w.opener = null; } else { window.print(); }
-});
-
-/* ---------- EASTER EGGS ---------- */
-
-// 1. a note for whoever opens DevTools
-console.log('%c✦ Business before data.', 'font:500 22px Georgia,serif;color:#cc785c;padding:6px 0');
-console.log('%cSELECT candidate\n  FROM analysts\n WHERE thinks_business_first = TRUE;\n\n→ 1 row returned: ' + C.name + '\n  ' + C.email,
-  'font:12px ui-monospace,monospace;color:#3d3d3a;line-height:1.5');
-console.log('%cpsst: click the ✦ next to my name five times.', 'font:11px ui-monospace,monospace;color:#8e8b82');
-
-// 2. five clicks on the brand spark: the hero dots line up into a chart
-(function(){
-  const brand = document.querySelector('.brand'), spark = brand.querySelector('.spark'), toast = document.getElementById('toast');
-  let clicks = 0, timer = 0, toastTimer = 0;
-  brand.addEventListener('click', ()=>{
-    spark.classList.remove('tap'); void spark.offsetWidth; spark.classList.add('tap');
-    clicks++; clearTimeout(timer); timer = setTimeout(()=>clicks = 0, 1600);
-    if(clicks < 5) return;
-    clicks = 0;
-    setTimeout(()=>{
-      window.heroChart && window.heroChart();
-      setTimeout(()=>{
-        toast.innerHTML = '<svg viewBox="0 0 16 16" fill="currentColor"><use href="#sp"/></svg>' + t('egg_toast');
-        toast.classList.add('show');
-        clearTimeout(toastTimer); toastTimer = setTimeout(()=>toast.classList.remove('show'), 3600);
-      }, 1500);
-    }, scrollY > 80 ? 650 : 0);
-  });
+if (C.analytics.goatcounter){ const s = document.createElement('script'); s.async = true; s.dataset.goatcounter = 'https://' + C.analytics.goatcounter + '.goatcounter.com/count'; s.src = '//gc.zgo.at/count.js'; document.body.appendChild(s); }
 })();
 </script>
 </body>

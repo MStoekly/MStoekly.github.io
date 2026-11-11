@@ -1,0 +1,4 @@
+# Ren'Py distribution folders (not part of the site)
+*-dists/
+*-web.zip
+*.symbols
