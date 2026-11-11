@@ -499,6 +499,8 @@ footer h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:22px;max-width:24ch;tex
 .fb{font-size:13px;color:var(--dim);border-top:1px solid var(--line2);padding-top:14px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
 .print-head{display:none}
+body.gaming::before,body.gaming::after{display:none}
+body.gaming #nav{backdrop-filter:none;background:var(--bg)}
 body.mag{--ink:#ffd6ea;--dim:#e3a9c6;--line:#c0588a;--line2:#5f2c47;--panel:#150a12;--panel2:#1c0e18;--bg:#0d070b;--mag:#7fe3ff;--glow:0 0 4px rgba(255,190,225,.9),0 0 14px rgba(255,90,170,.55)}
 #poweron{position:fixed;inset:0;z-index:90;background:#000;pointer-events:none;animation:pwr .7s ease-out forwards}
 #poweron::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:#cdeefa;box-shadow:0 0 18px 4px rgba(190,230,245,.8);animation:pwrline .7s ease-out forwards}
@@ -763,7 +765,7 @@ function loadGame(i){
   if (!g.embed){ $('gs-' + g.id).textContent = t.coin_soon; return; }
   scr.innerHTML = `<iframe src="${g.embed}" title="${esc(t.games[g.id].title)}" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe>`;
   const card = $('g-' + g.id), fr = scr.querySelector('iframe'); let muted = false;
-  card.classList.add('playing');
+  card.classList.add('playing'); document.body.classList.add('gaming');
   const ctl = $('gs-' + g.id); ctl.className = 'gbar';
   ctl.innerHTML = `<button class="btn" data-a="mute"></button><button class="btn" data-a="full">⛶ ${esc(t.full)}</button><button class="btn" data-a="eject">⏏ ${esc(t.close)}</button><span class="soon">${esc(t.click_hint)}</span>`;
   const mb = ctl.querySelector('[data-a=mute]');
@@ -772,7 +774,7 @@ function loadGame(i){
   paint(); fr.addEventListener('load', send);
   mb.onclick = () => { muted = !muted; paint(); send(); fr.focus(); };
   ctl.querySelector('[data-a=full]').onclick = () => { const r = scr.requestFullscreen || scr.webkitRequestFullscreen; if (r) r.call(scr); else window.open(g.embed, '_blank'); fr.focus(); };
-  ctl.querySelector('[data-a=eject]').onclick = () => render();
+  ctl.querySelector('[data-a=eject]').onclick = () => { document.body.classList.remove('gaming'); render(); };
   fr.focus();
 }
 
