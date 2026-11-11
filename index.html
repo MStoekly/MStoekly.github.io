@@ -87,6 +87,7 @@ const CONFIG = {
     lab_sub: "Two playable prototypes and the AI work behind them. Press the button to load a game.",
     coin: "Insert coin",
     coin_soon: "Web build going online soon.",
+    mute: "Mute", sound_on: "Sound on", full: "Fullscreen", click_hint: "Click inside the game first, then use WASD or the arrows.",
     coin_page: "Open on itch.io",
     close: "Eject",
     controls: "WASD or arrows",
@@ -170,6 +171,7 @@ const CONFIG = {
     lab_sub: "Dois protótipos jogáveis e o trabalho com IA por trás deles. Aperte o botão para carregar o jogo.",
     coin: "Inserir ficha",
     coin_soon: "A versão web entra no ar em breve.",
+    mute: "Silenciar", sound_on: "Ativar som", full: "Tela cheia", click_hint: "Clique dentro do jogo antes e use WASD ou as setas.",
     coin_page: "Abrir no itch.io",
     close: "Ejetar",
     controls: "WASD ou setas",
@@ -459,6 +461,12 @@ section.s{padding:64px 0;border-top:1px solid var(--line2)}
 .coin{position:absolute;left:12px;top:12px;animation:coin 1.2s steps(2) infinite}
 @keyframes coin{50%{opacity:.55}}
 .soon{font-size:12.5px;color:var(--dim)}
+.gbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.gbar .btn{font-size:17px;padding:6px 12px;min-height:40px}
+.card.playing{grid-column:1/-1}
+.card.playing .screen{aspect-ratio:16/9;max-height:78vh}
+.screen:fullscreen{aspect-ratio:auto;max-height:none}
+.screen:fullscreen iframe{width:100%;height:100%}
 .sig{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .sig .body{padding:14px;display:flex;flex-direction:column;gap:8px}
 .sig h3{font-size:24px}
@@ -741,8 +749,19 @@ function render(){
 function loadGame(i){
   const g = C.lab[i], t = T(), scr = $('s-' + g.id);
   if (!g.embed){ $('gs-' + g.id).textContent = t.coin_soon; return; }
-  scr.innerHTML = `<iframe src="${g.embed}" title="${esc(t.games[g.id].title)}" allow="fullscreen; autoplay; gamepad" allowfullscreen loading="lazy"></iframe>`;
-  scr.querySelector('iframe').focus();
+  scr.innerHTML = `<iframe src="${g.embed}" title="${esc(t.games[g.id].title)}" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe>`;
+  const card = $('g-' + g.id), fr = scr.querySelector('iframe'); let muted = false;
+  card.classList.add('playing');
+  const ctl = $('gs-' + g.id); ctl.className = 'gbar';
+  ctl.innerHTML = `<button class="btn" data-a="mute"></button><button class="btn" data-a="full">⛶ ${esc(t.full)}</button><button class="btn" data-a="eject">⏏ ${esc(t.close)}</button><span class="soon">${esc(t.click_hint)}</span>`;
+  const mb = ctl.querySelector('[data-a=mute]');
+  const paint = () => mb.textContent = muted ? '🔇 ' + t.sound_on : '🔊 ' + t.mute;
+  const send = () => { try{ fr.contentWindow.postMessage({type:'mute', on: muted}, '*') }catch(e){} };
+  paint(); fr.addEventListener('load', send);
+  mb.onclick = () => { muted = !muted; paint(); send(); fr.focus(); };
+  ctl.querySelector('[data-a=full]').onclick = () => { const r = scr.requestFullscreen || scr.webkitRequestFullscreen; if (r) r.call(scr); else window.open(g.embed, '_blank'); fr.focus(); };
+  ctl.querySelector('[data-a=eject]').onclick = () => render();
+  fr.focus();
 }
 
 window.setLang = function(l){ L = l; try{ localStorage.setItem('lang', l) }catch(e){} render(); };

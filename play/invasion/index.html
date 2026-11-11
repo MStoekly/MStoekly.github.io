@@ -2,6 +2,14 @@
 <html lang="en-us">
 
 <head>
+<script>/* portfolio: mute hook, controlled by the parent page via postMessage */
+(function(){var A=window.AudioContext||window.webkitAudioContext;if(!A)return;var muted=false,gains=[];
+function apply(){gains.forEach(function(g){g.gain.value=muted?0:1})}
+function P(){var c=new (Function.prototype.bind.apply(A,[null].concat([].slice.call(arguments))))();
+try{var g=c.createGain(),real=c.destination;g.connect(real);Object.defineProperty(c,'destination',{value:g,configurable:true});gains.push(g);apply()}catch(e){}return c}
+P.prototype=A.prototype;window.AudioContext=P;window.webkitAudioContext=P;
+window.addEventListener('message',function(e){if(e.data&&e.data.type==='mute'){muted=!!e.data.on;apply()}});})();</script>
+
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Invasion</title>
