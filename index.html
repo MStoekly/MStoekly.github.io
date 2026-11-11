@@ -37,8 +37,8 @@ const CONFIG = {
 
   /* JOGOS (Lab). embed = URL do embed do itch.io (ou /play/...); vazio = mostra "em breve". */
   lab: [
-    { id: "crimson-wake", embed: "play/crimson-wake/index.html", page: "", img: "img/crimson-wake.webp", tone: "mag" },
     { id: "invasion",     embed: "play/invasion/index.html", page: "", img: "img/invasion.webp",      tone: "grn" },
+    { id: "crimson-wake", embed: "play/crimson-wake/index.html", page: "", img: "img/crimson-wake.webp", tone: "mag" },
   ],
 
   en: {
@@ -453,9 +453,9 @@ section.s{padding:64px 0;border-top:1px solid var(--line2)}
 .pv.live .big{color:var(--ink)}
 
 /* LAB */
-.lab-g{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:22px}
-.screen{position:relative;aspect-ratio:4/3;background:#05080c;border-bottom:1px solid var(--line2);overflow:hidden}
-.screen img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;display:block}
+.lab-g{display:grid;grid-template-columns:1fr;gap:22px;margin-bottom:22px}
+.screen{position:relative;aspect-ratio:16/9;max-height:78vh;width:100%;background:#05080c;border-bottom:1px solid var(--line2);overflow:hidden}
+.screen img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated;display:block}
 .screen .noimg{display:none;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(90deg,#0a1a07 0 6px,#0d2209 6px 12px);font-family:var(--px);font-size:clamp(26px,3.6vw,40px);color:var(--grn);text-transform:uppercase;letter-spacing:.1em}
 .screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
 .coin{position:absolute;left:12px;top:12px;animation:coin 1.2s steps(2) infinite}
